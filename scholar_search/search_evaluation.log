@@ -1,0 +1,154 @@
+{
+    "query": "Machine Learning",
+    "relevance": 0.0006565126050420169,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T10:12:18.587658"
+}
+{
+    "query": "operating system",
+    "relevance": 0.0006565126050420169,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T10:13:29.896650"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.0006565126050420169,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 7.5,
+    "timestamp": "2024-12-12T10:15:28.638580"
+}
+{
+    "query": "Elad Hazan",
+    "relevance": 0.0,
+    "ranking_quality": 0.0,
+    "query_coverage": 0.0,
+    "timestamp": "2024-12-12T10:29:22.672631"
+}
+{
+    "query": "blockchain",
+    "relevance": 1.0,
+    "ranking_quality": 2.283333333333333,
+    "query_coverage": 5.0,
+    "timestamp": "2024-12-12T17:14:56.093945"
+}
+{
+    "query": "blockchain",
+    "relevance": 0,
+    "ranking_quality": 0.0,
+    "query_coverage": 0.0,
+    "timestamp": "2024-12-12T17:15:06.364066"
+}
+{
+    "query": "blockchain",
+    "relevance": 1.0,
+    "ranking_quality": 2.283333333333333,
+    "query_coverage": 5.0,
+    "timestamp": "2024-12-12T17:15:28.211951"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.005186721991701245,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 7.5,
+    "timestamp": "2024-12-12T17:16:43.127180"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.0073475385745775165,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 6.5,
+    "timestamp": "2024-12-12T17:16:52.489409"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.005186721991701245,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 7.5,
+    "timestamp": "2024-12-12T17:16:58.809672"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.005186721991701245,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 7.5,
+    "timestamp": "2024-12-12T17:17:35.589713"
+}
+{
+    "query": "Information Retrieval",
+    "relevance": 0.005186721991701245,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 7.5,
+    "timestamp": "2024-12-12T17:17:49.108002"
+}
+{
+    "query": "Machine Learning",
+    "relevance": 0.0015349194167306216,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T17:27:28.811295"
+}
+{
+    "query": "system",
+    "relevance": 0.003161555485298767,
+    "ranking_quality": 2.9289682539682538,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T17:27:42.666293"
+}
+{
+    "query": "system",
+    "relevance": 0.003161555485298767,
+    "ranking_quality": 2.9289682539682538,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T17:29:04.022741"
+}
+{
+    "query": "binary search",
+    "relevance": 0.0111731843575419,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 6.5,
+    "timestamp": "2024-12-12T17:30:22.037821"
+}
+{
+    "query": "binary search",
+    "relevance": 0.0111731843575419,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 6.5,
+    "timestamp": "2024-12-12T17:30:49.917215"
+}
+{
+    "query": "system",
+    "relevance": 0.0007374631268436578,
+    "ranking_quality": 2.5123015873015873,
+    "query_coverage": 8.0,
+    "timestamp": "2024-12-12T17:33:59.308864"
+}
+{
+    "query": "Machine Learning",
+    "relevance": 0.0015349194167306216,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 10.0,
+    "timestamp": "2024-12-12T20:14:20.199956"
+}
+{
+    "query": "Machine Learning",
+    "relevance": 0.0010780508840017248,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 9.5,
+    "timestamp": "2024-12-12T20:17:35.346125"
+}
+{
+    "query": "Machine Learning",
+    "relevance": 0.0010780508840017248,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 9.5,
+    "timestamp": "2024-12-12T20:17:41.330297"
+}
+{
+    "query": "Machine Learning",
+    "relevance": 0.0010780508840017248,
+    "ranking_quality": 1.9526455026455025,
+    "query_coverage": 9.5,
+    "timestamp": "2024-12-12T20:17:50.443780"
+}
