@@ -67,21 +67,6 @@ This project is a scholarly search web application developed for the **CS547 Inf
 
 ---
 
-## 🗃️ Project Structure
-
-```
-CS547-IR-Scholarly-Search/
-├── manage.py
-├── scholarly_search/        # Django settings
-├── search_app/              # App logic: views, models
-├── templates/               # HTML frontend
-├── static/                  # CSS, JS, assets
-├── db.sqlite3               # Local database
-├── arxiv_papers.sql         # Paper metadata
-└── requirements.txt         # Python dependencies
-```
-
----
 
 ## 🤝 Contributions
 
@@ -104,4 +89,5 @@ For feedback or collaboration, feel free to reach out!
 ---
 
 **Happy Searching!** 🚀
+
 
