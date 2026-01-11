@@ -50,9 +50,6 @@ This project is a scholarly search web application developed for the **CS547 Inf
    ```
 
 3. **Install the required packages**
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 4. **Apply migrations and load data**
    ```bash
@@ -107,3 +104,4 @@ For feedback or collaboration, feel free to reach out!
 ---
 
 **Happy Searching!** 🚀
+
