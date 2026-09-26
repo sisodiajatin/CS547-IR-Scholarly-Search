@@ -60,6 +60,10 @@ matching; no relevance improvement is claimed from these new controls yet.
 
 ## Configuration and deployment
 
+For the complete app on a free PythonAnywhere account, follow
+[DEPLOYMENT.md](DEPLOYMENT.md). The setup script prepares a private persistent
+database, generates a production secret, imports the corpus and collects static files.
+
 Set environment variables in your shell or hosting platform (`.env` files are not
 loaded automatically):
 
