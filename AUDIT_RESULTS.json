@@ -1,0 +1,294 @@
+{
+  "checks": [
+    {
+      "name": "SQLite quick_check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Corpus query: neural networks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Corpus query: transformer attention",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Corpus query: the",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Corpus query: quantum computing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rendered page: /",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARIA references: /",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unique IDs: /",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No placeholder links: /",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rendered page: /resps/?q=neural+networks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARIA references: /resps/?q=neural+networks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unique IDs: /resps/?q=neural+networks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No placeholder links: /resps/?q=neural+networks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rendered page: /library/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARIA references: /library/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unique IDs: /library/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No placeholder links: /library/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rendered page: /users/login/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARIA references: /users/login/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unique IDs: /users/login/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No placeholder links: /users/login/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rendered page: /users/signup/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARIA references: /users/signup/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unique IDs: /users/signup/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No placeholder links: /users/signup/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Login succeeds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Logout requires POST",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Repeated saves are idempotent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unsafe redirect rejected: https://example.com",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unsafe redirect rejected: //example.com",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unsafe redirect rejected: javascript:alert(1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Logout clears authentication",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Guest library hides private titles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pagination input: -1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pagination input: invalid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pagination input: 999999999999999999999999",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Search boundary: !!!",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Search boundary: ' OR 1=1 --",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Search boundary: \u4e2d\u6587",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Search boundary: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unknown route: /missing/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unknown route: /papers/9999999999999999999999/",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Branded production 404",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Signup CSRF protection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Deleting paper cleans saved references",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Deleted paper removed from search index",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Import failure rolls back flushed batches",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "findings": [],
+  "corpus": {
+    "total": 14748,
+    "earliest": "1992-05-04",
+    "latest": "2024-11-25",
+    "duplicate_url_groups": 0,
+    "excess_duplicate_url_records": 0,
+    "unique_urls": 14748
+  },
+  "timings": [
+    {
+      "query": "neural networks",
+      "median_ms": 20.42,
+      "max_ms": 47.39
+    },
+    {
+      "query": "transformer attention",
+      "median_ms": 12.92,
+      "max_ms": 13.58
+    },
+    {
+      "query": "the",
+      "median_ms": 40.5,
+      "max_ms": 41.35
+    },
+    {
+      "query": "quantum computing",
+      "median_ms": 21.19,
+      "max_ms": 21.51
+    }
+  ],
+  "head_statuses": {
+    "/": 200,
+    "/resps/": 200,
+    "/library/": 200
+  },
+  "invalid_form_markup": {
+    "duplicate_ids": [],
+    "missing_aria_targets": []
+  },
+  "login_next_redirect": "/library/",
+  "invalid_save_action": {
+    "status": 400,
+    "records_added": 0
+  },
+  "phrase_search_ids": [
+    1,
+    2
+  ],
+  "phrase_exact_paper_id": 1,
+  "arxiv_identifier_search_ids": [],
+  "summary": {
+    "checks": 47,
+    "passed": 47
+  }
+}

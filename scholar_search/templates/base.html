@@ -1,0 +1,47 @@
+{% load static %}<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Scholarly research terminal. Search, inspect, and collect academic papers.">
+<meta name="theme-color" content="#080f1e">
+<title>{% block title %}Scholarly | Research terminal{% endblock %}</title>
+<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml">
+<link rel="stylesheet" href="{% static 'app.css' %}"><script src="{% static 'app.js' %}" defer></script>
+</head>
+<body>
+{% include '_icons.html' %}<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<button type="button" class="icon-button mobile-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar" data-menu><svg class="icon"><use href="#i-menu"/></svg></button>
+<a class="brand" href="{% url 'home' %}"><span class="brand-mark"><svg class="icon"><use href="#i-book"/></svg></span><span><strong>SCHOLARLY <small>TERMINAL</small></strong><span class="brand-subtitle">ACADEMIC RESEARCH WORKSPACE</span></span></a>
+<nav class="top-nav" aria-label="Main navigation">
+<a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}aria-current="page"{% endif %}>Terminal</a>
+<a href="{% url 'resps' %}" {% if request.resolver_match.url_name == 'resps' or request.resolver_match.url_name == 'paper_detail' %}aria-current="page"{% endif %}>Search</a>
+<a href="{% url 'library' %}" {% if request.resolver_match.url_name == 'library' %}aria-current="page"{% endif %}>My Library</a>
+</nav>
+<form class="global-search" method="get" action="{% url 'resps' %}" role="search"><svg class="icon"><use href="#i-search"/></svg><label class="sr-only" for="global-query">Search the corpus</label><input id="global-query" name="q" placeholder="Search papers, authors, ideas..." maxlength="300" required><kbd>/</kbd></form>
+<div class="account-nav">{% if user.is_authenticated %}<a class="avatar" href="{% url 'profile' %}" aria-label="Your profile">{{ user.username|first|upper }}</a>{% else %}<a class="login-link" href="{% url 'login' %}">Log in</a><a class="button compact" href="{% url 'signup' %}">Join workspace <span aria-hidden="true">&nearr;</span></a>{% endif %}</div>
+</header>
+<aside id="sidebar" class="sidebar">
+<div class="rail-label">CORPUS VIEWS <span>01&mdash;04</span></div>
+<nav class="side-nav" aria-label="Workspace navigation">
+<a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'search' %}aria-current="page"{% endif %}><svg class="icon"><use href="#i-terminal"/></svg>Workspace <span class="nav-end">01</span></a>
+<a href="{% url 'resps' %}" {% if request.resolver_match.url_name == 'resps' or request.resolver_match.url_name == 'paper_detail' %}aria-current="page"{% endif %}><svg class="icon"><use href="#i-search"/></svg>Deep Query <span class="nav-end">02</span></a>
+<a href="{% url 'library' %}" {% if request.resolver_match.url_name == 'library' %}aria-current="page"{% endif %}><svg class="icon"><use href="#i-library"/></svg>My Library <span class="count-chip">{{ saved_count }}</span></a>
+<a href="{% url 'profile' %}" {% if request.resolver_match.url_name == 'profile' %}aria-current="page"{% endif %}><svg class="icon"><use href="#i-user"/></svg>Research Profile</a>
+</nav>
+<div class="rail-divider"></div>
+<div class="rail-label">RESEARCH CHANNELS</div>
+<div class="topic-links"><a href="{% url 'resps' %}?q=transformer+attention"><span class="topic-dot cyan"></span>Transformer architectures</a><a href="{% url 'resps' %}?q=neural+networks"><span class="topic-dot green"></span>Neural networks</a><a href="{% url 'resps' %}?q=quantum+computing"><span class="topic-dot amber"></span>Quantum computing</a><a href="{% url 'resps' %}?q=information+retrieval"><span class="topic-dot violet"></span>Information retrieval</a></div>
+<div class="rail-bottom"><div class="rail-note"><svg class="icon"><use href="#i-book"/></svg><strong>A little context.<br>A new direction.</strong><p>Explore the ideas behind your next research question.</p>
+</div>
+<div class="rail-stat"><span>INDEXED PAPERS</span><strong>{{ corpus.total }}</strong></div>
+<div class="index-line"></div>
+<div class="rail-stat"><span>COLLECTION</span><span>arXiv / local</span></div>
+</div>
+</aside>
+<main id="main" class="main-workspace">
+<div class="system-ribbon"><span><i class="status-dot"></i> CORPUS ONLINE <span class="ribbon-divider">/</span> <span class="muted">{{ corpus.total }} indexed records</span></span><span class="ribbon-right">CS547 <span class="ribbon-divider">/</span> RESEARCH TERMINAL</span></div>
+{% block content %}{% endblock %}</main>
+<footer class="status-footer"><span><i class="status-dot"></i> <span class="green">SYSTEM READY</span><span class="footer-divider">/</span> arXiv research collection</span><span class="footer-shortcuts"><kbd>/</kbd> search <kbd>j</kbd><kbd>k</kbd> browse <kbd>enter</kbd> open</span><span>CS547 <span class="muted">INFORMATION RETRIEVAL</span></span></footer>
+<div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+</body>
+</html>

@@ -21,13 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-dh&hb+i+c-3j%k3mpxhkk&-ya^45%l8mfc=#+*!3031uwu$)^y"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['scholary_search.onrender.com']
-
+DEBUG = os.environ.get("DJANGO_DEBUG", "true").lower() == "true"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "local-development-only-change-before-deployment")
+if not DEBUG and SECRET_KEY == "local-development-only-change-before-deployment":
+    raise RuntimeError("Set DJANGO_SECRET_KEY when DJANGO_DEBUG=false")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]").split(",")
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+SECURE_SSL_REDIRECT = not DEBUG
+SECURE_HSTS_SECONDS = 31536000 if not DEBUG else 0
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "search"
+LOGOUT_REDIRECT_URL = "search"
 
 # Application definition
 
@@ -64,6 +70,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "search.context_processors.workspace",
             ],
         },
     },
@@ -75,33 +82,11 @@ WSGI_APPLICATION = "scholar_search.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "user_info",
-            "USER": "jingxuan",
-            "PASSWORD": "jingxuan",
-            "HOST": "127.0.0.1",
-            "PORT": "3306",
-        },
-        "arxiv_papers": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "arxiv_papers",
-            "USER": "jingxuan",
-            "PASSWORD": "jingxuan",
-            "HOST": "127.0.0.1",
-            "PORT": "3306",
-        },
-
-}
-
+DATABASES = {"default": {
+    "ENGINE": "django.db.backends.sqlite3",
+    "NAME": os.environ.get("DJANGO_DB_PATH", str(BASE_DIR / "local.sqlite3")),
+    "OPTIONS": {"timeout": 20},
+}}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -154,3 +139,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # )
 
 
+
+STATIC_ROOT = BASE_DIR / "staticfiles"

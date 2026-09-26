@@ -1,0 +1,8 @@
+{% load navigation %}
+<article class="paper" data-paper-row>
+<div class="paper-meta"><span class="badge green-badge">ARXIV PAPER</span><span>{{ paper.published|date:'M d, Y'|default:'Undated' }}</span><span class="record-id">#{{ paper.pk }}</span></div>
+<h2><a href="{% reader_url paper %}" data-paper-link>{{ paper.title }}</a></h2>
+<p class="authors">{{ paper.authors|truncatechars:170 }}</p>
+<p class="abstract">{{ paper.summary|truncatewords:43 }}</p>
+<div class="paper-actions"><a class="action-button" href="{% reader_url paper %}"><svg class="icon"><use href="#i-book"/></svg>Read paper</a><a class="action-button" href="{% url 'paper_citation' paper.pk %}"><span class="quote-icon">&rdquo;</span>BibTeX</a>{% include '_save_button.html' %}<a class="source-link" href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">&nearr;</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+</article>

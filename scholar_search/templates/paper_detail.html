@@ -1,0 +1,29 @@
+{% extends 'base.html' %}{% block title %}{{ paper.title }} | Scholarly{% endblock %}{% block content %}
+<div class="detail-breadcrumb"><a href="{{ return_to }}" data-reader-back>&larr; {{ return_label }}</a><span>/</span><span>RECORD #{{ paper.pk }}</span></div>
+<section class="detail-header"><div class="paper-meta"><span class="badge green-badge">ARXIV RECORD</span><span>{{ paper.published|date:'M d, Y'|default:'Date unavailable' }}</span></div>
+<h1>{{ paper.title }}</h1>
+<p class="detail-authors">{{ paper.authors }}</p>
+<div class="detail-actions"><a class="button" href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">Read on arXiv <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only"> (opens in a new tab)</span></a>{% include '_save_button.html' %}<a class="action-button" href="{% url 'paper_citation' paper.pk %}"><svg class="icon"><use href="#i-download"/></svg> Export BibTeX</a></div>
+</section>
+<div class="detail-grid"><article class="reading-pane"><header class="panel-heading"><h2>Abstract</h2>
+<span>ORIGINAL SOURCE TEXT</span></header>
+<div class="reading-content">{{ paper.summary|linebreaks }}<div class="reading-end"><span></span> END OF ABSTRACT <span></span></div>
+</div>
+<section class="source-note"><svg class="icon"><use href="#i-book"/></svg><div><h3>Continue with the full paper</h3><p>The complete manuscript and any revised versions are available on the source record.</p>
+<a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">Open source record &nearr;<span class="sr-only"> (opens in a new tab)</span></a></div>
+</section>
+</article>
+<aside class="detail-aside"><section class="panel"><header class="panel-heading"><h2>Record metadata</h2>
+</header>
+<dl class="data-list panel-body"><div><dt>Record ID</dt><dd>#{{ paper.pk }}</dd></div>
+<div><dt>Published</dt><dd>{{ paper.published|date:'Y-m-d'|default:'Unknown' }}</dd></div>
+<div><dt>Repository</dt><dd>arXiv</dd></div>
+<div><dt>Collection</dt><dd>CS547 corpus</dd></div>
+</dl></section>
+<section class="panel citation-panel"><header class="panel-heading"><h2>BibTeX citation</h2>
+<button class="text-button cyan" type="button" data-copy-citation>Copy</button></header>
+<pre class="citation-code" id="citation-text">{{ citation }}</pre><div class="citation-note">Generated from the available source metadata.</div>
+</section>
+<a href="{% url 'library' %}" class="library-shortcut"><svg class="icon"><use href="#i-library"/></svg>Your research library <span>&rarr;</span></a></aside>
+</div>
+{% endblock %}

@@ -1,0 +1,240 @@
+{
+  "judgment_source": "ai",
+  "corpus_sha256": "96db1ed2ab9c464b9d7b31297b6abdcebdb0242d26996f653c50bbe12e0748b4",
+  "corpus_count": 14748,
+  "judgments_sha256": "86fb5480f293e1fc52d5240a41970bb30e755e61043e430003f11adbe36ad791",
+  "zero_relevance_queries": [],
+  "per_query": [
+    {
+      "query_id": "Q01",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8108582970019788,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "Q01",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8480411588814945,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "Q02",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8373334796803867,
+      "pooled_recall@10": 0.8333333333333334
+    },
+    {
+      "query_id": "Q02",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9783012898581854,
+      "pooled_recall@10": 0.8333333333333334
+    },
+    {
+      "query_id": "Q03",
+      "ranker": "weighted",
+      "precision@10": 0.5,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.4347182763010422,
+      "pooled_recall@10": 0.8333333333333334
+    },
+    {
+      "query_id": "Q03",
+      "ranker": "uniform",
+      "precision@10": 0.5,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.6069155106573773,
+      "pooled_recall@10": 0.8333333333333334
+    },
+    {
+      "query_id": "Q04",
+      "ranker": "weighted",
+      "precision@10": 0.2,
+      "MRR@10": 0.5,
+      "nDCG@10": 0.4108874912590222,
+      "pooled_recall@10": 0.5
+    },
+    {
+      "query_id": "Q04",
+      "ranker": "uniform",
+      "precision@10": 0.4,
+      "MRR@10": 0.5,
+      "nDCG@10": 0.6516298495526673,
+      "pooled_recall@10": 1.0
+    },
+    {
+      "query_id": "Q05",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9477344873475498,
+      "pooled_recall@10": 0.7142857142857143
+    },
+    {
+      "query_id": "Q05",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9510907186004267,
+      "pooled_recall@10": 0.7142857142857143
+    },
+    {
+      "query_id": "Q06",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9368077570869662,
+      "pooled_recall@10": 0.7692307692307693
+    },
+    {
+      "query_id": "Q06",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9074250374176303,
+      "pooled_recall@10": 0.7692307692307693
+    },
+    {
+      "query_id": "Q07",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7348851780912218,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "Q07",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7601933920987806,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "Q08",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9074250374176303,
+      "pooled_recall@10": 0.7142857142857143
+    },
+    {
+      "query_id": "Q08",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 0.7142857142857143
+    },
+    {
+      "query_id": "Q09",
+      "ranker": "weighted",
+      "precision@10": 0.2,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 1.0
+    },
+    {
+      "query_id": "Q09",
+      "ranker": "uniform",
+      "precision@10": 0.2,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.944847956559586,
+      "pooled_recall@10": 1.0
+    },
+    {
+      "query_id": "Q10",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.6397921882764936,
+      "pooled_recall@10": 0.7692307692307693
+    },
+    {
+      "query_id": "Q10",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9246069654849755,
+      "pooled_recall@10": 0.7692307692307693
+    },
+    {
+      "query_id": "Q11",
+      "ranker": "weighted",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 0.6666666666666666
+    },
+    {
+      "query_id": "Q11",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 0.6666666666666666
+    },
+    {
+      "query_id": "Q12",
+      "ranker": "weighted",
+      "precision@10": 0.9,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8572048559638626,
+      "pooled_recall@10": 0.75
+    },
+    {
+      "query_id": "Q12",
+      "ranker": "uniform",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 0.8333333333333334
+    }
+  ],
+  "macro": {
+    "weighted": {
+      "precision@10": {
+        "value": 0.8166666666666668,
+        "queries": 12
+      },
+      "MRR@10": {
+        "value": 0.9583333333333334,
+        "queries": 12
+      },
+      "nDCG@10": {
+        "value": 0.7931372540355128,
+        "queries": 12
+      },
+      "pooled_recall@10": {
+        "value": 0.7333638583638584,
+        "queries": 12
+      }
+    },
+    "uniform": {
+      "precision@10": {
+        "value": 0.8416666666666667,
+        "queries": 12
+      },
+      "MRR@10": {
+        "value": 0.9583333333333334,
+        "queries": 12
+      },
+      "nDCG@10": {
+        "value": 0.8810876565925936,
+        "queries": 12
+      },
+      "pooled_recall@10": {
+        "value": 0.7819749694749695,
+        "queries": 12
+      }
+    }
+  },
+  "limitations": "12-query ai-reviewed pilot; recall is relative to the pooled top-10 candidates, not the entire corpus. Frozen runs are evaluated without rerunning search. AI judgments are provisional and are not human ground truth or independent validation."
+}

@@ -19,6 +19,7 @@ from django.urls import path
 from search import views
 
 urlpatterns = [
+    path("", views.search, name="home"),
     # path("admin/", admin.site.urls),
     path("search/", views.search, name='search'),
     path("resps/", views.resps, name='resps'),
@@ -26,4 +27,8 @@ urlpatterns = [
     path("users/login/", views.login, name='login'),
     path('users/logout/', views.logout, name='logout'),
     path('users/profile/', views.profile, name='profile'),
+    path('library/', views.library, name='library'),
+    path('papers/<int:pk>/', views.paper_detail, name='paper_detail'),
+    path('papers/<int:pk>/citation/', views.paper_citation, name='paper_citation'),
+    path('papers/<int:pk>/save/', views.save_paper, name='save_paper'),
 ]

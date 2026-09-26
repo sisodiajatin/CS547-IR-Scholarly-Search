@@ -1,0 +1,9 @@
+<form class="search-box" method="get" action="{% url 'resps' %}" role="search" data-search-form>
+<span class="query-prefix"><svg class="icon"><use href="#i-terminal"/></svg><span>corpus://</span></span>
+<label class="sr-only" for="query">Search by title, author, or keyword</label>
+<input id="query" name="q" type="search" value="{{ query }}" placeholder="Search a topic, paper title, or author..." maxlength="300" {% if not year %}required{% endif %}>
+{% if match %}<input type="hidden" name="match" value="{{ match }}">{% endif %}
+{% if year %}<input type="hidden" name="year" value="{{ year }}"><input type="hidden" name="year_mode" value="{{ year_mode }}"><input type="hidden" name="sort" value="{{ sort }}">{% endif %}
+<button class="button execute" type="submit">EXECUTE <span aria-hidden="true">&crarr;</span></button>
+<span class="sr-only" role="status" data-search-status></span>
+</form>

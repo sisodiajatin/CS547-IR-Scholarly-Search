@@ -1,0 +1,13 @@
+{
+  "judgment_source": "ai",
+  "reviewer": "Codex",
+  "reviewed_date": "2026-09-24",
+  "source_packet": "..",
+  "source_judgments_sha256": "671476a0381cac4123ff3d97e82da4d1ad6eea7e0d2346f950034506badfe228",
+  "reviewed_judgments_sha256": "d1365da98840d1fe5e91f1ef6e98cb3f6b51d6bd1d9c43281c73f1c37d417c7f",
+  "records": 91,
+  "queries": 6,
+  "evidence": "Stored title, abstract and query intent. No full-paper review or external verification.",
+  "protocol": "Single AI assessor. Read shuffled candidates without inspecting manifest ranks or ranker assignments. Grade 0 irrelevant, 1 partial/background, 2 directly relevant. One rationale per query-paper pair.",
+  "limitations": "Provisional AI judgments, not human ground truth. No independent assessor or agreement estimate. Assessor previously implemented this benchmark and is not an independent validator."
+}

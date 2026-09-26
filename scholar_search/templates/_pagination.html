@@ -1,0 +1,2 @@
+{% if page.paginator.num_pages > 1 %}<nav class="pagination" aria-label="Results pages">{% if page.has_previous %}<a class="button secondary" href="?{{ querystring }}&amp;page={{ page.previous_page_number }}">&larr; Previous</a>{% else %}<span></span>{% endif %}<span>PAGE {{ page.number }} / {{ page.paginator.num_pages }}</span>{% if page.has_next %}<a class="button secondary" href="?{{ querystring }}&amp;page={{ page.next_page_number }}">Next &rarr;</a>{% endif %}</nav>
+{% endif %}

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'tertiary-container': '#f59e0b', 'on-secondary-fixed-variant': '#005236', 'on-primary-fixed': '#001e2c', 'secondary-container': '#00a572', 'on-surface': '#dae2fd', 'on-secondary-container': '#00311f', 'primary': '#8ed5ff', 'background': '#0b1326', 'error-container': '#93000a', 'surface-bright': '#31394d', 'surface-container-high': '#222a3d', 'primary-fixed-dim': '#7bd0ff', 'surface-container-highest': '#2d3449', 'on-primary': '#00354a', 'on-error-container': '#ffdad6', 'surface-container-low': '#131b2e', 'inverse-surface': '#dae2fd', 'inverse-primary': '#00668a', 'on-tertiary': '#472a00', 'on-secondary-fixed': '#002113', 'outline': '#87929a', 'surface-variant': '#2d3449', 'on-surface-variant': '#bdc8d1', 'on-background': '#dae2fd', 'tertiary': '#ffc174', 'on-primary-fixed-variant': '#004c69', 'secondary': '#4edea3', 'primary-container': '#38bdf8', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#ffb95f', 'surface': '#0b1326', 'outline-variant': '#3e484f', 'inverse-on-surface': '#283044', 'on-primary-container': '#004965', 'on-tertiary-container': '#613b00', 'on-tertiary-fixed-variant': '#653e00', 'surface-container-lowest': '#060e20', 'secondary-fixed': '#6ffbbe', 'surface-tint': '#7bd0ff', 'tertiary-fixed': '#ffddb8', 'primary-fixed': '#c4e7ff', 'secondary-fixed-dim': '#4edea3', 'on-tertiary-fixed': '#2a1700', 'on-secondary': '#003824', 'surface-container': '#171f33', 'on-error': '#690005', 'surface-dim': '#0b1326' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-md': '0.5rem', 'space-sm': '0.25rem', 'margin': '0.75rem', 'gutter': '0.5rem', 'space-xs': '0.125rem', 'space-lg': '0.75rem', 'space-xl': '1rem' }, fontFamily: { 'body-sm': ['Geist'], 'headline-lg': ['Geist'], 'label-kbd': ['JetBrains Mono'], 'headline-md': ['Geist'], 'label-code-sm': ['JetBrains Mono'], 'label-code-md': ['JetBrains Mono'], 'label-code-xs': ['JetBrains Mono'], 'body-md': ['Geist'], 'body-lg': ['Geist'], 'headline-xl': ['Geist'] }, fontSize: { 'body-sm': ['11px', { lineHeight: '14px', fontWeight: '400' }], 'headline-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.015em', fontWeight: '600' }], 'label-kbd': ['9.5px', { lineHeight: '10px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-md': ['14px', { lineHeight: '18px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-code-sm': ['11px', { lineHeight: '13px', letterSpacing: '-0.005em', fontWeight: '500' }], 'label-code-md': ['12px', { lineHeight: '14px', letterSpacing: '-0.01em', fontWeight: '500' }], 'label-code-xs': ['10px', { lineHeight: '12px', fontWeight: '500' }], 'body-md': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'body-lg': ['13px', { lineHeight: '18px', letterSpacing: '-0.005em', fontWeight: '400' }], 'headline-xl': ['24px', { lineHeight: '30px', letterSpacing: '-0.02em', fontWeight: '600' }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-surface-container-lowest border-b border-outline-variant/30 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="ScholarPulse academic logo emblem featuring a stylized open manuscript book combined with subtle neural/pulse node network, deep navy and academic cobalt blue SVG.. Brand logo. - Primary color: #1e40af
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V2UaK7Eh3yKCTn4x70GRSNPjGIx-IH69rS0_cgaOy3RqLesCcd2B5VRTMAPRTllAOBuh-DAQfv_X4_RPkLJyf5aHDgPtZqCZwtN8zZBkou8003W7f3n0Ip2xP4ConWXVSIQFScps98ILmc6j51MO2OUhwrTLgu4LCGSBAYMlx94j_Ztc086mG3mBLjsn14rG0Sdco9xZvsGN18OBFivko3CHtnCusXsFbqTNMK_oIm1YzZOdsfEZnnk4M"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase">ScholarPulse</span><span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-primary-container/20 text-primary border border-primary/30 font-semibold">TERMINAL</span></div><span class="font-label-code-xs text-label-code-xs text-outline">POWER-RESEARCH v4.9</span></div></div><div class="h-6 w-[1px] bg-outline-variant/40 hidden md:block"></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-highest text-primary border-b-2 border-primary font-medium"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="terminal-workspace" href="#">Terminal</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="deep-search" href="#">Search</a><a aria-current="page" class="px-space-md py-1.5 rounded-t transition-colors bg-surface-container-highest text-primary border-b-2 border-primary font-medium" data-path="influence-graph" href="#">Influence Graph</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="my-library" href="#">My Library</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="citation-alerts" href="#">Alerts</a></nav></div><div class="hidden xl:flex items-center bg-surface-container-low border border-outline-variant/40 rounded px-space-md py-1 w-96 justify-between text-outline cursor-pointer hover:border-primary/50 transition-colors"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-sm text-outline">terminal</span><span class="font-body-sm text-body-sm text-on-surface-variant">Global Corpus / DOI / Author Query...</span></div><div class="flex items-center gap-space-xs"><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant">⌘K</kbd><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant">/</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs font-label-code-xs text-label-code-xs px-2 py-1 rounded bg-surface-container-low border border-outline-variant/30 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-semibold text-on-surface">12ms</span><span class="text-outline">|</span><span class="text-on-surface-variant">240.8M DOCS</span></div><div class="hidden md:flex items-center gap-space-xs font-label-code-xs text-label-code-xs px-2 py-1 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-xs text-primary">sync_alt</span><span class="text-on-surface">Zotero/arXiv</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AEtjO1U3GHoIAhlUVnXGCvp7wtMhlkvv_KaaLzw9mxS8IM1-ZhfV5bBH53wl9GNhHWljtcR0lGEdC4fy85Oan2l3bTA5yAdOIA06crFPxx-QWzux1s3ZLtj1vlKGe7AN2ieCz1RaA_GwIprc4_qaDXTzI-GhNbqMalvNXJeSO_SjPDLwvL5qFXFig8b7tfMEM3T0fxkH1aQs6cQOQMFX8xiWcYq4gnGfPnTRKDZFvpioNSItAJn6PCi230V4hzU"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div></div></div></header><aside class="fixed left-0 top-14 bottom-7 w-60 bg-surface-container-lowest border-r border-outline-variant/30 flex flex-col justify-between py-space-md z-40"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-md py-space-xs flex items-center justify-between text-outline font-label-code-xs text-label-code-xs uppercase tracking-wider"><span>Corpus Views</span><kbd class="font-label-kbd text-label-kbd bg-surface-container px-1 rounded border border-outline-variant/30">[</kbd></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="terminal-workspace" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">code_blocks</span><span>Workspace</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g w</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="deep-search" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">manage_search</span><span>Deep Query</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g p</kbd></a><a aria-current="page" class="flex items-center justify-between px-space-md py-1.5 rounded transition-colors bg-surface-container-high text-primary font-semibold" data-path="influence-graph" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">hub</span><span>Influence Graph</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g i</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="my-library" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">folder_special</span><span>My Library</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g l</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="citation-alerts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">notifications_active</span><span>Citation Feeds</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g a</kbd></a></nav><div class="h-[1px] bg-outline-variant/30 my-space-xs mx-space-sm"></div><div class="px-space-md py-space-xs text-outline font-label-code-xs text-label-code-xs uppercase tracking-wider"><span>Active Clusters</span></div><div class="flex flex-col gap-0.5"><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Transformer Efficiency</span><span class="font-label-code-xs text-label-code-xs text-outline">1.4k</span></div><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Protein Folding LLMs</span><span class="font-label-code-xs text-label-code-xs text-outline">842</span></div><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Quantum Error Corr.</span><span class="font-label-code-xs text-label-code-xs text-outline">291</span></div></div></div><div class="px-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs"><span>ENGINE LATENCY</span><span class="text-secondary font-semibold">11.8 ms</span></div><div class="w-full bg-surface-container h-1 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[24%]"></div></div><div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs pt-1"><span>MEM REPOSITORY</span><span class="text-on-surface-variant">412 MB</span></div></div></aside><div class="pl-60"><main class="w-full pt-14 pb-7 min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Monospace High-Density Status Telemetry Strip -->
+<div class="w-full bg-surface-container-lowest px-space-md py-1 flex flex-wrap items-center justify-between text-outline">
+<div class="flex items-center gap-space-md font-label-code-xs text-label-code-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-semibold tracking-wider uppercase">CORPUS.RECORD::ID-1706.03762v7</span>
+</div>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant">CORPUS SYNC: <span class="text-secondary font-medium">NEURIPS_COLLECTION_2017</span></span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant">LINEAGE GRAPH DENSITY: <span class="text-primary font-medium">102.4k EDGES</span></span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant">REPRESENTATION: <span class="text-tertiary font-medium">EMBEDDED_VECTOR_V4</span></span>
+</div>
+<div class="flex items-center gap-space-md font-label-code-xs text-label-code-xs">
+<span class="text-on-surface-variant">CLUSTER: <span class="text-on-surface">TRANSFORMER_PRIMITIVES</span></span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-outline font-label-kbd text-label-kbd">ESC: UNPIN</span>
+</div>
+</div>
+<!-- Primary Analytical Paper Dossier Header -->
+<div class="w-full bg-surface-container-low px-space-lg py-space-md flex flex-col gap-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="bg-secondary/15 text-secondary px-2 py-0.5 rounded font-label-code-xs text-label-code-xs font-semibold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> NeurIPS 2017 Oral
+          </span>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded font-label-code-xs text-label-code-xs font-medium">
+            DOI: 10.48550/arXiv.1706.03762
+          </span>
+<span class="bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-label-code-xs text-label-code-xs">
+            Open Access (CC BY 4.0)
+          </span>
+<span class="bg-tertiary/15 text-tertiary px-1.5 py-0.5 rounded font-label-code-xs text-label-code-xs font-semibold">
+            Seminal Breakthrough
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold flex items-center gap-space-sm">
+<span>Attention Is All You Need</span>
+<span class="text-outline font-label-code-sm text-label-code-sm font-normal">[arXiv:1706.03762v7 [cs.CL]]</span>
+</h1>
+<!-- Author Chips with Affiliation Badges -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Ashish Vaswani</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Brain</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Noam Shazeer</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Brain</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Niki Parmar</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Research</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Jakob Uszkoreit</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Research</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Llion Jones</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Research</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Aidan N. Gomez</span>
+<span class="font-label-code-xs text-label-code-xs text-tertiary">U of Toronto</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Łukasz Kaiser</span>
+<span class="font-label-code-xs text-label-code-xs text-primary">G-Brain</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors">
+<span class="font-body-sm text-body-sm font-medium">Illia Polosukhin</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">Near.ai</span>
+</div>
+</div>
+</div>
+<!-- Action Instrument Toolbar -->
+<div class="flex flex-wrap lg:flex-nowrap items-center gap-space-sm pt-2 lg:pt-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary font-label-code-xs text-label-code-xs font-semibold hover:bg-primary-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Download PDF</span>
+<span class="text-on-primary-container/80 text-[9px]">2.2 MB</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-xs text-label-code-xs transition-colors" onclick="navigator.clipboard.writeText('@article{vaswani2017attention, title={Attention is all you need}, author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\\L}ukasz and Polosukhin, Illia}, journal={Advances in neural information processing systems}, volume={30}, year={2017}}'); alert('BibTeX citation copied to clipboard!');">
+<span class="material-symbols-outlined text-sm text-primary">format_quote</span>
+<span>Cite</span>
+<kbd class="font-label-kbd text-label-kbd bg-surface-container-lowest px-1 rounded text-outline">⌘C</kbd>
+</button>
+<button class="flex items-center gap-1 px-2 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-xs text-label-code-xs transition-colors">
+<span class="material-symbols-outlined text-sm text-secondary">bookmark_add</span>
+<span>Save Zotero</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-xs text-label-code-xs transition-colors">
+<span class="material-symbols-outlined text-sm text-tertiary">fork_right</span>
+<span>Fork BibTeX</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1.5 rounded bg-surface-container-highest text-primary font-label-code-xs text-label-code-xs hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Inspect Lineage</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main 3-Pane Workbench Architecture -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-0.5 bg-surface-container-lowest min-h-[calc(100vh-14rem)]">
+<!-- LEFT PANEL: Multi-Column Reading & Deep Synthesis View (Col 1-4) -->
+<section class="xl:col-span-4 bg-surface-container-low flex flex-col p-space-md gap-space-md overflow-y-auto">
+<!-- High Density Tab Strip -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-1 rounded">
+<div class="flex items-center gap-1" id="reader-tabs">
+<button class="px-2.5 py-1 rounded bg-surface-container text-primary font-label-code-xs text-label-code-xs font-semibold" id="tab-btn-abstract" onclick="switchReaderTab('abstract')">Synthesis</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-code-xs text-label-code-xs" id="tab-btn-methods" onclick="switchReaderTab('methods')">Architecture</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-code-xs text-label-code-xs" id="tab-btn-math" onclick="switchReaderTab('math')">Equations</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-code-xs text-label-code-xs" id="tab-btn-benchmarks" onclick="switchReaderTab('benchmarks')">Benchmarks</button>
+</div>
+<div class="flex items-center gap-1 text-outline font-label-code-xs text-label-code-xs">
+<span class="material-symbols-outlined text-xs">auto_read_play</span>
+<span>RAW_PARSED</span>
+</div>
+</div>
+<!-- Tab Content 1: Synthesis & Abstract -->
+<div class="flex flex-col gap-space-md" id="tab-content-abstract">
+<!-- Visual Illustration / Architectural Overview Card -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-primary font-medium">SCHEMATIC: THE TRANSFORMER ENCODER-DECODER</span>
+<span>FIG 1.1</span>
+</div>
+<div class="relative h-44 rounded overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-60" data-alt="High technical dark schematic illustration of Transformer model architecture featuring multi-head attention blocks, residual connections, and positional encodings in glowing neon cyan and slate palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8WsU1596fhNq_EBQ17-ZjJV861EHPQ-7EqJm1Sl2PVGGwHxxsGq7gxoxwc_yj4AxrVLtivvPfXwaXCNCsRDHi5hVIpxNKKQRwP3eVSeNrADDdWRTvLgT1sZVstaFVEkHwpSTuKwHl83oeQsayQtgng2lF4kEph8Pfk7txn121U2nE08f-aqw4oczg1gqwQjm4YflhBj5E39xnNVhU1m38ug16viAke25dw2m7ZN6suFCOT_SzNSj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between font-label-code-xs text-label-code-xs text-on-surface">
+<span class="bg-surface-container/90 px-1.5 py-0.5 rounded text-primary">N=6 Layers</span>
+<span class="bg-surface-container/90 px-1.5 py-0.5 rounded text-secondary">d_model=512</span>
+<span class="bg-surface-container/90 px-1.5 py-0.5 rounded text-tertiary">h=8 Attention Heads</span>
+</div>
+</div>
+</div>
+<!-- Abstract High-Density Reader Card -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">Abstract Canonical Extract</span>
+<span class="font-label-code-xs text-label-code-xs text-secondary">REPLICATION SCORE: 99.8%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed text-justify">
+            The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the <strong class="text-primary font-semibold">Transformer</strong>, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-justify">
+            Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves <strong class="text-secondary font-semibold">28.4 BLEU</strong> on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU.
+          </p>
+</div>
+<!-- Analytical Takeaways Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container rounded p-space-sm flex flex-col gap-1">
+<span class="font-label-code-xs text-label-code-xs text-outline">PARALLELIZATION SPEEDUP</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">12.4x</span>
+<span class="font-label-code-xs text-label-code-xs text-on-surface-variant">vs. ByteNet / ConvS2S</span>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex flex-col gap-1">
+<span class="font-label-code-xs text-label-code-xs text-outline">TRAINING BUDGET</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">3.5 DAYS</span>
+<span class="font-label-code-xs text-label-code-xs text-on-surface-variant">8 × NVIDIA P100 GPUs</span>
+</div>
+</div>
+</div>
+<!-- Tab Content 2: Core Methodology & Equations (Hidden by default, activated via tab) -->
+<div class="hidden flex flex-col gap-space-md" id="tab-content-methods">
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">Mathematical Formalism</span>
+<div class="bg-surface-container-lowest p-space-md rounded font-label-code-md text-label-code-md text-primary flex flex-col gap-2">
+<div class="text-on-surface-variant text-[11px] font-mono">// Scaled Dot-Product Attention:</div>
+<div class="text-secondary font-mono tracking-wide py-1 text-center bg-surface-container/50 rounded">
+              Attention(Q, K, V) = softmax( (Q K^T) / √d_k ) V
+            </div>
+<div class="text-on-surface-variant text-[11px] font-mono pt-1">// Multi-Head Parameter Projection:</div>
+<div class="text-on-surface font-mono tracking-wide py-1 text-center bg-surface-container/50 rounded">
+              MultiHead(Q, K, V) = Concat(head_1, ..., head_h) W^O
+            </div>
+</div>
+<div class="grid grid-cols-3 gap-space-xs font-label-code-xs text-label-code-xs text-on-surface-variant">
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline">KEY DIM (d_k)</span>
+<span class="text-on-surface font-semibold">64</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline">VALUE DIM (d_v)</span>
+<span class="text-on-surface font-semibold">64</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline">HEADS COUNT (h)</span>
+<span class="text-primary font-semibold">8</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">Positional Encodings Formulation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Since the model contains no recurrence, trigonometric sine and cosine functions of different frequencies are injected into input embeddings:
+          </p>
+<div class="bg-surface-container-lowest p-space-sm rounded font-label-code-xs text-label-code-xs text-tertiary font-mono">
+            PE(pos, 2i)   = sin(pos / 10000^(2i / d_model))<br/>
+            PE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))
+          </div>
+</div>
+</div>
+<!-- Tab Content 3: Math (Deep breakdown) -->
+<div class="hidden flex flex-col gap-space-md" id="tab-content-math">
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>COMPLEXITY PER LAYER COMPARISON</span>
+<span class="text-primary">O(n) ANALYSIS</span>
+</div>
+<div class="flex flex-col gap-1 font-label-code-xs text-label-code-xs">
+<div class="flex justify-between items-center p-1.5 bg-surface-container-lowest rounded">
+<span class="text-on-surface font-medium">Self-Attention</span>
+<span class="text-secondary font-mono">O(n² · d)</span>
+<span class="text-outline">O(1) Sequential</span>
+</div>
+<div class="flex justify-between items-center p-1.5 bg-surface-container-lowest rounded">
+<span class="text-on-surface-variant">Recurrent (RNN/LSTM)</span>
+<span class="text-error font-mono">O(n · d²)</span>
+<span class="text-outline">O(n) Sequential</span>
+</div>
+<div class="flex justify-between items-center p-1.5 bg-surface-container-lowest rounded">
+<span class="text-on-surface-variant">Convolutional</span>
+<span class="text-on-surface-variant font-mono">O(k · n · d²)</span>
+<span class="text-outline">O(1) Sequential</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab Content 4: Benchmarks Matrix -->
+<div class="hidden flex flex-col gap-space-md" id="tab-content-benchmarks">
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">WMT 2014 Translation Benchmarks</span>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-label-code-xs text-label-code-xs">
+<thead>
+<tr class="text-outline bg-surface-container-lowest">
+<th class="p-1.5">Model</th>
+<th class="p-1.5">BLEU (En-De)</th>
+<th class="p-1.5">BLEU (En-Fr)</th>
+<th class="p-1.5">FLOPs</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<tr class="bg-primary/10 text-primary font-bold">
+<td class="p-1.5">Transformer (big)</td>
+<td class="p-1.5">28.4</td>
+<td class="p-1.5">41.8</td>
+<td class="p-1.5">2.3 · 10¹⁹</td>
+</tr>
+<tr>
+<td class="p-1.5">Transformer (base)</td>
+<td class="p-1.5">27.3</td>
+<td class="p-1.5">38.1</td>
+<td class="p-1.5">3.3 · 10¹⁸</td>
+</tr>
+<tr class="text-outline">
+<td class="p-1.5">ConvS2S (Gehring et al.)</td>
+<td class="p-1.5">25.16</td>
+<td class="p-1.5">40.46</td>
+<td class="p-1.5">9.6 · 10¹⁸</td>
+</tr>
+<tr class="text-outline">
+<td class="p-1.5">GNMT + RL (Wu et al.)</td>
+<td class="p-1.5">24.60</td>
+<td class="p-1.5">39.92</td>
+<td class="p-1.5">1.5 · 10¹⁹</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Secondary Reading Material Artifacts -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>SOURCE CODE ARCHIVE REPOSITORIES</span>
+<span class="text-primary font-mono">GIT SYNCED</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">deployed_code</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">tensorflow/tensor2tensor</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs text-secondary font-mono">v1.2.0 • 48.2k ★</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">code_blocks</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">huggingface/transformers</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs text-secondary font-mono">main • 138k ★</span>
+</div>
+</div>
+</section>
+<!-- CENTER PANEL: Interactive Citation Influence & Lineage Graph (Col 5-8) -->
+<section class="xl:col-span-5 bg-surface-container flex flex-col relative overflow-hidden">
+<!-- Network Graph Controls & Ribbon Strip -->
+<div class="p-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm z-20 shadow-sm">
+<div class="flex items-center gap-space-sm font-label-code-xs text-label-code-xs">
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>LINEAGE TREE</span>
+</span>
+<span class="text-outline">|</span>
+<label class="flex items-center gap-1 text-on-surface-variant">
+<span>DEPTH:</span>
+<input class="w-16 h-1 accent-primary bg-surface-container-lowest rounded cursor-pointer" max="4" min="1" oninput="document.getElementById('depth-val').innerText = this.value" type="range" value="2"/>
+<span class="text-primary font-mono font-bold" id="depth-val">2</span>
+<span class="text-outline">HOPS</span>
+</label>
+</div>
+<div class="flex items-center gap-1 font-label-code-xs text-label-code-xs">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">filter_alt</span>
+<span>Prune &lt;10k</span>
+</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">center_focus_strong</span>
+<span>Reset View</span>
+</button>
+</div>
+</div>
+<!-- Vector Canvas Area -->
+<div class="relative w-full flex-1 bg-surface-container-lowest min-h-[440px] flex items-center justify-center overflow-hidden" id="network-container">
+<!-- SVG Network Graph Render -->
+<svg class="w-full h-full absolute inset-0 cursor-crosshair select-none" viewbox="0 0 700 520">
+<defs>
+<lineargradient id="edge-bert" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#8ed5ff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"></stop>
+</lineargradient>
+<lineargradient id="edge-gpt" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#8ed5ff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.3"></stop>
+</lineargradient>
+<lineargradient id="edge-vit" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#8ed5ff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#ffc174" stop-opacity="0.3"></stop>
+</lineargradient>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Graph Grid Mesh Background -->
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#131b2e" stroke-width="0.75"></path>
+</pattern>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Network Edges with Directed Pulse Visuals -->
+<g stroke-linecap="round">
+<!-- Root to BERT -->
+<line stroke="url(#edge-bert)" stroke-dasharray="4,2" stroke-width="2.5" x1="350" x2="200" y1="260" y2="150"></line>
+<!-- Root to GPT-2 -->
+<line stroke="url(#edge-gpt)" stroke-width="2.5" x1="350" x2="510" y1="260" y2="140"></line>
+<!-- Root to T5 -->
+<line stroke="#8ed5ff" stroke-opacity="0.4" stroke-width="1.8" x1="350" x2="170" y1="260" y2="380"></line>
+<!-- Root to ViT -->
+<line stroke="url(#edge-vit)" stroke-width="2.2" x1="350" x2="520" y1="260" y2="390"></line>
+<!-- Root to RoBERTa -->
+<line stroke="#8ed5ff" stroke-opacity="0.5" stroke-width="2" x1="350" x2="350" y1="260" y2="90"></line>
+<!-- Second Tier Hop Edges -->
+<line stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.5" x1="200" x2="90" y1="150" y2="90"></line>
+<line stroke="#4edea3" stroke-opacity="0.3" stroke-width="1.5" x1="510" x2="620" y1="140" y2="90"></line>
+<line stroke="#4edea3" stroke-opacity="0.2" stroke-width="1.2" x1="510" x2="630" y1="140" y2="200"></line>
+<line stroke="#ffc174" stroke-opacity="0.25" stroke-width="1.2" x1="520" x2="620" y1="390" y2="460"></line>
+</g>
+<!-- Nodes Interactive Grouping -->
+<!-- CENTER ROOT: Attention Is All You Need -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-105" onclick="inspectNode('Vaswani et al. (2017)', 'Attention Is All You Need', '102,419 citations', 'Root Paradigm Shift', 'Core Attention Layer')">
+<circle cx="350" cy="260" fill="#00354a" filter="url(#glow)" r="32" stroke="#8ed5ff" stroke-width="2.5"></circle>
+<circle cx="350" cy="260" fill="#0b1326" r="26"></circle>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="350" y="258">TRANSFORMER</text>
+<text fill="#dae2fd" font-family="Geist" font-size="8" text-anchor="middle" x="350" y="271">ORIGIN (2017)</text>
+</g>
+<!-- NODE 1: BERT -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-110" onclick="inspectNode('Devlin et al. (2018)', 'BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding', '84,930 citations', 'Encoder Pure-Masked LM', 'Bi-directional Representation')">
+<circle cx="200" cy="150" fill="#171f33" r="22" stroke="#38bdf8" stroke-width="2"></circle>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="200" y="153">BERT</text>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="200" y="184">84.9k cites</text>
+</g>
+<!-- NODE 2: GPT-2 / Autoregressive Line -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-110" onclick="inspectNode('Radford et al. (2019)', 'Language Models are Unsupervised Multitask Learners (GPT-2)', '42,100 citations', 'Decoder-Only Autoregressive', 'Causal Next-Token Gen')">
+<circle cx="510" cy="140" fill="#171f33" r="24" stroke="#4edea3" stroke-width="2"></circle>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="510" y="143">GPT-2</text>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="510" y="174">42.1k cites</text>
+</g>
+<!-- NODE 3: RoBERTa -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-110" onclick="inspectNode('Liu et al. (2019)', 'RoBERTa: A Robustly Optimized BERT Pretraining Approach', '28,300 citations', 'Hyperparam Optimized Masked LM', 'Tuning &amp; Large Batch')">
+<circle cx="350" cy="90" fill="#171f33" r="17" stroke="#8ed5ff" stroke-width="1.5"></circle>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="350" y="93">RoBERTa</text>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle" x="350" y="117">28.3k</text>
+</g>
+<!-- NODE 4: ViT (Vision Transformer) -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-110" onclick="inspectNode('Dosovitskiy et al. (2020)', 'An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale', '36,800 citations', 'Vision Token Patching', 'Spatial Self-Attention')">
+<circle cx="520" cy="390" fill="#171f33" r="21" stroke="#ffc174" stroke-width="2"></circle>
+<text fill="#ffc174" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="520" y="393">ViT</text>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="520" y="422">36.8k cites</text>
+</g>
+<!-- NODE 5: T5 -->
+<g class="cursor-pointer transition-transform duration-200 hover:scale-110" onclick="inspectNode('Raffel et al. (2020)', 'Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer', '24,650 citations', 'Encoder-Decoder Unified Text-to-Text', 'Multi-Task Transfer')">
+<circle cx="170" cy="380" fill="#171f33" r="18" stroke="#bdc8d1" stroke-width="1.5"></circle>
+<text fill="#dae2fd" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="170" y="383">T5</text>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle" x="170" y="408">24.6k</text>
+</g>
+<!-- Hop 2 Nodes -->
+<g class="cursor-pointer" onclick="inspectNode('Devlin et al. / DistilBERT', 'DistilBERT, a distilled version of BERT', '14,200 citations', 'Knowledge Distillation', 'Lightweight 60% faster')">
+<circle cx="90" cy="90" fill="#131b2e" r="12" stroke="#38bdf8" stroke-width="1"></circle>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="90" y="112">DistilBERT</text>
+</g>
+<g class="cursor-pointer" onclick="inspectNode('Brown et al. (2020)', 'Language Models are Few-Shot Learners (GPT-3)', '32,400 citations', 'In-Context Meta Learning', 'Few-Shot Emergence')">
+<circle cx="620" cy="90" fill="#131b2e" r="15" stroke="#4edea3" stroke-width="1.5"></circle>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle" x="620" y="93">GPT-3</text>
+</g>
+<g class="cursor-pointer" onclick="inspectNode('Touvron et al. (2023)', 'LLaMA: Open and Efficient Foundation Language Models', '19,800 citations', 'Open Weight Architecture', 'RMSNorm + SwiGLU')">
+<circle cx="630" cy="200" fill="#131b2e" r="13" stroke="#4edea3" stroke-width="1.2"></circle>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="630" y="222">LLaMA</text>
+</g>
+<g class="cursor-pointer" onclick="inspectNode('He et al. (2022)', 'Masked Autoencoders Are Scalable Vision Learners', '9,500 citations', 'Vision Pretraining', 'Patch Masking')">
+<circle cx="620" cy="460" fill="#131b2e" r="11" stroke="#ffc174" stroke-width="1"></circle>
+<text fill="#87929a" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="620" y="480">MAE</text>
+</g>
+</svg>
+<!-- Node Inspector Floating Hud -->
+<div class="absolute bottom-3 left-3 right-3 bg-surface-container-high/95 backdrop-blur-md p-space-sm rounded border-l-2 border-primary shadow-xl flex flex-col gap-1 transition-all" id="inspector-card">
+<div class="flex items-center justify-between">
+<span class="font-label-code-xs text-label-code-xs text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">radar</span>
+<span id="insp-author">Vaswani et al. (2017)</span>
+</span>
+<span class="font-label-code-xs text-label-code-xs text-secondary font-mono font-bold" id="insp-cites">102,419 citations</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface line-clamp-1 font-medium" id="insp-title">Attention Is All You Need</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code-xs text-label-code-xs text-on-surface-variant" id="insp-paradigm">Core Architectural Lineage :: Original Scaled Attention Foundation</span>
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code-xs text-label-code-xs font-semibold hover:bg-primary-container">Pivot Focus</button>
+</div>
+</div>
+</div>
+<!-- Graph Legend & Filter Footnote -->
+<div class="p-space-xs px-space-md bg-surface-container-low flex flex-wrap items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Encoder Lineage</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Autoregressive Decoder</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Vision/Multimodal</span>
+</div>
+<span class="text-on-surface-variant font-mono">LAYOUT: FORCE-DIRECTED [CONVERGED]</span>
+</div>
+</section>
+<!-- RIGHT PANEL: Citation Intelligence & Telemetry (Col 9-12) -->
+<section class="xl:col-span-3 bg-surface-container-low flex flex-col p-space-md gap-space-md overflow-y-auto">
+<!-- Metric Trajectory Card -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">CITATION VELOCITY</span>
+<span class="font-label-code-xs text-label-code-xs text-secondary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs">trending_up</span> +1,820 / mo
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">102,419</span>
+<span class="font-label-code-xs text-label-code-xs text-outline uppercase">Global Citations</span>
+</div>
+<!-- Inline SVG Sparkline Chart: 2017 to 2024 citation trajectory -->
+<div class="w-full bg-surface-container-lowest p-2 rounded flex flex-col gap-1">
+<div class="flex justify-between items-center text-[9px] font-mono text-outline">
+<span>2017 [0]</span>
+<span class="text-primary">EXPONENTIAL ACCELERATION</span>
+<span>2024 [102.4k]</span>
+</div>
+<svg class="w-full h-14" viewbox="0 0 300 60">
+<path d="M 0 58 Q 50 56 90 52 T 150 42 T 200 24 T 260 10 T 300 2" fill="none" stroke="#4edea3" stroke-width="2.5"></path>
+<path class="text-secondary/10" d="M 0 58 Q 50 56 90 52 T 150 42 T 200 24 T 260 10 T 300 2 L 300 60 L 0 60 Z" fill="currentColor"></path>
+<!-- Anchor points -->
+<circle cx="90" cy="52" fill="#8ed5ff" r="2.5"></circle>
+<circle cx="150" cy="42" fill="#8ed5ff" r="2.5"></circle>
+<circle cx="200" cy="24" fill="#38bdf8" r="3"></circle>
+<circle cx="300" cy="2" fill="#4edea3" r="3.5"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1 font-label-code-xs text-label-code-xs">
+<div class="bg-surface-container-lowest p-1.5 rounded flex flex-col">
+<span class="text-outline">H-INDEX IMPACT</span>
+<span class="text-primary font-bold font-mono">148</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded flex flex-col">
+<span class="text-outline">HIGH-INFLUENCE CITES</span>
+<span class="text-secondary font-bold font-mono">14,290</span>
+</div>
+</div>
+</div>
+<!-- Top Citing Venues Breakdown -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code-xs text-label-code-xs uppercase tracking-wider text-outline">TOP CITING DOMAINS / VENUES</span>
+<span class="font-label-code-xs text-label-code-xs text-outline font-mono">SHARE</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Venue 1: NeurIPS / ICML -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-code-xs text-label-code-xs">
+<span class="text-on-surface font-medium">NeurIPS / ICML (Machine Learning)</span>
+<span class="text-secondary font-mono">31.4%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[31.4%]"></div>
+</div>
+</div>
+<!-- Venue 2: ACL / EMNLP -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-code-xs text-label-code-xs">
+<span class="text-on-surface font-medium">ACL / EMNLP (NLP &amp; Ling.)</span>
+<span class="text-primary font-mono">28.2%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[28.2%]"></div>
+</div>
+</div>
+<!-- Venue 3: CVPR / ICCV -->
+<div class="flex justify-between font-label-code-xs text-label-code-xs">
+<span class="text-on-surface font-medium">CVPR / ICCV (Computer Vision)</span>
+<span class="text-tertiary font-mono">19.5%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[19.5%]"></div>
+</div>
+<!-- Venue 4: IEEE / Nature / Science / Bio -->
+<div class="flex justify-between font-label-code-xs text-label-code-xs">
+<span class="text-on-surface font-medium">Interdisciplinary (Nature/Science)</span>
+<span class="text-on-surface-variant font-mono">12.1%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full w-[12.1%]"></div>
+</div>
+</div>
+</div>
+<!-- Archival Integrity Provenance Card -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>ARCHIVAL PROVENANCE RECORD</span>
+<span class="text-secondary flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> IMMUTABLE
+          </span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-code-xs text-label-code-xs text-outline">
+<span>SHA-256 MANUSCRIPT DIGEST:</span>
+<button class="text-primary hover:underline" onclick="navigator.clipboard.writeText('e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'); alert('SHA-256 Provenance Hash copied.');">COPY</button>
+</div>
+<span class="font-label-code-xs text-label-code-xs text-on-surface-variant font-mono break-all">
+            e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+          </span>
+</div>
+<div class="flex items-center justify-between text-[10px] font-label-code-xs text-outline pt-1">
+<span>OPENALEX ID: W2963403868</span>
+<span>S2 CORPUS ID: 13756489</span>
+</div>
+</div>
+<!-- Terminal BibTeX Code Console with Quick-Copy -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs shadow-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-code-xs text-label-code-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-xs">terminal</span>
+<span>BIBTEX TELETYPE</span>
+</div>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-code-xs text-label-code-xs flex items-center gap-1 transition-colors" onclick="copyBibtex()">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+<span>Copy Raw</span>
+</button>
+</div>
+<pre class="bg-surface-container-lowest p-space-sm rounded font-label-code-xs text-label-code-xs text-on-surface font-mono overflow-x-auto whitespace-pre leading-snug select-all text-[10.5px]" id="bibtex-console">@article{vaswani2017attention,
+  author    = {Ashish Vaswani and
+               Noam Shazeer and
+               Niki Parmar and
+               Jakob Uszkoreit and
+               Llion Jones and
+               Aidan N. Gomez and
+               {\L}ukasz Kaiser and
+               Illia Polosukhin},
+  title     = {Attention is All You Need},
+  journal   = {Advances in Neural Information
+               Processing Systems (NeurIPS)},
+  volume    = {30},
+  year      = {2017},
+  url       = {https://arxiv.org/abs/1706.03762},
+  archivePrefix = {arXiv},
+  eprint    = {1706.03762}
+}</pre>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Tab switcher for reading synthesis
+  function switchReaderTab(tabId) {
+    const tabs = ['abstract', 'methods', 'math', 'benchmarks'];
+    tabs.forEach(t => {
+      const contentEl = document.getElementById('tab-content-' + t);
+      const btnEl = document.getElementById('tab-btn-' + t);
+      if (t === tabId) {
+        contentEl.classList.remove('hidden');
+        btnEl.classList.add('bg-surface-container', 'text-primary', 'font-semibold');
+        btnEl.classList.remove('text-on-surface-variant');
+      } else {
+        contentEl.classList.add('hidden');
+        btnEl.classList.remove('bg-surface-container', 'text-primary', 'font-semibold');
+        btnEl.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  // Node Inspector updating on network click
+  function inspectNode(author, title, cites, paradigm, notes) {
+    document.getElementById('insp-author').innerText = author;
+    document.getElementById('insp-title').innerText = title;
+    document.getElementById('insp-cites').innerText = cites;
+    document.getElementById('insp-paradigm').innerText = paradigm + ' :: ' + notes;
+
+    // Quick micro visual feedback
+    const hud = document.getElementById('inspector-card');
+    hud.classList.add('scale-[1.01]', 'border-secondary');
+    setTimeout(() => {
+      hud.classList.remove('scale-[1.01]', 'border-secondary');
+    }, 200);
+  }
+
+  // Fast BibTeX copy handler
+  function copyBibtex() {
+    const code = document.getElementById('bibtex-console').innerText;
+    navigator.clipboard.writeText(code);
+    alert('BibTeX record copied to clipboard!');
+  }
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-surface-container-lowest border-t border-outline-variant/30 z-50 flex items-center justify-between px-space-md font-label-code-xs text-label-code-xs text-on-surface-variant"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="text-outline">KEYS:</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">j/k</kbd><span class="text-on-surface">nav</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">enter</kbd><span class="text-on-surface">open</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">c</kbd><span class="text-on-surface">cite</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">b</kbd><span class="text-on-surface">bibtex</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">space</kbd><span class="text-on-surface">preview</span></div></div><div class="flex items-center gap-space-md"><span class="hidden sm:inline text-outline">INDEX: <span class="text-secondary">SYNCED</span></span><span class="text-outline">NODE: <span class="text-primary">US-EAST-CORPUS</span></span><span class="text-outline">MEM: <span class="text-on-surface">3.2 / 16 GB</span></span><div class="w-2 h-2 rounded-full bg-secondary"></div></div></footer></body></html>

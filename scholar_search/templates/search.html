@@ -1,195 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarly Search</title>
-    {% load static %}
-    <style>
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: url('{% static 'images/image.jpg' %}') no-repeat center fixed;
-            background-size: cover;
-        }
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .top-right-links {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            display: flex;
-            gap: 10px; /* Add spacing between buttons */
-        }
-        /* Button Styling */
-        .btn-31,
-        .btn-31 *,
-        .btn-31 :after,
-        .btn-31 :before,
-        .btn-31:after,
-        .btn-31:before {
-            border: 0 solid;
-            box-sizing: border-box;
-        }
-
-        .btn-31 {
-            -webkit-tap-highlight-color: transparent;
-            -webkit-appearance: button;
-            background-color: #000;
-            color: #fff;
-            cursor: pointer;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            font-size: 100%;
-            font-weight: 900;
-            line-height: 1.5;
-            margin: 0;
-            padding: 1rem 2rem;
-            position: relative;
-            text-transform: uppercase;
-        }
-
-        .btn-31:before {
-            --progress: 100%;
-            background: #fff;
-            -webkit-clip-path: polygon(
-                100% 0,
-                var(--progress) var(--progress),
-                0 100%,
-                100% 100%
-            );
-            clip-path: polygon(
-                100% 0,
-                var(--progress) var(--progress),
-                0 100%,
-                100% 100%
-            );
-            content: "";
-            inset: 0;
-            position: absolute;
-            transition: -webkit-clip-path 0.2s ease;
-            transition: clip-path 0.2s ease;
-        }
-
-        .btn-31:hover:before {
-            --progress: 0%;
-        }
-
-        .btn-31 .text-container {
-            display: block;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .btn-31 .text {
-            display: block;
-            font-weight: 900;
-            mix-blend-mode: difference;
-            position: relative;
-        }
-
-        .btn-31:hover .text {
-            -webkit-animation: move-up-alternate 0.3s ease forwards;
-            animation: move-up-alternate 0.3s ease forwards;
-        }
-
-        .btn-link {
-            color: white; /* Default color */
-            text-decoration: none; /* Remove underline */
-            transition: color 0.2s ease; /* Smooth transition */
-        }
-
-        .btn-31:hover .btn-link {
-            color: black; /* Change text color on hover */
-        }
-
-        @-webkit-keyframes move-up-alternate {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(80%);
-            }
-
-            51% {
-                transform: translateY(-80%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes move-up-alternate {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(80%);
-            }
-
-            51% {
-                transform: translateY(-80%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Profile and Logout Buttons -->
-    <div class="top-right-links">
-        {% if request.session.username %}
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'profile' %}", class="btn-link">Profile</a>
-                </span>
-            </button>
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'logout' %}", class="btn-link">Log Out</a>
-                </span>
-            </button>
-        {% else %}
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'signup' %}", class="btn-link">Sign Up</a>
-                </span>
-            </button>
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'login' %}", class="btn-link">Login</a>
-                </span>
-            </button>
-        {% endif %}
-    </div>
-
-    <!-- Scholarly Search Content -->
-    <div class="container">
-        <h1>Scholarly Search</h1>
-        <form method="post" action="/search/">
-            {% csrf_token %}
-            <input type="text" name="query" placeholder="Query Sentence">
-            <input type="submit" value="Search">
-        </form>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}{% block content %}
+<section class="command-deck"><div class="page-heading"><div><p class="eyebrow">YOUR RESEARCH, IN FOCUS</p>
+<h1>Discovery workspace<span class="heading-dot">.</span></h1>
+</div>
+<span class="workspace-label"><svg class="icon"><use href="#i-grid"/></svg> WORKSPACE / 01</span></div>
+{% include '_search_form.html' %}<div class="query-hints"><span>START WITH</span><a href="{% url 'resps' %}?q=attention+mechanisms">attention mechanisms</a><a href="{% url 'resps' %}?q=large+language+models">large language models</a><a href="{% url 'resps' %}?q=graph+neural+networks">graph neural networks</a><span class="query-hint-end">TITLE &middot; ABSTRACT &middot; AUTHOR</span></div>
+</section>
+<nav class="field-tabs" aria-label="Research fields"><a href="{% url 'resps' %}?q=computer+science"><span>01</span> Computer science <svg class="icon"><use href="#i-arrow"/></svg></a><a href="{% url 'resps' %}?q=machine+learning"><span>02</span> Machine learning</a><a href="{% url 'resps' %}?q=quantum+physics"><span>03</span> Quantum physics</a><a href="{% url 'resps' %}?q=mathematics"><span>04</span> Mathematics</a></nav>
+<div class="dashboard-grid">
+<aside class="corpus-column"><section class="panel"><header class="panel-heading"><h2><svg class="icon"><use href="#i-chart"/></svg>Collection overview</h2>
+<span class="live-label">INDEXED</span></header>
+<div class="panel-body"><p class="eyebrow">PAPERS IN THE CORPUS</p>
+<p class="big-number">{{ corpus.total }}</p>
+<div class="index-line"></div>
+<dl class="data-list"><div><dt>Source</dt><dd>arXiv</dd></div>
+<div><dt>Coverage</dt><dd>{{ corpus.earliest|date:'Y'|default:'--' }} &mdash; {{ corpus.latest|date:'Y'|default:'--' }}</dd></div>
+<div><dt>Access</dt><dd class="green">Public search</dd></div>
+</dl><div class="chart-heading">PUBLICATION ACTIVITY <span>BY YEAR</span></div>
+<div class="year-chart" role="group" aria-label="Browse papers by publication year">{% for item in year_distribution %}<a href="{% url 'resps' %}?year={{ item.year }}&amp;year_mode=exact&amp;sort=newest" class="year-bar" style="--bar-height:{{ item.height }}%" title="{{ item.year }}: {{ item.count }} papers" aria-label="Browse {{ item.count }} papers published in {{ item.year }}"></a>{% empty %}<p class="muted">No publication data yet.</p>
+{% endfor %}</div>
+<div class="chart-axis"><span>{{ year_distribution.0.year }}</span><span>PUBLICATION YEAR</span><span>{{ corpus.latest|date:'Y' }}</span></div>
+</div>
+</section>
+<section class="panel"><header class="panel-heading"><h2>Search capabilities</h2>
+</header>
+<div class="capability"><span class="capability-icon">Tt</span><div><strong>Beyond the title</strong><p>Match titles, abstracts, and authors in one query.</p>
+</div>
+</div>
+<div class="capability"><svg class="icon"><use href="#i-search"/></svg><div><strong>Ranked for relevance</strong><p>Find distinctive terms, with extra weight on title matches.</p>
+</div>
+</div>
+<div class="capability"><svg class="icon"><use href="#i-clock"/></svg><div><strong>Find your time frame</strong><p>Filter by year or explore the newest publications.</p>
+</div>
+</div>
+</section>
+</aside>
+<section class="discovery-stream"><header class="panel-heading feed-heading"><h2><svg class="icon"><use href="#i-terminal"/></svg>Latest in the collection</h2>
+<span class="badge cyan-badge">{{ recent_papers|length }} RECORDS</span></header>
+<div class="stream-list">{% for paper in recent_papers %}{% include '_paper_card.html' %}{% empty %}<div class="empty-state"><h2>The collection is ready for papers.</h2>
+<p>Import the corpus to start exploring research.</p>
+</div>
+{% endfor %}</div>
+<div class="feed-footer"><span>SORTED BY PUBLICATION DATE</span><a href="{% url 'resps' %}">Open deep query &rarr;</a></div>
+</section>
+<aside class="insights-column"><section class="panel"><header class="panel-heading"><h2><span class="amber">&target;</span> Research starting points</h2>
+</header>
+<a class="topic-card" href="{% url 'resps' %}?q=transformer+attention"><span class="eyebrow cyan">01 / ARTIFICIAL INTELLIGENCE</span><h3>Understanding attention</h3><p>Transformers, sequence modeling, and the architectures behind them.</p>
+<span class="topic-card-link">Explore papers &nearr;</span></a><a class="topic-card" href="{% url 'resps' %}?q=quantum+computing"><span class="eyebrow green">02 / COMPUTATION</span><h3>Beyond classical computing</h3><p>Quantum systems, new algorithms, and computational possibilities.</p>
+<span class="topic-card-link">Explore papers &nearr;</span></a><a class="topic-card" href="{% url 'resps' %}?q=information+retrieval"><span class="eyebrow amber">03 / INFORMATION SCIENCE</span><h3>The science of finding</h3><p>Retrieval, relevance, and connecting questions with information.</p>
+<span class="topic-card-link">Explore papers &nearr;</span></a></section>
+<section class="panel library-callout"><svg class="icon"><use href="#i-library"/></svg><h3>Build your reading list.</h3><p>Keep promising papers together. Pick up where your curiosity left off.</p>
+<a class="button secondary wide" href="{% url 'library' %}">Open my library <span>&rarr;</span></a></section>
+<div class="workspace-footnote">BUILT FOR CURIOUS MINDS.<br>CS547 / INFORMATION RETRIEVAL</div>
+</aside>
+</div>
+{% endblock %}

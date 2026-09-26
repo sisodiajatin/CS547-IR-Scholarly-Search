@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'tertiary-container': '#f59e0b', 'on-secondary-fixed-variant': '#005236', 'on-primary-fixed': '#001e2c', 'secondary-container': '#00a572', 'on-surface': '#dae2fd', 'on-secondary-container': '#00311f', 'primary': '#8ed5ff', 'background': '#0b1326', 'error-container': '#93000a', 'surface-bright': '#31394d', 'surface-container-high': '#222a3d', 'primary-fixed-dim': '#7bd0ff', 'surface-container-highest': '#2d3449', 'on-primary': '#00354a', 'on-error-container': '#ffdad6', 'surface-container-low': '#131b2e', 'inverse-surface': '#dae2fd', 'inverse-primary': '#00668a', 'on-tertiary': '#472a00', 'on-secondary-fixed': '#002113', 'outline': '#87929a', 'surface-variant': '#2d3449', 'on-surface-variant': '#bdc8d1', 'on-background': '#dae2fd', 'tertiary': '#ffc174', 'on-primary-fixed-variant': '#004c69', 'secondary': '#4edea3', 'primary-container': '#38bdf8', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#ffb95f', 'surface': '#0b1326', 'outline-variant': '#3e484f', 'inverse-on-surface': '#283044', 'on-primary-container': '#004965', 'on-tertiary-container': '#613b00', 'on-tertiary-fixed-variant': '#653e00', 'surface-container-lowest': '#060e20', 'secondary-fixed': '#6ffbbe', 'surface-tint': '#7bd0ff', 'tertiary-fixed': '#ffddb8', 'primary-fixed': '#c4e7ff', 'secondary-fixed-dim': '#4edea3', 'on-tertiary-fixed': '#2a1700', 'on-secondary': '#003824', 'surface-container': '#171f33', 'on-error': '#690005', 'surface-dim': '#0b1326' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-md': '0.5rem', 'space-sm': '0.25rem', 'margin': '0.75rem', 'gutter': '0.5rem', 'space-xs': '0.125rem', 'space-lg': '0.75rem', 'space-xl': '1rem' }, fontFamily: { 'body-sm': ['Geist'], 'headline-lg': ['Geist'], 'label-kbd': ['JetBrains Mono'], 'headline-md': ['Geist'], 'label-code-sm': ['JetBrains Mono'], 'label-code-md': ['JetBrains Mono'], 'label-code-xs': ['JetBrains Mono'], 'body-md': ['Geist'], 'body-lg': ['Geist'], 'headline-xl': ['Geist'] }, fontSize: { 'body-sm': ['11px', { lineHeight: '14px', fontWeight: '400' }], 'headline-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.015em', fontWeight: '600' }], 'label-kbd': ['9.5px', { lineHeight: '10px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-md': ['14px', { lineHeight: '18px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-code-sm': ['11px', { lineHeight: '13px', letterSpacing: '-0.005em', fontWeight: '500' }], 'label-code-md': ['12px', { lineHeight: '14px', letterSpacing: '-0.01em', fontWeight: '500' }], 'label-code-xs': ['10px', { lineHeight: '12px', fontWeight: '500' }], 'body-md': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'body-lg': ['13px', { lineHeight: '18px', letterSpacing: '-0.005em', fontWeight: '400' }], 'headline-xl': ['24px', { lineHeight: '30px', letterSpacing: '-0.02em', fontWeight: '600' }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-surface-container-lowest border-b border-outline-variant/30 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="ScholarPulse academic logo emblem featuring a stylized open manuscript book combined with subtle neural/pulse node network, deep navy and academic cobalt blue SVG.. Brand logo. - Primary color: #1e40af
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V2UaK7Eh3yKCTn4x70GRSNPjGIx-IH69rS0_cgaOy3RqLesCcd2B5VRTMAPRTllAOBuh-DAQfv_X4_RPkLJyf5aHDgPtZqCZwtN8zZBkou8003W7f3n0Ip2xP4ConWXVSIQFScps98ILmc6j51MO2OUhwrTLgu4LCGSBAYMlx94j_Ztc086mG3mBLjsn14rG0Sdco9xZvsGN18OBFivko3CHtnCusXsFbqTNMK_oIm1YzZOdsfEZnnk4M"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase">ScholarPulse</span><span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-primary-container/20 text-primary border border-primary/30 font-semibold">TERMINAL</span></div><span class="font-label-code-xs text-label-code-xs text-outline">POWER-RESEARCH v4.9</span></div></div><div class="h-6 w-[1px] bg-outline-variant/40 hidden md:block"></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-highest text-primary border-b-2 border-primary font-medium"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="terminal-workspace" href="#">Terminal</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="deep-search" href="#">Search</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="influence-graph" href="#">Influence Graph</a><a aria-current="page" class="px-space-md py-1.5 rounded-t transition-colors bg-surface-container-highest text-primary border-b-2 border-primary font-medium" data-path="my-library" href="#">My Library</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-t transition-colors" data-path="citation-alerts" href="#">Alerts</a></nav></div><div class="hidden xl:flex items-center bg-surface-container-low border border-outline-variant/40 rounded px-space-md py-1 w-96 justify-between text-outline cursor-pointer hover:border-primary/50 transition-colors"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-sm text-outline">terminal</span><span class="font-body-sm text-body-sm text-on-surface-variant">Global Corpus / DOI / Author Query...</span></div><div class="flex items-center gap-space-xs"><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant">⌘K</kbd><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant">/</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs font-label-code-xs text-label-code-xs px-2 py-1 rounded bg-surface-container-low border border-outline-variant/30 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-semibold text-on-surface">12ms</span><span class="text-outline">|</span><span class="text-on-surface-variant">240.8M DOCS</span></div><div class="hidden md:flex items-center gap-space-xs font-label-code-xs text-label-code-xs px-2 py-1 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-xs text-primary">sync_alt</span><span class="text-on-surface">Zotero/arXiv</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><div class="flex items-center pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AEtjO1U3GHoIAhlUVnXGCvp7wtMhlkvv_KaaLzw9mxS8IM1-ZhfV5bBH53wl9GNhHWljtcR0lGEdC4fy85Oan2l3bTA5yAdOIA06crFPxx-QWzux1s3ZLtj1vlKGe7AN2ieCz1RaA_GwIprc4_qaDXTzI-GhNbqMalvNXJeSO_SjPDLwvL5qFXFig8b7tfMEM3T0fxkH1aQs6cQOQMFX8xiWcYq4gnGfPnTRKDZFvpioNSItAJn6PCi230V4hzU"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div></div></div></header><aside class="fixed left-0 top-14 bottom-7 w-60 bg-surface-container-lowest border-r border-outline-variant/30 flex flex-col justify-between py-space-md z-40"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-md py-space-xs flex items-center justify-between text-outline font-label-code-xs text-label-code-xs uppercase tracking-wider"><span>Corpus Views</span><kbd class="font-label-kbd text-label-kbd bg-surface-container px-1 rounded border border-outline-variant/30">[</kbd></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="terminal-workspace" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">code_blocks</span><span>Workspace</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g w</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="deep-search" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">manage_search</span><span>Deep Query</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g p</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="influence-graph" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">hub</span><span>Influence Graph</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g i</kbd></a><a aria-current="page" class="flex items-center justify-between px-space-md py-1.5 rounded transition-colors bg-surface-container-high text-primary font-semibold" data-path="my-library" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">folder_special</span><span>My Library</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g l</kbd></a><a class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="citation-alerts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">notifications_active</span><span>Citation Feeds</span></div><kbd class="font-label-kbd text-label-kbd text-outline">g a</kbd></a></nav><div class="h-[1px] bg-outline-variant/30 my-space-xs mx-space-sm"></div><div class="px-space-md py-space-xs text-outline font-label-code-xs text-label-code-xs uppercase tracking-wider"><span>Active Clusters</span></div><div class="flex flex-col gap-0.5"><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Transformer Efficiency</span><span class="font-label-code-xs text-label-code-xs text-outline">1.4k</span></div><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Protein Folding LLMs</span><span class="font-label-code-xs text-label-code-xs text-outline">842</span></div><div class="flex items-center justify-between px-space-md py-1 rounded text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container cursor-pointer"><span class="truncate">Quantum Error Corr.</span><span class="font-label-code-xs text-label-code-xs text-outline">291</span></div></div></div><div class="px-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs"><span>ENGINE LATENCY</span><span class="text-secondary font-semibold">11.8 ms</span></div><div class="w-full bg-surface-container h-1 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[24%]"></div></div><div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs pt-1"><span>MEM REPOSITORY</span><span class="text-on-surface-variant">412 MB</span></div></div></aside><div class="pl-60"><main class="w-full pt-14 pb-7 min-h-screen bg-background"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- Top Global Researcher Context & Performance Monospace Ribbon -->
+<div class="w-full bg-surface-container-lowest px-space-md py-space-xs flex flex-wrap items-center justify-between gap-y-space-xs border-b border-outline-variant/30">
+<div class="flex flex-wrap items-center gap-space-md font-label-code-xs text-label-code-xs">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-semibold text-primary">WORKSPACE // DR. ELENA ROSTOVA</span>
+<span class="text-outline">::</span>
+<span class="text-on-surface-variant">INSTITUTION: MIT CSAIL</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs text-outline">
+<span>COLLECTION DENSITY:</span>
+<span class="text-secondary font-semibold">HIGH (88.4%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg font-label-code-xs text-label-code-xs">
+<div class="flex items-center gap-space-xs">
+<span class="text-outline">SYNC CHANNEL:</span>
+<span class="text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">cloud_done</span> Zotero &amp; Overleaf (4m ago)
+        </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-primary cursor-pointer hover:bg-surface-container-high" onclick="toggleHelpModal()">?</kbd>
+<span class="text-outline">SHORTCUTS</span>
+</div>
+</div>
+</div>
+<!-- Primary Stats KPI Strip -->
+<div class="w-full bg-surface-container-low px-space-md py-space-sm border-b border-outline-variant/30 grid grid-cols-2 md:grid-cols-5 gap-space-sm">
+<div class="flex flex-col bg-surface-container-lowest px-space-md py-space-xs rounded border border-outline-variant/20">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>SAVED PAPERS</span>
+<span class="material-symbols-outlined text-xs text-primary">menu_book</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">48</span>
+<span class="font-label-code-xs text-label-code-xs text-secondary">+4 this wk</span>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container-lowest px-space-md py-space-xs rounded border border-outline-variant/20">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>ACTIVE ALERTS</span>
+<span class="material-symbols-outlined text-xs text-tertiary">notifications_active</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-lg text-headline-lg text-tertiary font-semibold">6</span>
+<span class="font-label-code-xs text-label-code-xs text-on-surface-variant">2 pending</span>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container-lowest px-space-md py-space-xs rounded border border-outline-variant/20">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>CUSTOM LISTS</span>
+<span class="material-symbols-outlined text-xs text-primary-container">folder_special</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">14</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">across 3 grants</span>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container-lowest px-space-md py-space-xs rounded border border-outline-variant/20">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>WEEKLY VELOCITY</span>
+<span class="material-symbols-outlined text-xs text-secondary">trending_up</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-lg text-headline-lg text-secondary font-semibold">9 Papers</span>
+<span class="font-label-code-xs text-label-code-xs text-secondary">(+3 vs prev)</span>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col justify-center bg-surface-container-lowest px-space-md py-space-xs rounded border border-outline-variant/20">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>PIPELINE READINESS</span>
+<span class="text-primary font-semibold">82%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-1.5">
+<div class="bg-gradient-to-r from-primary to-secondary h-full w-[82%]"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-code-xs text-label-code-xs mt-1">
+<span>NSF-2025: 13 / 15 cited</span>
+</div>
+</div>
+</div>
+<!-- 3-Pane High-Density Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 w-full min-h-[calc(100vh-148px)] bg-background">
+<!-- Left Column: Collapsible Collection Tree & Smart Folders (Cols: 3) -->
+<section class="lg:col-span-3 border-r border-outline-variant/30 bg-surface-container-lowest flex flex-col justify-between overflow-y-auto">
+<div class="flex flex-col p-space-sm gap-space-sm">
+<!-- Tree Header & Quick Actions -->
+<div class="flex items-center justify-between px-space-sm py-space-xs border-b border-outline-variant/20">
+<span class="font-label-code-xs text-label-code-xs text-outline uppercase tracking-wider">Collections Directory</span>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-primary transition-colors" title="New List">
+<span class="material-symbols-outlined text-sm">create_new_folder</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-primary transition-colors" title="Filter Collections">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Directory-Style Hierarchy -->
+<div class="flex flex-col gap-0.5" id="collection-tree">
+<div class="flex items-center justify-between px-space-md py-1.5 rounded bg-surface-container-high text-primary cursor-pointer font-body-sm text-body-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base">library_books</span>
+<span class="font-semibold truncate">All Saved Manuscripts</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-bold">48</span>
+</div>
+<div class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer font-body-sm text-body-sm group transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base text-secondary">neurology</span>
+<span class="truncate">Transformer Architectures</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-surface-container text-outline">18</span>
+</div>
+<div class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer font-body-sm text-body-sm group transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base text-tertiary">blur_on</span>
+<span class="truncate">Diffusion Models</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-surface-container text-outline">12</span>
+</div>
+<div class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer font-body-sm text-body-sm group transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base text-error">mark_email_unread</span>
+<span class="truncate font-medium text-on-surface">Reading Queue</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-error-container/30 text-error font-semibold">5 unread</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer font-body-sm text-body-sm group transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base text-primary">verified_user</span>
+<span class="truncate font-semibold text-primary">Grant Proposal NSF-2025</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold">13</span>
+</div>
+<div class="flex items-center justify-between px-space-md py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer font-body-sm text-body-sm group transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-base text-outline">archive</span>
+<span class="truncate">Archived Syntheses</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-surface-container text-outline">89</span>
+</div>
+</div>
+<!-- Section Hairline -->
+<div class="h-[1px] bg-outline-variant/30 my-space-xs"></div>
+<!-- Smart Research Tags Cloud -->
+<div class="flex flex-col gap-space-xs px-space-xs">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs uppercase tracking-wider">
+<span>Semantic Tags</span>
+<span class="text-outline-variant text-[9px]">[Auto-Clustered]</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-secondary font-label-code-xs text-label-code-xs transition-colors">
+<span>#nlp</span>
+<span class="text-outline text-[9px]">(24)</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high border border-primary/40 text-primary font-label-code-xs text-label-code-xs">
+<span>#self-attention</span>
+<span class="text-primary-fixed-dim text-[9px]">(19)</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-tertiary font-label-code-xs text-label-code-xs transition-colors">
+<span>#interpretability</span>
+<span class="text-outline text-[9px]">(11)</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface-variant font-label-code-xs text-label-code-xs transition-colors">
+<span>#flash-attn</span>
+<span class="text-outline text-[9px]">(8)</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface-variant font-label-code-xs text-label-code-xs transition-colors">
+<span>#state-space</span>
+<span class="text-outline text-[9px]">(7)</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface-variant font-label-code-xs text-label-code-xs transition-colors">
+<span>#quantization</span>
+<span class="text-outline text-[9px]">(14)</span>
+</button>
+</div>
+</div>
+<!-- Annotation Activity Sparkline Widget -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>SYNTHESIS RATE (30D)</span>
+<span class="text-secondary font-semibold">41 notes written</span>
+</div>
+<svg class="w-full h-8 text-primary overflow-visible" fill="none" stroke="currentColor" viewbox="0 0 100 24">
+<path class="stroke-primary" d="M0 18 L12 16 L24 20 L36 10 L48 14 L60 6 L72 12 L84 4 L100 8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M0 18 L12 16 L24 20 L36 10 L48 14 L60 6 L72 12 L84 4 L100 8 L100 24 L0 24 Z" fill="currentColor" fill-opacity="0.08" stroke="none"></path>
+</svg>
+</div>
+</div>
+<!-- Left Sidebar Bottom Hardware/Storage Profile -->
+<div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest font-label-code-xs text-label-code-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span>LOCAL REPO STATUS</span>
+<span class="text-secondary font-semibold">ALL CLEAN</span>
+</div>
+<div class="text-outline truncate">ZOTERO DB: /Volumes/SSD-Research/zotero.sqlite</div>
+</div>
+</section>
+<!-- Center Column: High-Density Reading List with In-Line Markdown Notes (Cols: 5) -->
+<section class="lg:col-span-5 border-r border-outline-variant/30 bg-surface flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col h-full overflow-y-auto pb-16">
+<!-- Control Bar & Search Filter -->
+<div class="sticky top-0 z-20 bg-surface-container-lowest px-space-md py-space-xs border-b border-outline-variant/30 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-1">
+<span class="material-symbols-outlined text-sm text-outline">search</span>
+<input class="w-full bg-transparent border-none text-on-surface font-body-sm text-body-sm focus:outline-none placeholder-outline" placeholder="Filter title, author, or inline note... [ / ]" type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code-xs text-label-code-xs text-outline hidden sm:inline">SORT:</span>
+<select class="bg-surface-container border border-outline-variant/40 rounded px-1.5 py-0.5 text-on-surface font-label-code-xs text-label-code-xs focus:outline-none">
+<option>Added (Newest)</option>
+<option>Citations (Highest)</option>
+<option>Unread First</option>
+<option>Elena's Star Rating</option>
+</select>
+</div>
+</div>
+<!-- High-Density Paper Item Rows -->
+<div class="flex flex-col divide-y divide-outline-variant/20" id="paper-list">
+<!-- Paper Item 1: Active Highlighted State -->
+<article class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer border-l-2 border-primary" onclick="selectPaper(0)">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 cursor-pointer" onclick="event.stopPropagation(); toggleCheck(this)" type="checkbox"/>
+<div class="flex flex-col gap-1 w-full min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-secondary-container/20 text-secondary border border-secondary/30 font-semibold">READ</span>
+<span class="font-label-code-xs text-label-code-xs text-tertiary">arXiv:2307.08691</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">·</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">JMLR 2024</span>
+</div>
+<div class="flex items-center text-tertiary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold leading-tight">
+                  FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Tri Dao (Stanford / Together AI) · Cited by 1,842 · Published Jul 2023
+                </p>
+<!-- Elena's Markdown In-Line Working Note -->
+<div class="mt-1 p-space-sm rounded bg-surface-container-low border border-primary/20 flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">edit_note</span> ELENA'S WORKING NOTE: Section 3 derivation
+                    </span>
+<span class="text-outline">Edited 2h ago [e]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                    "Equation 4 rescales the softmax denominator online without storing $O(N^2)$ activations to HBM. Need to benchmark backward pass overhead against Triton custom kernel for our NSF benchmark testbed."
+                  </p>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#flash-attn</span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#self-attention</span>
+<span class="px-1 py-0.5 rounded bg-primary/10 text-primary font-label-code-xs text-label-code-xs">NSF-2025</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Paper Item 2 -->
+<article class="p-space-md hover:bg-surface-container-high transition-colors cursor-pointer border-l-2 border-transparent" onclick="selectPaper(1)">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 cursor-pointer" onclick="event.stopPropagation(); toggleCheck(this)" type="checkbox"/>
+<div class="flex flex-col gap-1 w-full min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary border border-tertiary/30 font-semibold">IN-PROGRESS</span>
+<span class="font-label-code-xs text-label-code-xs text-tertiary">arXiv:2312.00752</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">·</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">ICLR 2024 (Oral)</span>
+</div>
+<div class="flex items-center text-tertiary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline">star</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold leading-tight">
+                  Mamba: Linear-Time Sequence Modeling with Selective State Spaces
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Albert Gu, Tri Dao (Carnegie Mellon &amp; Princeton) · Cited by 1,120 · Dec 2023
+                </p>
+<!-- Elena's Markdown In-Line Working Note -->
+<div class="mt-1 p-space-sm rounded bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">edit_note</span> ELENA'S WORKING NOTE: Hardware associative scan
+                    </span>
+<span class="text-outline">Edited yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                    "Selective mechanism replaces time-invariant $B, C$ matrices with input-dependent mappings. Crucial for token copying tasks. Validate if hybrid Transformer-Mamba block fits Section 2 of proposal."
+                  </p>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#state-space</span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#linear-complexity</span>
+<span class="px-1 py-0.5 rounded bg-primary/10 text-primary font-label-code-xs text-label-code-xs">NSF-2025</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Paper Item 3 -->
+<article class="p-space-md hover:bg-surface-container-high transition-colors cursor-pointer border-l-2 border-transparent" onclick="selectPaper(2)">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 cursor-pointer" onclick="event.stopPropagation(); toggleCheck(this)" type="checkbox"/>
+<div class="flex flex-col gap-1 w-full min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.5 rounded bg-error-container/20 text-error border border-error/30 font-semibold">UNREAD</span>
+<span class="font-label-code-xs text-label-code-xs text-tertiary">arXiv:2404.19756</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">·</span>
+<span class="font-label-code-xs text-label-code-xs text-outline">NeurIPS 2024 Sub</span>
+</div>
+<div class="flex items-center text-tertiary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline">star</span>
+<span class="material-symbols-outlined text-sm text-outline">star</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold leading-tight">
+                  Scalable MatMul-free Language Modeling via Ternary Weights
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Rui-Jie Zhu, Yu Zhang et al. (UC Santa Cruz) · Cited by 148 · Apr 2024
+                </p>
+<!-- Elena's Note Placeholder -->
+<div class="mt-1 p-space-sm rounded bg-surface-container-low border border-dashed border-outline-variant/30 flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span>No inline synthesis yet. Hit [E] to begin scratchpad entry...</span>
+<span class="text-primary font-semibold hover:underline">Add Note</span>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#quantization</span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-outline font-label-code-xs text-label-code-xs">#ternary</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Multi-Select Floating Batch Action Dock -->
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-highest/95 backdrop-blur border border-primary/40 rounded p-space-sm flex items-center justify-between gap-space-sm shadow-xl z-30" id="batch-dock">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-code-xs text-label-code-xs font-bold text-on-surface" id="selected-counter">3 Selected</span>
+</div>
+<div class="flex items-center gap-1 flex-wrap">
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-primary text-on-primary font-label-code-xs text-label-code-xs font-semibold hover:brightness-110 transition-all" onclick="copyBibTeX()">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+<span>Export BibTeX</span>
+<kbd class="font-label-kbd text-label-kbd bg-on-primary/20 text-on-primary px-1 rounded">⌘E</kbd>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-on-surface font-label-code-xs text-label-code-xs hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-xs">drive_file_move</span>
+<span>Move</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-secondary font-label-code-xs text-label-code-xs hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-xs">send</span>
+<span>To Overleaf</span>
+</button>
+<button class="p-1 rounded bg-surface-container border border-outline-variant/40 text-error hover:bg-error-container/30 transition-colors" title="Delete from list">
+<span class="material-symbols-outlined text-xs">delete</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Column: Split Citation Alerts & Live BibTeX Inspector (Cols: 4) -->
+<section class="lg:col-span-4 bg-surface-container-lowest flex flex-col justify-between overflow-y-auto">
+<!-- Top Card: Live Citation Feeds with Diffs -->
+<div class="flex flex-col border-b border-outline-variant/30">
+<div class="p-space-md border-b border-outline-variant/20 flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-tertiary">bolt</span>
+<span class="font-label-code-xs text-label-code-xs text-on-surface uppercase tracking-wider font-semibold">Live Citation Radar</span>
+</div>
+<span class="font-label-code-xs text-label-code-xs px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary border border-tertiary/40">2 New Diffs</span>
+</div>
+<div class="p-space-sm flex flex-col gap-space-sm divide-y divide-outline-variant/20">
+<!-- Citation Alert 1 -->
+<div class="pt-space-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-tertiary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> PREPRINT MENTION
+              </span>
+<span>2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Scalable Transformer Attention (Chen et al.)</span> cited your target paper:
+            </p>
+<!-- Diff Box -->
+<div class="bg-surface-container-lowest p-space-xs rounded border border-outline-variant/30 font-label-code-xs text-label-code-xs text-on-surface-variant flex flex-col gap-0.5">
+<div class="text-error bg-error-container/10 px-1 py-0.5 rounded line-through">- "Prior standard multihead schemes rely on quadratic KV caches..."</div>
+<div class="text-secondary bg-secondary-container/10 px-1 py-0.5 rounded">+ "...leveraging Dao's FlashAttention-2 tiling principles to constrain SRAM traffic."</div>
+</div>
+</div>
+<!-- Citation Alert 2 -->
+<div class="pt-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-secondary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> JOURNAL ACCEPTED
+              </span>
+<span>5h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Dao FlashAttention-2</span> accepted into <span class="text-on-surface font-medium">Journal of Machine Learning Research (JMLR)</span>.
+            </p>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-code-xs text-label-code-xs px-1 rounded bg-surface-container text-outline">Vol. 25, Issue 84</span>
+<a class="font-label-code-xs text-label-code-xs text-primary hover:underline" href="#">Update Local Zotero DOI</a>
+</div>
+</div>
+<!-- Citation Alert 3 -->
+<div class="pt-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline font-label-code-xs text-label-code-xs">
+<span class="text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> REPOSITORY UPDATE
+              </span>
+<span>Yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Code release detected for <span class="text-on-surface">Mamba SSM (v1.2.0)</span>: CUDA scan memory leak fixed on H100 SXM5.
+            </p>
+</div>
+</div>
+</div>
+<!-- Bottom Card: Real-Time BibTeX / APA / IEEE Inspector -->
+<div class="flex flex-col flex-1 bg-surface-container-lowest">
+<!-- Inspector Header Bar -->
+<div class="p-space-md border-b border-outline-variant/20 flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">code</span>
+<span class="font-label-code-xs text-label-code-xs text-on-surface uppercase tracking-wider font-semibold">Citation Inspector</span>
+</div>
+<!-- Format Switcher Pill -->
+<div class="flex items-center bg-surface-container rounded p-0.5 border border-outline-variant/40">
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code-xs text-label-code-xs font-semibold">BibTeX</button>
+<button class="px-2 py-0.5 rounded text-outline hover:text-on-surface font-label-code-xs text-label-code-xs">APA 7</button>
+<button class="px-2 py-0.5 rounded text-outline hover:text-on-surface font-label-code-xs text-label-code-xs">IEEE</button>
+</div>
+</div>
+<!-- Syntax-Highlighted BibTeX Editor / Inspector -->
+<div class="p-space-md flex flex-col gap-space-xs font-label-code-xs text-label-code-xs flex-1 bg-surface-container-lowest text-on-surface overflow-x-auto relative">
+<div class="flex items-center justify-between text-outline pb-1 border-b border-outline-variant/20">
+<span>TARGET: @article{dao2023flashattention2}</span>
+<span class="text-secondary">UTF-8 SYNTAX VALID</span>
+</div>
+<pre class="font-label-code-sm text-label-code-sm leading-relaxed text-on-surface mt-1 overflow-x-auto" id="bibtex-block"><span class="text-primary font-bold">@article</span>{<span class="text-tertiary">dao2023flashattention2</span>,
+  <span class="text-primary-container">title</span>     = {<span class="text-secondary">FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning</span>},
+  <span class="text-primary-container">author</span>    = {<span class="text-on-surface">Dao, Tri</span>},
+  <span class="text-primary-container">journal</span>   = {<span class="text-on-surface">Journal of Machine Learning Research</span>},
+  <span class="text-primary-container">year</span>      = {<span class="text-tertiary">2023</span>},
+  <span class="text-primary-container">eprint</span>    = {<span class="text-secondary">2307.08691</span>},
+  <span class="text-primary-container">archivePrefix</span> = {<span class="text-outline">arXiv</span>},
+  <span class="text-primary-container">primaryClass</span>  = {<span class="text-outline">cs.LG</span>},
+  <span class="text-primary-container">doi</span>       = {<span class="text-secondary">10.48550/arXiv.2307.08691</span>}
+}</pre>
+</div>
+<!-- Copy Citation Trigger Action Footer -->
+<div class="p-space-sm bg-surface-container-low border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1 text-outline font-label-code-xs text-label-code-xs">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+<span>Overleaf Linked: NSF-Proposal.tex</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1 rounded bg-surface-container border border-primary/40 text-primary font-label-code-xs text-label-code-xs font-semibold hover:bg-primary hover:text-on-primary transition-colors" id="copy-btn" onclick="copyBibTeX()">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+<span>Copy Citation</span>
+<kbd class="font-label-kbd text-label-kbd bg-surface-container-lowest text-on-surface border border-outline-variant/50 px-1 rounded">⌘C</kbd>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Command Shortcut Modal Helper (Initially Hidden) -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-md" id="shortcuts-modal" onclick="toggleHelpModal()">
+<div class="w-full max-w-md bg-surface-container-low border border-outline-variant/40 rounded p-space-md shadow-2xl" onclick="event.stopPropagation()">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/20">
+<div class="flex items-center gap-space-xs font-headline-md text-headline-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-base">keyboard</span>
+<span>Elena's Terminal Keybindings</span>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="toggleHelpModal()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm py-space-md font-label-code-xs text-label-code-xs">
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">j / k</span>
+<span class="text-on-surface font-semibold">Next / Prev Paper</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">e</span>
+<span class="text-on-surface font-semibold">Edit Active Note</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">b / ⌘C</span>
+<span class="text-on-surface font-semibold">Copy BibTeX</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">x</span>
+<span class="text-on-surface font-semibold">Toggle Select</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">Focus Deep Filter</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<span class="text-outline">?</span>
+<span class="text-on-surface font-semibold">Toggle This Cheat</span>
+</div>
+</div>
+<div class="text-center font-label-code-xs text-label-code-xs text-outline border-t border-outline-variant/20 pt-space-xs">
+        Press <kbd class="font-label-kbd text-label-kbd bg-surface-container px-1 py-0.5 rounded border border-outline-variant text-on-surface">ESC</kbd> or click outside to dismiss.
+      </div>
+</div>
+</div>
+<!-- In-Line Micro-Interaction Scripting -->
+<script>
+    const bibtexEntries = [
+      `@article{dao2023flashattention2,
+  title     = {FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning},
+  author    = {Dao, Tri},
+  journal   = {Journal of Machine Learning Research},
+  year      = {2023},
+  eprint    = {2307.08691},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi       = {10.48550/arXiv.2307.08691}
+}`,
+      `@article{gu2023mamba,
+  title     = {Mamba: Linear-Time Sequence Modeling with Selective State Spaces},
+  author    = {Gu, Albert and Dao, Tri},
+  journal   = {arXiv preprint arXiv:2312.00752},
+  year      = {2023}
+}`,
+      `@article{zhu2024matmulfree,
+  title     = {Scalable MatMul-free Language Modeling},
+  author    = {Zhu, Rui-Jie and Zhang, Yu and Sanyal, Sarthak and Duke, Ash},
+  journal   = {arXiv preprint arXiv:2404.19756},
+  year      = {2024}
+}`
+    ];
+
+    let currentPaperIdx = 0;
+
+    function selectPaper(index) {
+      currentPaperIdx = index;
+      const rows = document.querySelectorAll('#paper-list article');
+      rows.forEach((row, i) => {
+        if(i === index) {
+          row.classList.add('bg-surface-container', 'border-primary');
+          row.classList.remove('border-transparent');
+        } else {
+          row.classList.remove('bg-surface-container', 'border-primary');
+          row.classList.add('border-transparent');
+        }
+      });
+
+      const bibBlock = document.getElementById('bibtex-block');
+      if (bibBlock && bibtexEntries[index]) {
+        bibBlock.textContent = bibtexEntries[index];
+      }
+    }
+
+    function toggleCheck(checkbox) {
+      const allCheckboxes = document.querySelectorAll('#paper-list input[type="checkbox"]');
+      let count = 0;
+      allCheckboxes.forEach(cb => { if(cb.checked) count++; });
+
+      const counter = document.getElementById('selected-counter');
+      const dock = document.getElementById('batch-dock');
+      if(counter) counter.textContent = `${count} Selected`;
+
+      if(dock) {
+        if(count === 0) {
+          dock.classList.add('opacity-40', 'pointer-events-none');
+        } else {
+          dock.classList.remove('opacity-40', 'pointer-events-none');
+        }
+      }
+    }
+
+    function copyBibTeX() {
+      const bibBlock = document.getElementById('bibtex-block');
+      if(bibBlock) {
+        navigator.clipboard.writeText(bibBlock.textContent);
+        const btn = document.getElementById('copy-btn');
+        if(btn) {
+          const original = btn.innerHTML;
+          btn.innerHTML = `<span class="material-symbols-outlined text-xs text-secondary">check</span><span class="text-secondary font-bold">Copied!</span>`;
+          setTimeout(() => { btn.innerHTML = original; }, 1600);
+        }
+      }
+    }
+
+    function toggleHelpModal() {
+      const modal = document.getElementById('shortcuts-modal');
+      if(modal) {
+        modal.classList.toggle('hidden');
+      }
+    }
+
+    // Global Terminal Keyboard Shortcuts (j/k navigation, b bibtex, ? help)
+    window.addEventListener('keydown', (e) => {
+      // Don't intercept when user is typing in input fields
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.key === 'j') {
+        const rows = document.querySelectorAll('#paper-list article');
+        if (currentPaperIdx < rows.length - 1) {
+          selectPaper(currentPaperIdx + 1);
+        }
+      } else if (e.key === 'k') {
+        if (currentPaperIdx > 0) {
+          selectPaper(currentPaperIdx - 1);
+        }
+      } else if (e.key === 'b') {
+        copyBibTeX();
+      } else if (e.key === '?') {
+        toggleHelpModal();
+      } else if (e.key === 'Escape') {
+        const modal = document.getElementById('shortcuts-modal');
+        if(modal && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-surface-container-lowest border-t border-outline-variant/30 z-50 flex items-center justify-between px-space-md font-label-code-xs text-label-code-xs text-on-surface-variant"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="text-outline">KEYS:</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">j/k</kbd><span class="text-on-surface">nav</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">enter</kbd><span class="text-on-surface">open</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">c</kbd><span class="text-on-surface">cite</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">b</kbd><span class="text-on-surface">bibtex</span><kbd class="font-label-kbd text-label-kbd px-1 py-0.5 rounded bg-surface-container border border-outline-variant text-on-surface">space</kbd><span class="text-on-surface">preview</span></div></div><div class="flex items-center gap-space-md"><span class="hidden sm:inline text-outline">INDEX: <span class="text-secondary">SYNCED</span></span><span class="text-outline">NODE: <span class="text-primary">US-EAST-CORPUS</span></span><span class="text-outline">MEM: <span class="text-on-surface">3.2 / 16 GB</span></span><div class="w-2 h-2 rounded-full bg-secondary"></div></div></footer></body></html>

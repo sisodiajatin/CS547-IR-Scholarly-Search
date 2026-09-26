@@ -1,0 +1,1529 @@
+﻿"query_id","query","intent","paper_url","title","authors","abstract","grade","reviewer","notes"
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2208.11625v1","PromptFL: Let Federated Participants Cooperatively Learn Prompts Instead
+  of Models -- Federated Learning in Age of Foundation Model","Tao Guo, Song Guo, Junxiao Wang, Wenchao Xu","  Quick global aggregation of effective distributed parameters is crucial to
+federated learning (FL), which requires adequate bandwidth for parameters
+communication and sufficient user data for local training. Otherwise, FL may
+cost excessive training time for convergence and produce inaccurate models. In
+this paper, we propose a brand-new FL framework, PromptFL, that replaces the
+federated model training with the federated prompt training, i.e., let
+federated participants train prompts instead of a shared model, to
+simultaneously achieve the efficient global aggregation and local training on
+insufficient data by exploiting the power of foundation models (FM) in a
+distributed way. PromptFL ships an off-the-shelf FM, i.e., CLIP, to distributed
+clients who would cooperatively train shared soft prompts based on very few
+local data. Since PromptFL only needs to update the prompts instead of the
+whole model, both the local training and the global aggregation can be
+significantly accelerated. And FM trained over large scale data can provide
+strong adaptation capability to distributed users tasks with the trained soft
+prompts. We empirically analyze the PromptFL via extensive experiments, and
+show its superiority in terms of system feasibility, user privacy, and
+performance.
+","2","AI: Codex (2026-09-24; title/abstract review)","Learns shared prompts collaboratively over local client data without centralizing raw datasets."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2108.02117v2","FedJAX: Federated learning simulation with JAX","Jae Hun Ro, Ananda Theertha Suresh, Ke Wu","  Federated learning is a machine learning technique that enables training
+across decentralized data. Recently, federated learning has become an active
+area of research due to an increased focus on privacy and security. In light of
+this, a variety of open source federated learning libraries have been developed
+and released. We introduce FedJAX, a JAX-based open source library for
+federated learning simulations that emphasizes ease-of-use in research. With
+its simple primitives for implementing federated learning algorithms,
+prepackaged datasets, models and algorithms, and fast simulation speed, FedJAX
+aims to make developing and evaluating federated algorithms faster and easier
+for researchers. Our benchmark results show that FedJAX can be used to train
+models with federated averaging on the EMNIST dataset in a few minutes and the
+Stack Overflow dataset in roughly an hour with standard hyperparameters using
+TPUs.
+","1","AI: Codex (2026-09-24; title/abstract review)","Provides simulation tools for implementing federated algorithms rather than a new collaborative training method."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2202.00195v2","Federated Active Learning (F-AL): an Efficient Annotation Strategy for
+  Federated Learning","Jin-Hyun Ahn, Kyungsang Kim, Jeongwan Koh, Quanzheng Li","  Federated learning (FL) has been intensively investigated in terms of
+communication efficiency, privacy, and fairness. However, efficient annotation,
+which is a pain point in real-world FL applications, is less studied. In this
+project, we propose to apply active learning (AL) and sampling strategy into
+the FL framework to reduce the annotation workload. We expect that the AL and
+FL can improve the performance of each other complementarily. In our proposed
+federated active learning (F-AL) method, the clients collaboratively implement
+the AL to obtain the instances which are considered as informative to FL in a
+distributed optimization manner. We compare the test accuracies of the global
+FL models using the conventional random sampling strategy, client-level
+separate AL (S-AL), and the proposed F-AL. We empirically demonstrate that the
+F-AL outperforms baseline methods in image classification tasks.
+","2","AI: Codex (2026-09-24; title/abstract review)","Collaboratively selects informative local examples to improve federated model training."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2202.03070v1","Addressing modern and practical challenges in machine learning: A survey
+  of online federated and transfer learning","Shuang Dai, Fanlin Meng","  Online federated learning (OFL) and online transfer learning (OTL) are two
+collaborative paradigms for overcoming modern machine learning challenges such
+as data silos, streaming data, and data security. This survey explored OFL and
+OTL throughout their major evolutionary routes to enhance understanding of
+online federated and transfer learning. Besides, practical aspects of popular
+datasets and cutting-edge applications for online federated and transfer
+learning are highlighted in this work. Furthermore, this survey provides
+insight into potential future research areas and aims to serve as a resource
+for professionals developing online federated and transfer learning frameworks.
+","2","AI: Codex (2026-09-24; title/abstract review)","Surveys online federated learning methods and their treatment of data silos."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2003.09603v2","Dynamic Sampling and Selective Masking for Communication-Efficient
+  Federated Learning","Shaoxiong Ji, Wenqi Jiang, Anwar Walid, Xue Li","  Federated learning (FL) is a novel machine learning setting that enables
+on-device intelligence via decentralized training and federated optimization.
+Deep neural networks' rapid development facilitates the learning techniques for
+modeling complex problems and emerges into federated deep learning under the
+federated setting. However, the tremendous amount of model parameters burdens
+the communication network with a high load of transportation. This paper
+introduces two approaches for improving communication efficiency by dynamic
+sampling and top-$k$ selective masking. The former controls the fraction of
+selected client models dynamically, while the latter selects parameters with
+top-$k$ largest values of difference for federated updating. Experiments on
+convolutional image classification and recurrent language modeling are
+conducted on three public datasets to show our proposed methods' effectiveness.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops client sampling and parameter masking for communication-efficient federated training."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2207.10751v2","Federated Learning on Adaptively Weighted Nodes by Bilevel Optimization","Yankun Huang, Qihang Lin, Nick Street, Stephen Baek","  We propose a federated learning method with weighted nodes in which the
+weights can be modified to optimize the model's performance on a separate
+validation set. The problem is formulated as a bilevel optimization where the
+inner problem is a federated learning problem with weighted nodes and the outer
+problem focuses on optimizing the weights based on the validation performance
+of the model returned from the inner problem. A communication-efficient
+federated optimization algorithm is designed to solve this bilevel optimization
+problem. Under an error-bound assumption, we analyze the generalization
+performance of the output model and identify scenarios when our method is in
+theory superior to training a model only locally and to federated learning with
+static and evenly distributed weights.
+","2","AI: Codex (2026-09-24; title/abstract review)","Optimizes client weights through bilevel federated optimization."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2205.14236v1","FedControl: When Control Theory Meets Federated Learning","Adnan Ben Mansour, Gaia Carenini, Alexandre Duplessis, David Naccache","  To date, the most popular federated learning algorithms use coordinate-wise
+averaging of the model parameters. We depart from this approach by
+differentiating client contributions according to the performance of local
+learning and its evolution. The technique is inspired from control theory and
+its classification performance is evaluated extensively in IID framework and
+compared with FedAvg.
+","2","AI: Codex (2026-09-24; title/abstract review)","Changes federated aggregation according to local learning performance using control-theory ideas."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2202.09155v1","PerFED-GAN: Personalized Federated Learning via Generative Adversarial
+  Networks","Xingjian Cao, Gang Sun, Hongfang Yu, Mohsen Guizani","  Federated learning is gaining popularity as a distributed machine learning
+method that can be used to deploy AI-dependent IoT applications while
+protecting client data privacy and security. Due to the differences of clients,
+a single global model may not perform well on all clients, so the personalized
+federated learning method, which trains a personalized model for each client
+that better suits its individual needs, becomes a research hotspot. Most
+personalized federated learning research, however, focuses on data
+heterogeneity while ignoring the need for model architecture heterogeneity.
+Most existing federated learning methods uniformly set the model architecture
+of all clients participating in federated learning, which is inconvenient for
+each client's individual model and local data distribution requirements, and
+also increases the risk of client model leakage. This paper proposes a
+federated learning method based on co-training and generative adversarial
+networks(GANs) that allows each client to design its own model to participate
+in federated learning training independently without sharing any model
+architecture or parameter information with other clients or a center. In our
+experiments, the proposed method outperforms the existing methods in mean test
+accuracy by 42% when the client's model architecture and data distribution vary
+significantly.
+","2","AI: Codex (2026-09-24; title/abstract review)","Enables heterogeneous clients to collaborate through generative co-training without sharing model parameters."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2206.13190v1","An Empirical Study of Personalized Federated Learning","Koji Matsuda, Yuya Sasaki, Chuan Xiao, Makoto Onizuka","  Federated learning is a distributed machine learning approach in which a
+single server and multiple clients collaboratively build machine learning
+models without sharing datasets on clients. A challenging issue of federated
+learning is data heterogeneity (i.e., data distributions may differ across
+clients). To cope with this issue, numerous federated learning methods aim at
+personalized federated learning and build optimized models for clients. Whereas
+existing studies empirically evaluated their own methods, the experimental
+settings (e.g., comparison methods, datasets, and client setting) in these
+studies differ from each other, and it is unclear which personalized federate
+learning method achieves the best performance and how much progress can be made
+by using these methods instead of standard (i.e., non-personalized) federated
+learning. In this paper, we benchmark the performance of existing personalized
+federated learning through comprehensive experiments to evaluate the
+characteristics of each method. Our experimental study shows that (1) there are
+no champion methods, (2) large data heterogeneity often leads to high accurate
+predictions, and (3) standard federated learning methods (e.g. FedAvg) with
+fine-tuning often outperform personalized federated learning methods. We open
+our benchmark tool FedBench for researchers to conduct experimental studies
+with various experimental settings.
+","2","AI: Codex (2026-09-24; title/abstract review)","Compares personalized and standard federated training methods across heterogeneous clients."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2206.03436v3","A Benchmark for Federated Hetero-Task Learning","Liuyi Yao, Dawei Gao, Zhen Wang, Yuexiang Xie, Weirui Kuang, Daoyuan Chen, Haohui Wang, Chenhe Dong, Bolin Ding, Yaliang Li","  To investigate the heterogeneity in federated learning in real-world
+scenarios, we generalize the classic federated learning to federated
+hetero-task learning, which emphasizes the inconsistency across the
+participants in federated learning in terms of both data distribution and
+learning tasks. We also present B-FHTL, a federated hetero-task learning
+benchmark consisting of simulation dataset, FL protocols and a unified
+evaluation mechanism. B-FHTL dataset contains three well-designed federated
+learning tasks with increasing heterogeneity. Each task simulates the clients
+with different non-IID data and learning tasks. To ensure fair comparison among
+different FL algorithms, B-FHTL builds in a full suite of FL protocols by
+providing high-level APIs to avoid privacy leakage, and presets most common
+evaluation metrics spanning across different learning tasks, such as
+regression, classification, text generation and etc. Furthermore, we compare
+the FL algorithms in fields of federated multi-task learning, federated
+personalization and federated meta learning within B-FHTL, and highlight the
+influence of heterogeneity and difficulties of federated hetero-task learning.
+Our benchmark, including the federated dataset, protocols, the evaluation
+mechanism and the preliminary experiment, is open-sourced at
+https://github.com/alibaba/FederatedScope/tree/master/benchmark/B-FHTL
+","1","AI: Codex (2026-09-24; title/abstract review)","Provides tasks and evaluation protocols for heterogeneous federated learning; primarily benchmark infrastructure."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2110.15318v3","Communication-Efficient ADMM-based Federated Learning","Shenglong Zhou, Geoffrey Ye Li","  Federated learning has shown its advances over the last few years but is
+facing many challenges, such as how algorithms save communication resources,
+how they reduce computational costs, and whether they converge. To address
+these issues, this paper proposes exact and inexact ADMM-based federated
+learning. They are not only communication-efficient but also converge linearly
+under very mild conditions, such as convexity-free and irrelevance to data
+distributions. Moreover, the inexact version has low computational complexity,
+thereby alleviating the computational burdens significantly.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops exact and inexact ADMM algorithms for communication-efficient federated training."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2106.10874v1","FedCM: Federated Learning with Client-level Momentum","Jing Xu, Sen Wang, Liwei Wang, Andrew Chi-Chih Yao","  Federated Learning is a distributed machine learning approach which enables
+model training without data sharing. In this paper, we propose a new federated
+learning algorithm, Federated Averaging with Client-level Momentum (FedCM), to
+tackle problems of partial participation and client heterogeneity in real-world
+federated learning applications. FedCM aggregates global gradient information
+in previous communication rounds and modifies client gradient descent with a
+momentum-like term, which can effectively correct the bias and improve the
+stability of local SGD. We provide theoretical analysis to highlight the
+benefits of FedCM. We also perform extensive empirical studies and demonstrate
+that FedCM achieves superior performance in various tasks and is robust to
+different levels of client numbers, participation rate and client
+heterogeneity.
+","2","AI: Codex (2026-09-24; title/abstract review)","Uses client-level momentum to improve federated averaging under partial participation."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2111.08649v1","FedCostWAvg: A new averaging for better Federated Learning","Leon Mächler, Ivan Ezhov, Florian Kofler, Suprosanna Shit, Johannes C. Paetzold, Timo Loehr, Benedikt Wiestler, Bjoern Menze","  We propose a simple new aggregation strategy for federated learning that won
+the MICCAI Federated Tumor Segmentation Challenge 2021 (FETS), the first ever
+challenge on Federated Learning in the Machine Learning community. Our method
+addresses the problem of how to aggregate multiple models that were trained on
+different data sets. Conceptually, we propose a new way to choose the weights
+when averaging the different models, thereby extending the current state of the
+art (FedAvg). Empirical validation demonstrates that our approach reaches a
+notable improvement in segmentation performance compared to FedAvg.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops model aggregation weights and tests federated tumor segmentation."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2202.09472v1","FedEmbed: Personalized Private Federated Learning","Andrew Silva, Katherine Metcalf, Nicholas Apostoloff, Barry-John Theobald","  Federated learning enables the deployment of machine learning to problems for
+which centralized data collection is impractical. Adding differential privacy
+guarantees bounds on privacy while data are contributed to a global model.
+Adding personalization to federated learning introduces new challenges as we
+must account for preferences of individual users, where a data sample could
+have conflicting labels because one sub-population of users might view an input
+positively, but other sub-populations view the same input negatively. We
+present FedEmbed, a new approach to private federated learning for
+personalizing a global model that uses (1) sub-populations of similar users,
+and (2) personal embeddings. We demonstrate that current approaches to
+federated learning are inadequate for handling data with conflicting labels,
+and we show that FedEmbed achieves up to 45% improvement over baseline
+approaches to personalized private federated learning.
+","2","AI: Codex (2026-09-24; title/abstract review)","Combines personalization and differential privacy in collaborative federated training."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2110.12292v1","Federated Multiple Label Hashing (FedMLH): Communication Efficient
+  Federated Learning on Extreme Classification Tasks","Zhenwei Dai, Chen Dun, Yuxin Tang, Anastasios Kyrillidis, Anshumali Shrivastava","  Federated learning enables many local devices to train a deep learning model
+jointly without sharing the local data. Currently, most of federated training
+schemes learns a global model by averaging the parameters of local models.
+However, most of these training schemes suffer from high communication cost
+resulted from transmitting full local model parameters. Moreover, directly
+averaging model parameters leads to a significant performance degradation, due
+to the class-imbalanced non-iid data on different devices. Especially for the
+real life federated learning tasks involving extreme classification, (1)
+communication becomes the main bottleneck since the model size increases
+proportionally to the number of output classes; (2) extreme classification
+(such as user recommendation) normally have extremely imbalanced classes and
+heterogeneous data on different devices. To overcome this problem, we propose
+federated multiple label hashing (FedMLH), which leverages label hashing to
+simultaneously reduce the model size (up to 3.40X decrease) with communication
+cost (up to 18.75X decrease) and achieves significant better accuracy (up to
+35.5%} relative accuracy improvement) and faster convergence rate (up to 5.5X
+increase) for free on the federated extreme classification tasks compared to
+federated average algorithm.
+","2","AI: Codex (2026-09-24; title/abstract review)","Uses label hashing to improve federated extreme-classification training without sharing local data."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2201.07316v1","Towards Federated Clustering: A Federated Fuzzy $c$-Means Algorithm
+  (FFCM)","Morris Stallmann, Anna Wilbik","  Federated Learning (FL) is a setting where multiple parties with distributed
+data collaborate in training a joint Machine Learning (ML) model while keeping
+all data local at the parties. Federated clustering is an area of research
+within FL that is concerned with grouping together data that is globally
+similar while keeping all data local. We describe how this area of research can
+be of interest in itself, or how it helps addressing issues like
+non-independently-identically-distributed (i.i.d.) data in supervised FL
+frameworks. The focus of this work, however, is an extension of the federated
+fuzzy $c$-means algorithm to the FL setting (FFCM) as a contribution towards
+federated clustering. We propose two methods to calculate global cluster
+centers and evaluate their behaviour through challenging numerical experiments.
+We observe that one of the methods is able to identify good global clusters
+even in challenging scenarios, but also acknowledge that many challenges remain
+open.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops federated fuzzy clustering while keeping data local to participants."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2011.06803v1","Federated Learning System without Model Sharing through Integration of
+  Dimensional Reduced Data Representations","Anna Bogdanova, Akie Nakai, Yukihiko Okada, Akira Imakura, Tetsuya Sakurai","  Dimensionality Reduction is a commonly used element in a machine learning
+pipeline that helps to extract important features from high-dimensional data.
+In this work, we explore an alternative federated learning system that enables
+integration of dimensionality reduced representations of distributed data prior
+to a supervised learning task, thus avoiding model sharing among the parties.
+We compare the performance of this approach on image classification tasks to
+three alternative frameworks: centralized machine learning, individual machine
+learning, and Federated Averaging, and analyze potential use cases for a
+federated learning system without model sharing. Our results show that our
+approach can achieve similar accuracy as Federated Averaging and performs
+better than Federated Averaging in a small-user setting.
+","2","AI: Codex (2026-09-24; title/abstract review)","Shares reduced representations rather than raw datasets for collaborative supervised learning."
+"M01","federated learning","Find methods for collaboratively training models without centralizing clients' raw data.","http://arxiv.org/abs/2010.14159v1","Federated Learning From Big Data Over Networks","Y. Sarcheshmehpour, M. Leinonen, A. Jung","  This paper formulates and studies a novel algorithm for federated learning
+from large collections of local datasets. This algorithm capitalizes on an
+intrinsic network structure that relates the local datasets via an undirected
+""empirical"" graph. We model such big data over networks using a networked
+linear regression model. Each local dataset has individual regression weights.
+The weights of close-knit sub-collections of local datasets are enforced to
+deviate only little. This lends naturally to a network Lasso problem which we
+solve using a primal-dual method. We obtain a distributed federated learning
+algorithm via a message passing implementation of this primal-dual method. We
+provide a detailed analysis of the statistical and computational properties of
+the resulting federated learning algorithm.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops distributed regression training over related local datasets through message passing."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2208.00598v1","A Real-time Edge-AI System for Reef Surveys","Yang Li, Jiajun Liu, Brano Kusy, Ross Marchant, Brendan Do, Torsten Merz, Joey Crosswell, Andy Steven, Lachlan Tychsen-Smith, David Ahmedt-Aristizabal, Jeremy Oorloff, Peyman Moghadam, Russ Babcock, Megha Malpani, Ard Oerlemans","  Crown-of-Thorn Starfish (COTS) outbreaks are a major cause of coral loss on
+the Great Barrier Reef (GBR) and substantial surveillance and control programs
+are ongoing to manage COTS populations to ecologically sustainable levels. In
+this paper, we present a comprehensive real-time machine learning-based
+underwater data collection and curation system on edge devices for COTS
+monitoring. In particular, we leverage the power of deep learning-based object
+detection techniques, and propose a resource-efficient COTS detector that
+performs detection inferences on the edge device to assist marine experts with
+COTS identification during the data collection phase. The preliminary results
+show that several strategies for improving computational efficiency (e.g.,
+batch-wise processing, frame skipping, model input size) can be combined to run
+the proposed detection model on edge hardware with low resource consumption and
+low information loss.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops an underwater visual object detector for crown-of-thorns starfish on edge hardware."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2112.13755v1","Self-supervision of wearable sensors time-series data for influenza
+  detection","Arinbjörn Kolbeinsson, Piyusha Gade, Raghu Kainkaryam, Filip Jankovic, Luca Foschini","  Self-supervision may boost model performance in downstream tasks. However,
+there is no principled way of selecting the self-supervised objectives that
+yield the most adaptable models. Here, we study this problem on daily
+time-series data generated from wearable sensors used to detect onset of
+influenza-like illness (ILI). We first show that using self-supervised learning
+to predict next-day time-series values allows us to learn rich representations
+which can be adapted to perform accurate ILI prediction. Second, we perform an
+empirical analysis of three different self-supervised objectives to assess
+their adaptability to ILI prediction. Our results show that predicting the next
+day's resting heart rate or time-in-bed during sleep provides better
+representations for ILI prediction. These findings add to previous work
+demonstrating the practical application of self-supervised learning from
+activity data to improve health predictions.
+","0","AI: Codex (2026-09-24; title/abstract review)","Detects influenza from wearable time series, not objects in images or video."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2209.11785v3","Tiered Pruning for Efficient Differentialble Inference-Aware Neural
+  Architecture Search","Sławomir Kierat, Mateusz Sieniawski, Denys Fridman, Chen-Han Yu, Szymon Migacz, Paweł Morkisz, Alex-Fit Florea","  We propose three novel pruning techniques to improve the cost and results of
+inference-aware Differentiable Neural Architecture Search (DNAS). First, we
+introduce Prunode, a stochastic bi-path building block for DNAS, which can
+search over inner hidden dimensions with O(1) memory and compute complexity.
+Second, we present an algorithm for pruning blocks within a stochastic layer of
+the SuperNet during the search. Third, we describe a novel technique for
+pruning unnecessary stochastic layers during the search. The optimized models
+resulting from the search are called PruNet and establishes a new
+state-of-the-art Pareto frontier for NVIDIA V100 in terms of inference latency
+for ImageNet Top-1 image classification accuracy. PruNet as a backbone also
+outperforms GPUNet and EfficientNet on the COCO object detection task on
+inference latency relative to mean Average Precision (mAP).
+","1","AI: Codex (2026-09-24; title/abstract review)","Optimizes generic network backbones and evaluates object detection as one application."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2005.10640v1","DETECT: A Hierarchical Clustering Algorithm for Behavioural Trends in
+  Temporal Educational Data","Jessica McBroom, Kalina Yacef, Irena Koprinska","  Techniques for clustering student behaviour offer many opportunities to
+improve educational outcomes by providing insight into student learning.
+However, one important aspect of student behaviour, namely its evolution over
+time, can often be challenging to identify using existing methods. This is
+because the objective functions used by these methods do not explicitly aim to
+find cluster trends in time, so these trends may not be clearly represented in
+the results. This paper presents `DETECT' (Detection of Educational Trends
+Elicited by Clustering Time-series data), a novel divisive hierarchical
+clustering algorithm that incorporates temporal information into its objective
+function to prioritise the detection of behavioural trends. The resulting
+clusters are similar in structure to a decision tree, with a hierarchy of
+clusters defined by decision rules on features. DETECT is easy to apply, highly
+customisable, applicable to a wide range of educational datasets and yields
+easily interpretable results. Through a case study of two online programming
+courses (N>600), this paper demonstrates two example applications of DETECT: 1)
+to identify how cohort behaviour develops over time and 2) to identify student
+behaviours that characterise exercises where many students give up.
+","0","AI: Codex (2026-09-24; title/abstract review)","Detects educational behavior trends through time-series clustering, not visual objects."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2204.11220v1","Graph Neural Network-based Early Bearing Fault Detection","Xusheng Du, Jiong Yu","  Early detection of faults is of importance to avoid catastrophic accidents
+and ensure safe operation of machinery. A novel graph neural network-based
+fault detection method is proposed to build a bridge between AI and real-world
+running mechanical systems. First, the vibration signals, which are Euclidean
+structured data, are converted into graph (non-Euclidean structured data), so
+that the vibration signals, which are originally independent of each other, are
+correlated with each other. Second, inputs the dataset together with its
+corresponding graph into the GNN for training, which contains graphs in each
+hidden layer of the network, enabling the graph neural network to learn the
+feature values of itself and its neighbors, and the obtained early features
+have stronger discriminability. Finally, determines the top-n objects that are
+difficult to reconstruct in the output layer of the GNN as fault objects. A
+public datasets of bearings have been used to verify the effectiveness of the
+proposed method. We find that the proposed method can successfully detect
+faulty objects that are mixed in the normal object region.
+","0","AI: Codex (2026-09-24; title/abstract review)","Detects bearing faults from vibration signals rather than locating visual objects."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/1612.06052v2","Quantization and Training of Low Bit-Width Convolutional Neural Networks
+  for Object Detection","Penghang Yin, Shuai Zhang, Yingyong Qi, Jack Xin","  We present LBW-Net, an efficient optimization based method for quantization
+and training of the low bit-width convolutional neural networks (CNNs).
+Specifically, we quantize the weights to zero or powers of two by minimizing
+the Euclidean distance between full-precision weights and quantized weights
+during backpropagation. We characterize the combinatorial nature of the low
+bit-width quantization problem. For 2-bit (ternary) CNNs, the quantization of
+$N$ weights can be done by an exact formula in $O(N\log N)$ complexity. When
+the bit-width is three and above, we further propose a semi-analytical
+thresholding scheme with a single free parameter for quantization that is
+computationally inexpensive. The free parameter is further determined by
+network retraining and object detection tests. LBW-Net has several desirable
+advantages over full-precision CNNs, including considerable memory savings,
+energy efficiency, and faster deployment. Our experiments on PASCAL VOC dataset
+show that compared with its 32-bit floating-point counterpart, the performance
+of the 6-bit LBW-Net is nearly lossless in the object detection tasks, and can
+even do better in some real world visual scenes, while empirically enjoying
+more than 4$\times$ faster deployment.
+","2","AI: Codex (2026-09-24; title/abstract review)","Quantizes and trains efficient convolutional networks specifically evaluated for object detection."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/1511.06411v2","Training Deep Neural Networks via Direct Loss Minimization","Yang Song, Alexander G. Schwing, Richard S. Zemel, Raquel Urtasun","  Supervised training of deep neural nets typically relies on minimizing
+cross-entropy. However, in many domains, we are interested in performing well
+on metrics specific to the application. In this paper we propose a direct loss
+minimization approach to train deep neural networks, which provably minimizes
+the application-specific loss function. This is often non-trivial, since these
+functions are neither smooth nor decomposable and thus are not amenable to
+optimization with standard gradient-based methods. We demonstrate the
+effectiveness of our approach in the context of maximizing average precision
+for ranking problems. Towards this goal, we develop a novel dynamic programming
+algorithm that can efficiently compute the weight updates. Our approach proves
+superior to a variety of baselines in the context of action classification and
+object detection, especially in the presence of label noise.
+","1","AI: Codex (2026-09-24; title/abstract review)","Develops a generic loss-training method with object detection among its applications."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/1709.03573v1","Anomaly Detection in Hierarchical Data Streams under Unknown Models","Sattar Vakili, Qing Zhao, Chang Liu, Chen-Nee Chuah","  We consider the problem of detecting a few targets among a large number of
+hierarchical data streams. The data streams are modeled as random processes
+with unknown and potentially heavy-tailed distributions. The objective is an
+active inference strategy that determines, sequentially, which data stream to
+collect samples from in order to minimize the sample complexity under a
+reliability constraint. We propose an active inference strategy that induces a
+biased random walk on the tree-structured hierarchy based on confidence bounds
+of sample statistics. We then establish its order optimality in terms of both
+the size of the search space (i.e., the number of data streams) and the
+reliability requirement. The results find applications in hierarchical heavy
+hitter detection, noisy group testing, and adaptive sampling for active
+learning, classification, and stochastic root finding.
+","0","AI: Codex (2026-09-24; title/abstract review)","Finds anomalous hierarchical data streams, not objects in visual scenes."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2112.04643v3","Autoregressive Quantile Flows for Predictive Uncertainty Estimation","Phillip Si, Allan Bishop, Volodymyr Kuleshov","  Numerous applications of machine learning involve representing probability
+distributions over high-dimensional data. We propose autoregressive quantile
+flows, a flexible class of normalizing flow models trained using a novel
+objective based on proper scoring rules. Our objective does not require
+calculating computationally expensive determinants of Jacobians during training
+and supports new types of neural architectures, such as neural autoregressive
+flows from which it is easy to sample.
+  We leverage these models in quantile flow regression, an approach that
+parameterizes predictive conditional distributions with flows, resulting in
+improved probabilistic predictions on tasks such as time series forecasting and
+object detection. Our novel objective functions and neural flow
+parameterizations also yield improvements on popular generation and density
+estimation tasks, and represent a step beyond maximum likelihood learning of
+flows.
+","1","AI: Codex (2026-09-24; title/abstract review)","Models predictive uncertainty with applications to object detection but does not primarily develop a detector."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2102.09701v3","Center Smoothing: Certified Robustness for Networks with Structured
+  Outputs","Aounon Kumar, Tom Goldstein","  The study of provable adversarial robustness has mostly been limited to
+classification tasks and models with one-dimensional real-valued outputs. We
+extend the scope of certifiable robustness to problems with more general and
+structured outputs like sets, images, language, etc. We model the output space
+as a metric space under a distance/similarity function, such as
+intersection-over-union, perceptual similarity, total variation distance, etc.
+Such models are used in many machine learning problems like image segmentation,
+object detection, generative models, image/audio-to-text systems, etc. Based on
+a robustness technique called randomized smoothing, our $\textit{center
+smoothing}$ procedure can produce models with the guarantee that the change in
+the output, as measured by the distance metric, remains small for any
+norm-bounded adversarial perturbation of the input. We apply our method to
+create certifiably robust models with disparate output spaces - from sets to
+images - and show that it yields meaningful certificates without significantly
+degrading the performance of the base model. Code for our experiments is
+available at: https://github.com/aounon/center-smoothing.
+","1","AI: Codex (2026-09-24; title/abstract review)","Certifies robustness of structured-output models including detectors; supporting rather than direct detection methodology."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2109.03784v1","A Survey on Machine Learning Techniques for Auto Labeling of Video,
+  Audio, and Text Data","Shikun Zhang, Omid Jafari, Parth Nagarkar","  Machine learning has been utilized to perform tasks in many different domains
+such as classification, object detection, image segmentation and natural
+language analysis. Data labeling has always been one of the most important
+tasks in machine learning. However, labeling large amounts of data increases
+the monetary cost in machine learning. As a result, researchers started to
+focus on reducing data annotation and labeling costs. Transfer learning was
+designed and widely used as an efficient approach that can reasonably reduce
+the negative impact of limited data, which in turn, reduces the data
+preparation cost. Even transferring previous knowledge from a source domain
+reduces the amount of data needed in a target domain. However, large amounts of
+annotated data are still demanded to build robust models and improve the
+prediction accuracy of the model. Therefore, researchers started to pay more
+attention on auto annotation and labeling. In this survey paper, we provide a
+review of previous techniques that focuses on optimized data annotation and
+labeling for video, audio, and text data.
+","1","AI: Codex (2026-09-24; title/abstract review)","Surveys automatic data labeling, including video, as support for training visual detectors."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2111.03727v1","Defect Detection on Semiconductor Wafers by Distribution Analysis","Thomas Olschewski","  A method for object classification that is based on distribution analysis is
+proposed. In addition, a method for finding relevant features and the
+unification of this algorithm with another classification algorithm is
+proposed. The presented classification algorithm has been applied successfully
+to real-world measurement data from wafer fabrication of close to hundred
+thousand chips of several product types. The presented algorithm prefers
+finding the best rater in a low-dimensional search space over finding a good
+rater in a high-dimensional search space. Our approach is interesting in that
+it is fast (quasi-linear) and reached good to excellent prediction or detection
+quality for real-world wafer data.
+","0","AI: Codex (2026-09-24; title/abstract review)","Classifies semiconductor fabrication measurements without evidence of image-based localization."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2207.01242v2","Parametric and Multivariate Uncertainty Calibration for Regression and
+  Object Detection","Fabian Küppers, Jonas Schneider, Anselm Haselhoff","  Reliable spatial uncertainty evaluation of object detection models is of
+special interest and has been subject of recent work. In this work, we review
+the existing definitions for uncertainty calibration of probabilistic
+regression tasks. We inspect the calibration properties of common detection
+networks and extend state-of-the-art recalibration methods. Our methods use a
+Gaussian process (GP) recalibration scheme that yields parametric distributions
+as output (e.g. Gaussian or Cauchy). The usage of GP recalibration allows for a
+local (conditional) uncertainty calibration by capturing dependencies between
+neighboring samples. The use of parametric distributions such as as Gaussian
+allows for a simplified adaption of calibration in subsequent processes, e.g.,
+for Kalman filtering in the scope of object tracking.
+  In addition, we use the GP recalibration scheme to perform covariance
+estimation which allows for post-hoc introduction of local correlations between
+the output quantities, e.g., position, width, or height in object detection. To
+measure the joint calibration of multivariate and possibly correlated data, we
+introduce the quantile calibration error which is based on the Mahalanobis
+distance between the predicted distribution and the ground truth to determine
+whether the ground truth is within a predicted quantile.
+  Our experiments show that common detection models overestimate the spatial
+uncertainty in comparison to the observed error. We show that the simple
+Isotonic Regression recalibration method is sufficient to achieve a good
+uncertainty quantification in terms of calibrated quantiles. In contrast, if
+normal distributions are required for subsequent processes, our GP-Normal
+recalibration method yields the best results. Finally, we show that our
+covariance estimation method is able to achieve best calibration results for
+joint multivariate calibration.
+","1","AI: Codex (2026-09-24; title/abstract review)","Calibrates spatial uncertainty of existing object detectors rather than introducing object localization and classification."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2002.07051v1","Retrain or not retrain? -- efficient pruning methods of deep CNN
+  networks","Marcin Pietron, Maciej Wielgosz","  Convolutional neural networks (CNN) play a major role in image processing
+tasks like image classification, object detection, semantic segmentation. Very
+often CNN networks have from several to hundred stacked layers with several
+megabytes of weights. One of the possible methods to reduce complexity and
+memory footprint is pruning. Pruning is a process of removing weights which
+connect neurons from two adjacent layers in the network. The process of finding
+near optimal solution with specified drop in accuracy can be more sophisticated
+when DL model has higher number of convolutional layers. In the paper few
+approaches based on retraining and no retraining are described and compared
+together.
+","1","AI: Codex (2026-09-24; title/abstract review)","Prunes generic CNNs used in visual tasks; useful efficiency background but no specific detector in the abstract."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/1311.6211v1","Novelty Detection Under Multi-Instance Multi-Label Framework","Qi Lou, Raviv Raich, Forrest Briggs, Xiaoli Z. Fern","  Novelty detection plays an important role in machine learning and signal
+processing. This paper studies novelty detection in a new setting where the
+data object is represented as a bag of instances and associated with multiple
+class labels, referred to as multi-instance multi-label (MIML) learning.
+Contrary to the common assumption in MIML that each instance in a bag belongs
+to one of the known classes, in novelty detection, we focus on the scenario
+where bags may contain novel-class instances. The goal is to determine, for any
+given instance in a new bag, whether it belongs to a known class or a novel
+class. Detecting novelty in the MIML setting captures many real-world phenomena
+and has many potential applications. For example, in a collection of tagged
+images, the tag may only cover a subset of objects existing in the images.
+Discovering an object whose class has not been previously tagged can be useful
+for the purpose of soliciting a label for the new object class. To address this
+novel problem, we present a discriminative framework for detecting new class
+instances. Experiments demonstrate the effectiveness of our proposed method,
+and reveal that the presence of unlabeled novel instances in training bags is
+helpful to the detection of such instances in testing stage.
+","1","AI: Codex (2026-09-24; title/abstract review)","Detects novel-class instances in tagged-image bags but does not explicitly localize and classify objects in a scene."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2107.07564v2","On the Importance of Regularisation & Auxiliary Information in OOD
+  Detection","John Mitros, Brian Mac Namee","  Neural networks are often utilised in critical domain applications (e.g.
+self-driving cars, financial markets, and aerospace engineering), even though
+they exhibit overconfident predictions for ambiguous inputs. This deficiency
+demonstrates a fundamental flaw indicating that neural networks often overfit
+on spurious correlations. To address this problem in this work we present two
+novel objectives that improve the ability of a network to detect
+out-of-distribution samples and therefore avoid overconfident predictions for
+ambiguous inputs. We empirically demonstrate that our methods outperform the
+baseline and perform better than the majority of existing approaches while
+still maintaining a competitive performance against the rest. Additionally, we
+empirically demonstrate the robustness of our approach against common
+corruptions and demonstrate the importance of regularisation and auxiliary
+information in out-of-distribution detection.
+","0","AI: Codex (2026-09-24; title/abstract review)","Detects out-of-distribution inputs rather than locating visual objects."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2011.04298v1","Robustness of Community Detection to Random Geometric Perturbations","Sandrine Peche, Vianney Perchet","  We consider the stochastic block model where connection between vertices is
+perturbed by some latent (and unobserved) random geometric graph. The objective
+is to prove that spectral methods are robust to this type of noise, even if
+they are agnostic to the presence (or not) of the random graph. We provide
+explicit regimes where the second eigenvector of the adjacency matrix is highly
+correlated to the true community vector (and therefore when weak/exact recovery
+is possible). This is possible thanks to a detailed analysis of the spectrum of
+the latent random graph, of its own interest.
+","0","AI: Codex (2026-09-24; title/abstract review)","Detects graph communities under perturbations rather than objects in images."
+"M02","object detection","Find methods that locate and classify objects in images or video; image-level classification alone is partial at most.","http://arxiv.org/abs/2104.02493v2","RadarScenes: A Real-World Radar Point Cloud Data Set for Automotive
+  Applications","Ole Schumann, Markus Hahn, Nicolas Scheiner, Fabio Weishaupt, Julius F. Tilly, Jürgen Dickmann, Christian Wöhler","  A new automotive radar data set with measurements and point-wise annotations
+from more than four hours of driving is presented. Data provided by four series
+radar sensors mounted on one test vehicle were recorded and the individual
+detections of dynamic objects were manually grouped to clusters and labeled
+afterwards. The purpose of this data set is to enable the development of novel
+(machine learning-based) radar perception algorithms with the focus on moving
+road users. Images of the recorded sequences were captured using a documentary
+camera. For the evaluation of future object detection and classification
+algorithms, proposals for score calculation are made so that researchers can
+evaluate their algorithms on a common basis. Additional information as well as
+download instructions can be found on the website of the data set:
+www.radar-scenes.com.
+","1","AI: Codex (2026-09-24; title/abstract review)","Provides radar object annotations and evaluation support; visual images are documentary rather than the detector input."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1801.04014v2","A Hardware-Friendly Algorithm for Scalable Training and Deployment of
+  Dimensionality Reduction Models on FPGA","Mahdi Nazemi, Amir Erfan Eshratifar, Massoud Pedram","  With ever-increasing application of machine learning models in various
+domains such as image classification, speech recognition and synthesis, and
+health care, designing efficient hardware for these models has gained a lot of
+popularity. While the majority of researches in this area focus on efficient
+deployment of machine learning models (a.k.a inference), this work concentrates
+on challenges of training these models in hardware. In particular, this paper
+presents a high-performance, scalable, reconfigurable solution for both
+training and deployment of different dimensionality reduction models in
+hardware by introducing a hardware-friendly algorithm. Compared to
+state-of-the-art implementations, our proposed algorithm and its hardware
+realization decrease resource consumption by 50\% without any degradation in
+accuracy.
+","0","AI: Codex (2026-09-24; title/abstract review)","Optimizes generic dimensionality reduction hardware; speech transcription is only motivational context."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2205.14054v1","Contrastive Siamese Network for Semi-supervised Speech Recognition","Soheil Khorram, Jaeyoung Kim, Anshuman Tripathi, Han Lu, Qian Zhang, Hasim Sak","  This paper introduces contrastive siamese (c-siam) network, an architecture
+for leveraging unlabeled acoustic data in speech recognition. c-siam is the
+first network that extracts high-level linguistic information from speech by
+matching outputs of two identical transformer encoders. It contains augmented
+and target branches which are trained by: (1) masking inputs and matching
+outputs with a contrastive loss, (2) incorporating a stop gradient operation on
+the target branch, (3) using an extra learnable transformation on the augmented
+branch, (4) introducing new temporal augment functions to prevent the shortcut
+learning problem. We use the Libri-light 60k unsupervised data and the
+LibriSpeech 100hrs/960hrs supervised data to compare c-siam and other
+best-performing systems. Our experiments show that c-siam provides 20% relative
+word error rate improvement over wav2vec baselines. A c-siam network with 450M
+parameters achieves competitive results compared to the state-of-the-art
+networks with 600M parameters.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops semi-supervised acoustic representation learning and evaluates speech transcription word error rate."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1701.01887v1","Deep Learning for Time-Series Analysis","John Cristian Borges Gamboa","  In many real-world application, e.g., speech recognition or sleep stage
+classification, data are captured over the course of time, constituting a
+Time-Series. Time-Series often contain temporal dependencies that cause two
+otherwise identical points of time to belong to different classes or predict
+different behavior. This characteristic generally increases the difficulty of
+analysing them. Existing techniques often depended on hand-crafted features
+that were expensive to create and required expert knowledge of the field. With
+the advent of Deep Learning new models of unsupervised learning of features for
+Time-series analysis and forecast have been developed. Such new developments
+are the topic of this paper: a review of the main Deep Learning techniques is
+presented, and some applications on Time-Series analysis are summaried. The
+results make it clear that Deep Learning has a lot to contribute to the field.
+","1","AI: Codex (2026-09-24; title/abstract review)","Reviews temporal learning methods that can support speech recognition, but no specific transcription method is described."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1610.02583v3","A Gentle Tutorial of Recurrent Neural Network with Error Backpropagation","Gang Chen","  We describe recurrent neural networks (RNNs), which have attracted great
+attention on sequential tasks, such as handwriting recognition, speech
+recognition and image to text. However, compared to general feedforward neural
+networks, RNNs have feedback loops, which makes it a little hard to understand
+the backpropagation step. Thus, we focus on basics, especially the error
+backpropagation to compute gradients with respect to model parameters. Further,
+we go into detail on how error backpropagation algorithm is applied on long
+short-term memory (LSTM) by unfolding the memory unit.
+","1","AI: Codex (2026-09-24; title/abstract review)","Explains recurrent-network and LSTM training, providing background for speech recognition models."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2110.06650v2","Multistage linguistic conditioning of convolutional layers for speech
+  emotion recognition","Andreas Triantafyllopoulos, Uwe Reichel, Shuo Liu, Stephan Huber, Florian Eyben, Björn W. Schuller","  In this contribution, we investigate the effectiveness of deep fusion of text
+and audio features for categorical and dimensional speech emotion recognition
+(SER). We propose a novel, multistage fusion method where the two information
+streams are integrated in several layers of a deep neural network (DNN), and
+contrast it with a single-stage one where the streams are merged in a single
+point. Both methods depend on extracting summary linguistic embeddings from a
+pre-trained BERT model, and conditioning one or more intermediate
+representations of a convolutional model operating on log-Mel spectrograms.
+Experiments on the MSP-Podcast and IEMOCAP datasets demonstrate that the two
+fusion methods clearly outperform a shallow (late) fusion baseline and their
+unimodal constituents, both in terms of quantitative performance and
+qualitative behaviour. Overall, our multistage fusion shows better quantitative
+performance, surpassing alternatives on most of our evaluations. This
+illustrates the potential of multistage fusion in better assimilating text and
+audio information.
+","0","AI: Codex (2026-09-24; title/abstract review)","Recognizes emotions from speech rather than converting audio into words."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2104.07072v1","Unsupervised low-rank representations for speech emotion recognition","Georgios Paraskevopoulos, Efthymios Tzinis, Nikolaos Ellinas, Theodoros Giannakopoulos, Alexandros Potamianos","  We examine the use of linear and non-linear dimensionality reduction
+algorithms for extracting low-rank feature representations for speech emotion
+recognition. Two feature sets are used, one based on low-level descriptors and
+their aggregations (IS10) and one modeling recurrence dynamics of speech (RQA),
+as well as their fusion. We report speech emotion recognition (SER) results for
+learned representations on two databases using different classification
+methods. Classification with low-dimensional representations yields performance
+improvement in a variety of settings. This indicates that dimensionality
+reduction is an effective way to combat the curse of dimensionality for SER.
+Visualization of features in two dimensions provides insight into
+discriminatory abilities of reduced feature sets.
+","0","AI: Codex (2026-09-24; title/abstract review)","Learns representations for speech emotion classification, not transcription."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1610.01178v1","A Tour of TensorFlow","Peter Goldsborough","  Deep learning is a branch of artificial intelligence employing deep neural
+network architectures that has significantly advanced the state-of-the-art in
+computer vision, speech recognition, natural language processing and other
+domains. In November 2015, Google released $\textit{TensorFlow}$, an open
+source deep learning software library for defining, training and deploying
+machine learning models. In this paper, we review TensorFlow and put it in
+context of modern deep learning concepts and software. We discuss its basic
+computational paradigms and distributed execution model, its programming
+interface as well as accompanying visualization toolkits. We then compare
+TensorFlow to alternative libraries such as Theano, Torch or Caffe on a
+qualitative as well as quantitative basis and finally comment on observed
+use-cases of TensorFlow in academia and industry.
+","0","AI: Codex (2026-09-24; title/abstract review)","Reviews a general machine-learning library; no speech-to-text method is described."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2102.02326v1","Effects of Number of Filters of Convolutional Layers on Speech
+  Recognition Model Accuracy","James Mou, Jun Li","  Inspired by the progress of the End-to-End approach [1], this paper
+systematically studies the effects of Number of Filters of convolutional layers
+on the model prediction accuracy of CNN+RNN (Convolutional Neural Networks
+adding to Recurrent Neural Networks) for ASR Models (Automatic Speech
+Recognition). Experimental results show that only when the CNN Number of
+Filters exceeds a certain threshold value is adding CNN to RNN able to improve
+the performance of the CNN+RNN speech recognition model, otherwise some
+parameter ranges of CNN can render it useless to add the CNN to the RNN model.
+Our results show a strong dependency of word accuracy on the Number of Filters
+of convolutional layers. Based on the experimental results, the paper suggests
+a possible hypothesis of Sound-2-Vector Embedding (Convolutional Embedding) to
+explain the above observations.
+  Based on this Embedding hypothesis and the optimization of parameters, the
+paper develops an End-to-End speech recognition system which has a high word
+accuracy but also has a light model-weight. The developed LVCSR (Large
+Vocabulary Continuous Speech Recognition) model has achieved quite a high word
+accuracy of 90.2% only by its Acoustic Model alone, without any assistance from
+intermediate phonetic representation and any Language Model. Its acoustic model
+contains only 4.4 million weight parameters, compared to the 35~68 million
+acoustic-model weight parameters in DeepSpeech2 [2] (one of the top
+state-of-the-art LVCSR models) which can achieve a word accuracy of 91.5%. The
+light-weighted model is good for improving the transcribing computing
+efficiency and also useful for mobile devices, Driverless Vehicles, etc. Our
+model weight is reduced to ~10% the size of DeepSpeech2, but our model accuracy
+remains close to that of DeepSpeech2. If combined with a Language Model, our
+LVCSR system is able to achieve 91.5% word accuracy.
+","2","AI: Codex (2026-09-24; title/abstract review)","Designs and evaluates a lightweight end-to-end speech-to-text system."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1606.04521v1","Training variance and performance evaluation of neural networks in
+  speech","Ewout van den Berg, Bhuvana Ramabhadran, Michael Picheny","  In this work we study variance in the results of neural network training on a
+wide variety of configurations in automatic speech recognition. Although this
+variance itself is well known, this is, to the best of our knowledge, the first
+paper that performs an extensive empirical study on its effects in speech
+recognition. We view training as sampling from a distribution and show that
+these distributions can have a substantial variance. These results show the
+urgent need to rethink the way in which results in the literature are reported
+and interpreted.
+","1","AI: Codex (2026-09-24; title/abstract review)","Studies variance in ASR training and evaluation rather than developing a new transcription method."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2106.09668v1","Multi-modal fusion with gating using audio, lexical and disfluency
+  features for Alzheimer's Dementia recognition from spontaneous speech","Morteza Rohanian, Julian Hough, Matthew Purver","  This paper is a submission to the Alzheimer's Dementia Recognition through
+Spontaneous Speech (ADReSS) challenge, which aims to develop methods that can
+assist in the automated prediction of severity of Alzheimer's Disease from
+speech data. We focus on acoustic and natural language features for cognitive
+impairment detection in spontaneous speech in the context of Alzheimer's
+Disease Diagnosis and the mini-mental state examination (MMSE) score
+prediction. We proposed a model that obtains unimodal decisions from different
+LSTMs, one for each modality of text and audio, and then combines them using a
+gating mechanism for the final prediction. We focused on sequential modelling
+of text and audio and investigated whether the disfluencies present in
+individuals' speech relate to the extent of their cognitive impairment. Our
+results show that the proposed classification and regression schemes obtain
+very promising results on both development and test sets. This suggests
+Alzheimer's Disease can be detected successfully with sequence modeling of the
+speech data of medical sessions.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts dementia and cognitive impairment from speech, not spoken words."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2202.03555v3","data2vec: A General Framework for Self-supervised Learning in Speech,
+  Vision and Language","Alexei Baevski, Wei-Ning Hsu, Qiantong Xu, Arun Babu, Jiatao Gu, Michael Auli","  While the general idea of self-supervised learning is identical across
+modalities, the actual algorithms and objectives differ widely because they
+were developed with a single modality in mind. To get us closer to general
+self-supervised learning, we present data2vec, a framework that uses the same
+learning method for either speech, NLP or computer vision. The core idea is to
+predict latent representations of the full input data based on a masked view of
+the input in a self-distillation setup using a standard Transformer
+architecture. Instead of predicting modality-specific targets such as words,
+visual tokens or units of human speech which are local in nature, data2vec
+predicts contextualized latent representations that contain information from
+the entire input. Experiments on the major benchmarks of speech recognition,
+image classification, and natural language understanding demonstrate a new
+state of the art or competitive performance to predominant approaches.
+","1","AI: Codex (2026-09-24; title/abstract review)","Develops general self-supervised representations with speech recognition as one evaluated application."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2106.14120v1","On a novel training algorithm for sequence-to-sequence predictive
+  recurrent networks","Boris Rubinstein","  Neural networks mapping sequences to sequences (seq2seq) lead to significant
+progress in machine translation and speech recognition. Their traditional
+architecture includes two recurrent networks (RNs) followed by a linear
+predictor. In this manuscript we perform analysis of a corresponding algorithm
+and show that the parameters of the RNs of the well trained predictive network
+are not independent of each other. Their dependence can be used to
+significantly improve the network effectiveness. The traditional seq2seq
+algorithms require short term memory of a size proportional to the predicted
+sequence length. This requirement is quite difficult to implement in a
+neuroscience context. We present a novel memoryless algorithm for seq2seq
+predictive networks and compare it to the traditional one in the context of
+time series prediction. We show that the new algorithm is more robust and makes
+predictions with higher accuracy than the traditional one.
+","1","AI: Codex (2026-09-24; title/abstract review)","Develops sequence prediction training with potential ASR use, but reported evaluation concerns time-series prediction."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1608.07719v2","Temperature-Based Deep Boltzmann Machines","Leandro Aparecido Passos Junior, Joao Paulo Papa","  Deep learning techniques have been paramount in the last years, mainly due to
+their outstanding results in a number of applications, that range from speech
+recognition to face-based user identification. Despite other techniques
+employed for such purposes, Deep Boltzmann Machines are among the most used
+ones, which are composed of layers of Restricted Boltzmann Machines (RBMs)
+stacked on top of each other. In this work, we evaluate the concept of
+temperature in DBMs, which play a key role in Boltzmann-related distributions,
+but it has never been considered in this context up to date. Therefore, the
+main contribution of this paper is to take into account this information and to
+evaluate its influence in DBMs considering the task of binary image
+reconstruction. We expect this work can foster future research considering the
+usage of different temperatures during learning in DBMs.
+","0","AI: Codex (2026-09-24; title/abstract review)","Studies Boltzmann-machine temperature for image reconstruction; speech recognition is incidental."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2109.05701v1","Applications of Recurrent Neural Network for Biometric Authentication &
+  Anomaly Detection","Joseph M. Ackerson, Dave Rushit, Seliya Jim","  Recurrent Neural Networks are powerful machine learning frameworks that allow
+for data to be saved and referenced in a temporal sequence. This opens many new
+possibilities in fields such as handwriting analysis and speech recognition.
+This paper seeks to explore current research being conducted on RNNs in four
+very important areas, being biometric authentication, expression recognition,
+anomaly detection, and applications to aircraft. This paper reviews the
+methodologies, purpose, results, and the benefits and drawbacks of each
+proposed method below. These various methodologies all focus on how they can
+leverage distinct RNN architectures such as the popular Long Short-Term Memory
+(LSTM) RNN or a Deep-Residual RNN. This paper also examines which frameworks
+work best in certain situations, and the advantages and disadvantages of each
+pro-posed model.
+","0","AI: Codex (2026-09-24; title/abstract review)","Reviews biometric and anomaly-recognition applications rather than speech transcription."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2109.02915v1","Few-shot Learning in Emotion Recognition of Spontaneous Speech Using a
+  Siamese Neural Network with Adaptive Sample Pair Formation","Kexin Feng, Theodora Chaspari","  Speech-based machine learning (ML) has been heralded as a promising solution
+for tracking prosodic and spectrotemporal patterns in real-life that are
+indicative of emotional changes, providing a valuable window into one's
+cognitive and mental state. Yet, the scarcity of labelled data in ambulatory
+studies prevents the reliable training of ML models, which usually rely on
+""data-hungry"" distribution-based learning. Leveraging the abundance of labelled
+speech data from acted emotions, this paper proposes a few-shot learning
+approach for automatically recognizing emotion in spontaneous speech from a
+small number of labelled samples. Few-shot learning is implemented via a metric
+learning approach through a siamese neural network, which models the relative
+distance between samples rather than relying on learning absolute patterns of
+the corresponding distributions of each emotion. Results indicate the
+feasibility of the proposed metric learning in recognizing emotions from
+spontaneous speech in four datasets, even with a small amount of labelled
+samples. They further demonstrate superior performance of the proposed metric
+learning compared to commonly used adaptation methods, including network
+fine-tuning and adversarial learning. Findings from this work provide a
+foundation for the ambulatory tracking of human emotion in spontaneous speech
+contributing to the real-life assessment of mental health degradation.
+","0","AI: Codex (2026-09-24; title/abstract review)","Classifies emotions in spontaneous speech rather than recognizing its words."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/2202.01252v2","Speaker Normalization for Self-supervised Speech Emotion Recognition","Itai Gat, Hagai Aronowitz, Weizhong Zhu, Edmilson Morais, Ron Hoory","  Large speech emotion recognition datasets are hard to obtain, and small
+datasets may contain biases. Deep-net-based classifiers, in turn, are prone to
+exploit those biases and find shortcuts such as speaker characteristics. These
+shortcuts usually harm a model's ability to generalize. To address this
+challenge, we propose a gradient-based adversary learning framework that learns
+a speech emotion recognition task while normalizing speaker characteristics
+from the feature representation. We demonstrate the efficacy of our method on
+both speaker-independent and speaker-dependent settings and obtain new
+state-of-the-art results on the challenging IEMOCAP dataset.
+","0","AI: Codex (2026-09-24; title/abstract review)","Normalizes speaker characteristics for emotion recognition, not speech-to-text."
+"M03","speech recognition","Find methods for converting spoken audio into words; speaker identity or emotion recognition alone is not relevant.","http://arxiv.org/abs/1802.05874v1","Constrained Convolutional-Recurrent Networks to Improve Speech Quality
+  with Low Impact on Recognition Accuracy","Rasool Fakoor, Xiaodong He, Ivan Tashev, Shuayb Zarar","  For a speech-enhancement algorithm, it is highly desirable to simultaneously
+improve perceptual quality and recognition rate. Thanks to computational costs
+and model complexities, it is challenging to train a model that effectively
+optimizes both metrics at the same time. In this paper, we propose a method for
+speech enhancement that combines local and global contextual structures
+information through convolutional-recurrent neural networks that improves
+perceptual quality. At the same time, we introduce a new constraint on the
+objective function using a language model/decoder that limits the impact on
+recognition rate. Based on experiments conducted with real user data, we
+demonstrate that our new context-augmented machine-learning approach for speech
+enhancement improves PESQ and WER by an additional 24.5% and 51.3%,
+respectively, when compared to the best-performing methods in the literature.
+","1","AI: Codex (2026-09-24; title/abstract review)","Enhances speech while preserving recognition accuracy; supports an ASR pipeline rather than introducing a decoder."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2111.13346v1","A multitask transfer learning framework for the prediction of
+  virus-human protein-protein interactions","Thi Ngan Dong, Graham Brogden, Gisa Gerold, Megha Khosla","  Viral infections are causing significant morbidity and mortality worldwide.
+Understanding the interaction patterns between a particular virus and human
+proteins plays a crucial role in unveiling the underlying mechanism of viral
+infection and pathogenesis. This could further help in the prevention and
+treatment of virus-related diseases. However, the task of predicting
+protein-protein interactions between a new virus and human cells is extremely
+challenging due to scarce data on virus-human interactions and fast mutation
+rates of most viruses.
+  We developed a multitask transfer learning approach that exploits the
+information of around 24 million protein sequences and the interaction patterns
+from the human interactome to counter the problem of small training datasets.
+Instead of using hand-crafted protein features, we utilize statistically rich
+protein representations learned by a deep language modeling approach from a
+massive source of protein sequences. Additionally, we employ an additional
+objective which aims to maximize the probability of observing human
+protein-protein interactions. This additional task objective acts as a
+regularizer and also allows to incorporate domain knowledge to inform the
+virus-human protein-protein interaction prediction model.
+  Our approach achieved competitive results on 13 benchmark datasets and the
+case study for the SAR-CoV-2 virus receptor. Experimental results show that our
+proposed model works effectively for both virus-human and bacteria-human
+protein-protein interaction prediction tasks. We share our code for
+reproducibility and future research at
+https://git.l3s.uni-hannover.de/dong/multitask-transfer.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts interactions between viral and human proteins, not three-dimensional protein structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2107.06882v1","Conservative Objective Models for Effective Offline Model-Based
+  Optimization","Brandon Trabucco, Aviral Kumar, Xinyang Geng, Sergey Levine","  Computational design problems arise in a number of settings, from synthetic
+biology to computer architectures. In this paper, we aim to solve data-driven
+model-based optimization (MBO) problems, where the goal is to find a design
+input that maximizes an unknown objective function provided access to only a
+static dataset of prior experiments. Such data-driven optimization procedures
+are the only practical methods in many real-world domains where active data
+collection is expensive (e.g., when optimizing over proteins) or dangerous
+(e.g., when optimizing over aircraft designs). Typical methods for MBO that
+optimize the design against a learned model suffer from distributional shift:
+it is easy to find a design that ""fools"" the model into predicting a high
+value. To overcome this, we propose conservative objective models (COMs), a
+method that learns a model of the objective function that lower bounds the
+actual value of the ground-truth objective on out-of-distribution inputs, and
+uses it for optimization. Structurally, COMs resemble adversarial training
+methods used to overcome adversarial examples. COMs are simple to implement and
+outperform a number of existing methods on a wide range of MBO problems,
+including optimizing protein sequences, robot morphologies, neural network
+weights, and superconducting materials.
+","0","AI: Codex (2026-09-24; title/abstract review)","Optimizes designs including protein sequences for an objective, without predicting protein structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2206.02096v2","PEER: A Comprehensive and Multi-Task Benchmark for Protein Sequence
+  Understanding","Minghao Xu, Zuobai Zhang, Jiarui Lu, Zhaocheng Zhu, Yangtian Zhang, Chang Ma, Runcheng Liu, Jian Tang","  We are now witnessing significant progress of deep learning methods in a
+variety of tasks (or datasets) of proteins. However, there is a lack of a
+standard benchmark to evaluate the performance of different methods, which
+hinders the progress of deep learning in this field. In this paper, we propose
+such a benchmark called PEER, a comprehensive and multi-task benchmark for
+Protein sEquence undERstanding. PEER provides a set of diverse protein
+understanding tasks including protein function prediction, protein localization
+prediction, protein structure prediction, protein-protein interaction
+prediction, and protein-ligand interaction prediction. We evaluate different
+types of sequence-based methods for each task including traditional feature
+engineering approaches, different sequence encoding methods as well as
+large-scale pre-trained protein language models. In addition, we also
+investigate the performance of these methods under the multi-task learning
+setting. Experimental results show that large-scale pre-trained protein
+language models achieve the best performance for most individual tasks, and
+jointly training multiple tasks further boosts the performance. The datasets
+and source codes of this benchmark are all available at
+https://github.com/DeepGraphLearning/PEER_Benchmark
+","1","AI: Codex (2026-09-24; title/abstract review)","Benchmarks sequence-understanding tasks including structure prediction, but does not specify a complete 3D predictor."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2203.06125v5","Protein Representation Learning by Geometric Structure Pretraining","Zuobai Zhang, Minghao Xu, Arian Jamasb, Vijil Chenthamarakshan, Aurelie Lozano, Payel Das, Jian Tang","  Learning effective protein representations is critical in a variety of tasks
+in biology such as predicting protein function or structure. Existing
+approaches usually pretrain protein language models on a large number of
+unlabeled amino acid sequences and then finetune the models with some labeled
+data in downstream tasks. Despite the effectiveness of sequence-based
+approaches, the power of pretraining on known protein structures, which are
+available in smaller numbers only, has not been explored for protein property
+prediction, though protein structures are known to be determinants of protein
+function. In this paper, we propose to pretrain protein representations
+according to their 3D structures. We first present a simple yet effective
+encoder to learn the geometric features of a protein. We pretrain the protein
+graph encoder by leveraging multiview contrastive learning and different
+self-prediction tasks. Experimental results on both function prediction and
+fold classification tasks show that our proposed pretraining methods outperform
+or are on par with the state-of-the-art sequence-based methods, while using
+much less pretraining data. Our implementation is available at
+https://github.com/DeepGraphLearning/GearNet.
+","1","AI: Codex (2026-09-24; title/abstract review)","Learns geometric protein representations from known structures; useful structural background but predicts function and fold classes."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2012.08194v2","Bayesian neural network with pretrained protein embedding enhances
+  prediction accuracy of drug-protein interaction","QHwan Kim, Joon-Hyuk Ko, Sunghoon Kim, Nojun Park, Wonho Jhe","  The characterization of drug-protein interactions is crucial in the
+high-throughput screening for drug discovery. The deep learning-based
+approaches have attracted attention because they can predict drug-protein
+interactions without trial-and-error by humans. However, because data labeling
+requires significant resources, the available protein data size is relatively
+small, which consequently decreases model performance. Here we propose two
+methods to construct a deep learning framework that exhibits superior
+performance with a small labeled dataset. At first, we use transfer learning in
+encoding protein sequences with a pretrained model, which trains general
+sequence representations in an unsupervised manner. Second, we use a Bayesian
+neural network to make a robust model by estimating the data uncertainty. As a
+result, our model performs better than the previous baselines for predicting
+drug-protein interactions. We also show that the quantified uncertainty from
+the Bayesian inference is related to the confidence and can be used for
+screening DPI data points.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts drug-protein interactions rather than protein structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/1803.04465v2","PotentialNet for Molecular Property Prediction","Evan N. Feinberg, Debnil Sur, Zhenqin Wu, Brooke E. Husic, Huanghao Mai, Yang Li, Saisai Sun, Jianyi Yang, Bharath Ramsundar, Vijay S. Pande","  The arc of drug discovery entails a multiparameter optimization problem
+spanning vast length scales. They key parameters range from solubility
+(angstroms) to protein-ligand binding (nanometers) to in vivo toxicity
+(meters). Through feature learning---instead of feature engineering---deep
+neural networks promise to outperform both traditional physics-based and
+knowledge-based machine learning models for predicting molecular properties
+pertinent to drug discovery. To this end, we present the PotentialNet family of
+graph convolutions. These models are specifically designed for and achieve
+state-of-the-art performance for protein-ligand binding affinity. We further
+validate these deep neural networks by setting new standards of performance in
+several ligand-based tasks. In parallel, we introduce a new metric, the
+Regression Enrichment Factor $EF_\chi^{(R)}$, to measure the early enrichment
+of computational models for chemical data. Finally, we introduce a
+cross-validation strategy based on structural homology clustering that can more
+accurately measure model generalizability, which crucially distinguishes the
+aims of machine learning for drug discovery from standard machine learning
+tasks.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts binding affinity and molecular properties, not three-dimensional protein structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2110.04383v1","Learning 3D Representations of Molecular Chirality with Invariance to
+  Bond Rotations","Keir Adams, Lagnajit Pattanaik, Connor W. Coley","  Molecular chirality, a form of stereochemistry most often describing relative
+spatial arrangements of bonded neighbors around tetrahedral carbon centers,
+influences the set of 3D conformers accessible to the molecule without changing
+its 2D graph connectivity. Chirality can strongly alter (bio)chemical
+interactions, particularly protein-drug binding. Most 2D graph neural networks
+(GNNs) designed for molecular property prediction at best use atomic labels to
+na\""ively treat chirality, while E(3)-invariant 3D GNNs are invariant to
+chirality altogether. To enable representation learning on molecules with
+defined stereochemistry, we design an SE(3)-invariant model that processes
+torsion angles of a 3D molecular conformer. We explicitly model conformational
+flexibility by integrating a novel type of invariance to rotations about
+internal molecular bonds into the architecture, mitigating the need for
+multi-conformer data augmentation. We test our model on four benchmarks:
+contrastive learning to distinguish conformers of different stereoisomers in a
+learned latent space, classification of chiral centers as R/S, prediction of
+how enantiomers rotate circularly polarized light, and ranking enantiomers by
+their docking scores in an enantiosensitive protein pocket. We compare our
+model, Chiral InterRoto-Invariant Neural Network (ChIRo), with 2D and 3D GNNs
+to demonstrate that our model achieves state of the art performance when
+learning chiral-sensitive functions from molecular structures.
+","1","AI: Codex (2026-09-24; title/abstract review)","Models conformational geometry and chirality, providing structural representation methods but not protein folding prediction."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2103.03547v7","Structure-Enhanced Meta-Learning For Few-Shot Graph Classification","Shunyu Jiang, Fuli Feng, Weijian Chen, Xiang Li, Xiangnan He","  Graph classification is a highly impactful task that plays a crucial role in
+a myriad of real-world applications such as molecular property prediction and
+protein function prediction.Aiming to handle the new classes with limited
+labeled graphs, few-shot graph classification has become a bridge of existing
+graph classification solutions and practical usage.This work explores the
+potential of metric-based meta-learning for solving few-shot graph
+classification.We highlight the importance of considering structural
+characteristics in the solution and propose a novel framework which explicitly
+considers global structure and local structure of the input graph. An
+implementation upon GIN, named SMF-GIN, is tested on two datasets, Chembl and
+TRIANGLES, where extensive experiments validate the effectiveness of the
+proposed method. The Chembl is constructed to fill in the gap of lacking
+large-scale benchmark for few-shot graph classification evaluation, which is
+released together with the implementation of SMF-GIN at:
+https://github.com/jiangshunyu/SMF-GIN.
+","0","AI: Codex (2026-09-24; title/abstract review)","Classifies graphs for molecular properties; no protein 3D structure prediction method."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2107.02168v5","DPPIN: A Biological Repository of Dynamic Protein-Protein Interaction
+  Network Data","Dongqi Fu, Jingrui He","  In the big data era, the relationship between entries becomes more and more
+complex. Many graph (or network) algorithms have already paid attention to
+dynamic networks, which are more suitable than static ones for fitting the
+complex real-world scenarios with evolving structures and features. To
+contribute to the dynamic network representation learning and mining research,
+we provide a new bunch of label-adequate, dynamics-meaningful, and
+attribute-sufficient dynamic networks from the health domain. To be specific,
+in our proposed repository DPPIN, we totally have 12 individual dynamic network
+datasets at different scales, and each dataset is a dynamic protein-protein
+interaction network describing protein-level interactions of yeast cells. We
+hope these domain-specific node features, structure evolution patterns, and
+node and graph labels could inspire the regularization techniques to increase
+the performance of graph machine learning algorithms in a more complex setting.
+Also, we link potential applications with our DPPIN by designing various
+dynamic graph experiments, where DPPIN could indicate future research
+opportunities for some tasks by presenting challenges on state-of-the-art
+baseline algorithms. Finally, we identify future directions to improve the
+utility of this repository and welcome constructive inputs from the community.
+All resources (e.g., data and code) of this work are deployed and publicly
+available at https://github.com/DongqiFu/DPPIN.
+","0","AI: Codex (2026-09-24; title/abstract review)","Provides dynamic protein-interaction networks, not protein conformations or structure predictors."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2205.13760v1","Tranception: protein fitness prediction with autoregressive transformers
+  and inference-time retrieval","Pascal Notin, Mafalda Dias, Jonathan Frazer, Javier Marchena-Hurtado, Aidan Gomez, Debora S. Marks, Yarin Gal","  The ability to accurately model the fitness landscape of protein sequences is
+critical to a wide range of applications, from quantifying the effects of human
+variants on disease likelihood, to predicting immune-escape mutations in
+viruses and designing novel biotherapeutic proteins. Deep generative models of
+protein sequences trained on multiple sequence alignments have been the most
+successful approaches so far to address these tasks. The performance of these
+methods is however contingent on the availability of sufficiently deep and
+diverse alignments for reliable training. Their potential scope is thus limited
+by the fact many protein families are hard, if not impossible, to align. Large
+language models trained on massive quantities of non-aligned protein sequences
+from diverse families address these problems and show potential to eventually
+bridge the performance gap. We introduce Tranception, a novel transformer
+architecture leveraging autoregressive predictions and retrieval of homologous
+sequences at inference to achieve state-of-the-art fitness prediction
+performance. Given its markedly higher performance on multiple mutants,
+robustness to shallow alignments and ability to score indels, our approach
+offers significant gain of scope over existing approaches. To enable more
+rigorous model testing across a broader range of protein families, we develop
+ProteinGym -- an extensive set of multiplexed assays of variant effects,
+substantially increasing both the number and diversity of assays compared to
+existing benchmarks.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts sequence fitness and mutation effects, not three-dimensional structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/2201.09948v2","ReLSO: A Transformer-based Model for Latent Space Optimization and
+  Generation of Proteins","Egbert Castro, Abhinav Godavarthi, Julian Rubinfien, Kevin B. Givechian, Dhananjay Bhaskar, Smita Krishnaswamy","  The development of powerful natural language models have increased the
+ability to learn meaningful representations of protein sequences. In addition,
+advances in high-throughput mutagenesis, directed evolution, and
+next-generation sequencing have allowed for the accumulation of large amounts
+of labeled fitness data. Leveraging these two trends, we introduce Regularized
+Latent Space Optimization (ReLSO), a deep transformer-based autoencoder which
+features a highly structured latent space that is trained to jointly generate
+sequences as well as predict fitness. Through regularized prediction heads,
+ReLSO introduces a powerful protein sequence encoder and novel approach for
+efficient fitness landscape traversal. Using ReLSO, we explicitly model the
+sequence-function landscape of large labeled datasets and generate new
+molecules by optimizing within the latent space using gradient-based methods.
+We evaluate this approach on several publicly-available protein datasets,
+including variant sets of anti-ranibizumab and GFP. We observe a greater
+sequence optimization efficiency (increase in fitness per optimization step) by
+ReLSO compared to other approaches, where ReLSO more robustly generates
+high-fitness sequences. Furthermore, the attention-based relationships learned
+by the jointly-trained ReLSO models provides a potential avenue towards
+sequence-level fitness attribution information.
+","0","AI: Codex (2026-09-24; title/abstract review)","Generates protein sequences optimized for fitness, not their three-dimensional folds."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/1605.03004v1","MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture
+  for Sequence-based Protein Structure Prediction","Zeming Lin, Jack Lanchantin, Yanjun Qi","  Predicting protein properties such as solvent accessibility and secondary
+structure from its primary amino acid sequence is an important task in
+bioinformatics. Recently, a few deep learning models have surpassed the
+traditional window based multilayer perceptron. Taking inspiration from the
+image classification domain we propose a deep convolutional neural network
+architecture, MUST-CNN, to predict protein properties. This architecture uses a
+novel multilayer shift-and-stitch (MUST) technique to generate fully dense
+per-position predictions on protein sequences. Our model is significantly
+simpler than the state-of-the-art, yet achieves better results. By combining
+MUST and the efficient convolution operation, we can consider far more
+parameters while retaining very fast prediction speeds. We beat the
+state-of-the-art performance on two large protein property prediction datasets.
+","1","AI: Codex (2026-09-24; title/abstract review)","Predicts secondary structure and solvent accessibility, contributing to but not completing three-dimensional structure prediction."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/1511.02196v1","Evaluating Protein-protein Interaction Predictors with a Novel
+  3-Dimensional Metric","Haohan Wang, Madhavi K. Ganapathiraju","  In order for the predicted interactions to be directly adopted by biologists,
+the ma- chine learning predictions have to be of high precision, regardless of
+recall. This aspect cannot be evaluated or numerically represented well by
+traditional metrics like accuracy, ROC, or precision-recall curve. In this
+work, we start from the alignment in sensitivity of ROC and recall of
+precision-recall curve, and propose an evaluation metric focusing on the
+ability of a model to be adopted by biologists. This metric evaluates the
+ability of a machine learning algorithm to predict only new interactions,
+meanwhile, it eliminates the influence of test dataset. In the experiment of
+evaluating different classifiers with a same data set and evaluating the same
+predictor with different datasets, our new metric fulfills the evaluation task
+of our interest while two widely recognized metrics, ROC and precision-recall
+curve fail the tasks for different reasons.
+","0","AI: Codex (2026-09-24; title/abstract review)","Evaluates protein-interaction predictors; three-dimensional refers to an evaluation metric, not a protein structure."
+"M04","protein structure prediction","Find methods predicting three-dimensional protein structure from sequence or related evidence; protein property prediction alone is partial at most.","http://arxiv.org/abs/1704.05204v1","HPSLPred: An Ensemble Multi-label Classifier for Human Protein
+  Subcellular Location Prediction with Imbalanced Source","Shixiang Wan, Quan Zou","  Predicting the subcellular localization of proteins is an important and
+challenging problem. Traditional experimental approaches are often expensive
+and time-consuming. Consequently, a growing number of research efforts employ a
+series of machine learning approaches to predict the subcellular location of
+proteins. There are two main challenges among the state-of-the-art prediction
+methods. First, most of the existing techniques are designed to deal with
+multi-class rather than multi-label classification, which ignores connections
+between multiple labels. In reality, multiple locations of particular proteins
+implies that there are vital and unique biological significances that deserve
+special focus and cannot be ignored. Second, techniques for handling imbalanced
+data in multi-label classification problems are necessary, but never employed.
+For solving these two issues, we have developed an ensemble multi-label
+classifier called HPSLPred, which can be applied for multi-label classification
+with an imbalanced protein source. For convenience, a user-friendly webserver
+has been established at http://server.malab.cn/HPSLPred.
+","0","AI: Codex (2026-09-24; title/abstract review)","Predicts cellular localization rather than three-dimensional conformation."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2209.06032v1","Investigating the Predictive Reproducibility of Federated Graph Neural
+  Networks using Medical Datasets","Mehmet Yigit Balik, Arwa Rekik, Islem Rekik","  Graph neural networks (GNNs) have achieved extraordinary enhancements in
+various areas including the fields medical imaging and network neuroscience
+where they displayed a high accuracy in diagnosing challenging neurological
+disorders such as autism. In the face of medical data scarcity and
+high-privacy, training such data-hungry models remains challenging. Federated
+learning brings an efficient solution to this issue by allowing to train models
+on multiple datasets, collected independently by different hospitals, in fully
+data-preserving manner. Although both state-of-the-art GNNs and federated
+learning techniques focus on boosting classification accuracy, they overlook a
+critical unsolved problem: investigating the reproducibility of the most
+discriminative biomarkers (i.e., features) selected by the GNN models within a
+federated learning paradigm. Quantifying the reproducibility of a predictive
+medical model against perturbations of training and testing data distributions
+presents one of the biggest hurdles to overcome in developing translational
+clinical applications. To the best of our knowledge, this presents the first
+work investigating the reproducibility of federated GNN models with application
+to classifying medical imaging and brain connectivity datasets. We evaluated
+our framework using various GNN models trained on medical imaging and
+connectomic datasets. More importantly, we showed that federated learning
+boosts both the accuracy and reproducibility of GNN models in such medical
+learning tasks. Our source code is available at
+https://github.com/basiralab/reproducibleFedGNN.
+","1","AI: Codex (2026-09-24; title/abstract review)","Evaluates reproducibility of federated medical models; privacy is the operating setting rather than the evaluated protection mechanism."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/1610.03577v3","Minimax Filter: Learning to Preserve Privacy from Inference Attacks","Jihun Hamm","  Preserving privacy of continuous and/or high-dimensional data such as images,
+videos and audios, can be challenging with syntactic anonymization methods
+which are designed for discrete attributes. Differential privacy, which
+provides a more formal definition of privacy, has shown more success in
+sanitizing continuous data. However, both syntactic and differential privacy
+are susceptible to inference attacks, i.e., an adversary can accurately infer
+sensitive attributes from sanitized data. The paper proposes a novel
+filter-based mechanism which preserves privacy of continuous and
+high-dimensional attributes against inference attacks. Finding the optimal
+utility-privacy tradeoff is formulated as a min-diff-max optimization problem.
+The paper provides an ERM-like analysis of the generalization error and also a
+practical algorithm to perform the optimization. In addition, the paper
+proposes an extension that combines minimax filter and differentially-private
+noisy mechanism. Advantages of the method over purely noisy mechanisms is
+explained and demonstrated with examples. Experiments with several real-world
+tasks including facial expression classification, speech emotion
+classification, and activity classification from motion, show that the minimax
+filter can simultaneously achieve similar or better target task accuracy and
+lower inference accuracy, often significantly lower than previous methods.
+","1","AI: Codex (2026-09-24; title/abstract review)","Develops general inference-privacy filters without a medical-data application in the abstract."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2204.09850v1","FedCL: Federated Contrastive Learning for Privacy-Preserving
+  Recommendation","Chuhan Wu, Fangzhao Wu, Tao Qi, Yongfeng Huang, Xing Xie","  Contrastive learning is widely used for recommendation model learning, where
+selecting representative and informative negative samples is critical. Existing
+methods usually focus on centralized data, where abundant and high-quality
+negative samples are easy to obtain. However, centralized user data storage and
+exploitation may lead to privacy risks and concerns, while decentralized user
+data on a single client can be too sparse and biased for accurate contrastive
+learning. In this paper, we propose a federated contrastive learning method
+named FedCL for privacy-preserving recommendation, which can exploit
+high-quality negative samples for effective model training with privacy well
+protected. We first infer user embeddings from local user data through the
+local model on each client, and then perturb them with local differential
+privacy (LDP) before sending them to a central server for hard negative
+sampling. Since individual user embedding contains heavy noise due to LDP, we
+propose to cluster user embeddings on the server to mitigate the influence of
+noise, and the cluster centroids are used to retrieve hard negative samples
+from the item pool. These hard negative samples are delivered to user clients
+and mixed with the observed negative samples from local data as well as
+in-batch negatives constructed from positive samples for federated model
+training. Extensive experiments on four benchmark datasets show FedCL can
+empower various recommendation methods in a privacy-preserving way.
+","1","AI: Codex (2026-09-24; title/abstract review)","Protects recommendation data using local differential privacy; relevant general methods but not medical data."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2202.03672v2","APPFL: Open-Source Software Framework for Privacy-Preserving Federated
+  Learning","Minseok Ryu, Youngdae Kim, Kibaek Kim, Ravi K. Madduri","  Federated learning (FL) enables training models at different sites and
+updating the weights from the training instead of transferring data to a
+central location and training as in classical machine learning. The FL
+capability is especially important to domains such as biomedicine and smart
+grid, where data may not be shared freely or stored at a central location
+because of policy challenges. Thanks to the capability of learning from
+decentralized datasets, FL is now a rapidly growing research field, and
+numerous FL frameworks have been developed. In this work, we introduce APPFL,
+the Argonne Privacy-Preserving Federated Learning framework. APPFL allows users
+to leverage implemented privacy-preserving algorithms, implement new
+algorithms, and simulate and deploy various FL algorithms with
+privacy-preserving techniques. The modular framework enables users to customize
+the components for algorithms, privacy, communication protocols, neural network
+models, and user data. We also present a new communication-efficient algorithm
+based on an inexact alternating direction method of multipliers. The algorithm
+requires significantly less communication between the server and the clients
+than does the current state of the art. We demonstrate the computational
+capabilities of APPFL, including differentially private FL on various test
+datasets and its scalability, by using multiple algorithms and datasets on
+different computing environments.
+","1","AI: Codex (2026-09-24; title/abstract review)","Implements privacy-preserving federated methods and motivates biomedicine, but no medical-specific evaluation is described."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2207.03448v1","Adaptive Personlization in Federated Learning for Highly Non-i.i.d. Data","Yousef Yeganeh, Azade Farshad, Johann Boschmann, Richard Gaus, Maximilian Frantzen, Nassir Navab","  Federated learning (FL) is a distributed learning method that offers medical
+institutes the prospect of collaboration in a global model while preserving the
+privacy of their patients. Although most medical centers conduct similar
+medical imaging tasks, their differences, such as specializations, number of
+patients, and devices, lead to distinctive data distributions. Data
+heterogeneity poses a challenge for FL and the personalization of the local
+models. In this work, we investigate an adaptive hierarchical clustering method
+for FL to produce intermediate semi-global models, so clients with similar data
+distribution have the chance of forming a more specialized model. Our method
+forms several clusters consisting of clients with the most similar data
+distributions; then, each cluster continues to train separately. Inside the
+cluster, we use meta-learning to improve the personalization of the
+participants' models. We compare the clustering approach with classical FedAvg
+and centralized training by evaluating our proposed methods on the HAM10k
+dataset for skin lesion classification with extreme heterogeneous data
+distribution. Our experiments demonstrate significant performance gain in
+heterogeneous distribution compared to standard FL methods in classification
+accuracy. Moreover, we show that the models converge faster if applied in
+clusters and outperform centralized training while using only a small subset of
+data.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops federated personalization for medical institutes and evaluates skin-lesion data without central pooling."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2108.10064v1","Effective and Privacy preserving Tabular Data Synthesizing","Aditya Kunar","  While data sharing is crucial for knowledge development, privacy concerns and
+strict regulation (e.g., European General Data Protection Regulation (GDPR))
+unfortunately limits its full effectiveness. Synthetic tabular data emerges as
+an alternative to enable data sharing while fulfilling regulatory and privacy
+constraints. The state-of-the-art tabular data synthesizers draw methodologies
+from Generative Adversarial Networks (GAN). In this thesis, we develop
+CTAB-GAN, a novel conditional table GAN architecture that can effectively model
+diverse data types with complex distributions. CTAB-GAN is extensively
+evaluated with the state of the art GANs that generate synthetic tables, in
+terms of data similarity and analysis utility. The results on five datasets
+show that the synthetic data of CTAB-GAN remarkably resembles the real data for
+all three types of variables and results in higher accuracy for five machine
+learning algorithms, by up to 17%.
+  Additionally, to ensure greater security for training tabular GANs against
+malicious privacy attacks, differential privacy (DP) is studied and used to
+train CTAB-GAN with strict privacy guarantees. DP-CTAB-GAN is rigorously
+evaluated using state-of-the-art DP-tabular GANs in terms of data utility and
+privacy robustness against membership and attribute inference attacks. Our
+results on three datasets indicate that strict theoretical differential privacy
+guarantees come only after severely affecting data utility. However, it is
+shown empirically that these guarantees help provide a stronger defence against
+privacy attacks. Overall, it is found that DP-CTABGAN is capable of being
+robust to privacy attacks while maintaining the highest data utility as
+compared to prior work, by up to 18% in terms of the average precision score.
+","1","AI: Codex (2026-09-24; title/abstract review)","Synthesizes differentially private tabular data; the abstract does not establish a medical-data application."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2201.01409v2","Towards Understanding Quality Challenges of the Federated Learning for
+  Neural Networks: A First Look from the Lens of Robustness","Amin Eslami Abyane, Derui Zhu, Roberto Souza, Lei Ma, Hadi Hemmati","  Federated learning (FL) is a distributed learning paradigm that preserves
+users' data privacy while leveraging the entire dataset of all participants. In
+FL, multiple models are trained independently on the clients and aggregated
+centrally to update a global model in an iterative process. Although this
+approach is excellent at preserving privacy, FL still suffers from quality
+issues such as attacks or byzantine faults. Recent attempts have been made to
+address such quality challenges on the robust aggregation techniques for FL.
+However, the effectiveness of state-of-the-art (SOTA) robust FL techniques is
+still unclear and lacks a comprehensive study. Therefore, to better understand
+the current quality status and challenges of these SOTA FL techniques in the
+presence of attacks and faults, we perform a large-scale empirical study to
+investigate the SOTA FL's quality from multiple angles of attacks, simulated
+faults (via mutation operators), and aggregation (defense) methods. In
+particular, we study FL's performance on the image classification tasks and use
+DNNs as our model type. Furthermore, we perform our study on two generic image
+datasets and one real-world federated medical image dataset. We also
+investigate the effect of the proportion of affected clients and the dataset
+distribution factors on the robustness of FL. After a large-scale analysis with
+496 configurations, we find that most mutators on each user have a negligible
+effect on the final model in the generic datasets, and only one of them is
+effective in the medical dataset. Furthermore, we show that model poisoning
+attacks are more effective than data poisoning attacks. Moreover, choosing the
+most robust FL aggregator depends on the attacks and datasets. Finally, we
+illustrate that a simple ensemble of aggregators achieves a more robust
+solution than any single aggregator and is the best choice in 75% of the cases.
+","1","AI: Codex (2026-09-24; title/abstract review)","Studies poisoning robustness of federated models including medical data rather than patient-privacy guarantees."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2101.05504v1","Reliability Check via Weight Similarity in Privacy-Preserving
+  Multi-Party Machine Learning","Kennedy Edemacu, Beakcheol Jang, Jong Wook Kim","  Multi-party machine learning is a paradigm in which multiple participants
+collaboratively train a machine learning model to achieve a common learning
+objective without sharing their privately owned data. The paradigm has recently
+received a lot of attention from the research community aimed at addressing its
+associated privacy concerns. In this work, we focus on addressing the concerns
+of data privacy, model privacy, and data quality associated with
+privacy-preserving multi-party machine learning, i.e., we present a scheme for
+privacy-preserving collaborative learning that checks the participants' data
+quality while guaranteeing data and model privacy. In particular, we propose a
+novel metric called weight similarity that is securely computed and used to
+check whether a participant can be categorized as a reliable participant (holds
+good quality data) or not. The problems of model and data privacy are tackled
+by integrating homomorphic encryption in our scheme and uploading encrypted
+weights, which prevent leakages to the server and malicious participants,
+respectively. The analytical and experimental evaluations of our scheme
+demonstrate that it is accurate and ensures data and model privacy.
+","1","AI: Codex (2026-09-24; title/abstract review)","Uses encryption for private collaborative learning without a medical application in the abstract."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2202.04893v1","Differential Private Knowledge Transfer for Privacy-Preserving
+  Cross-Domain Recommendation","Chaochao Chen, Huiwen Wu, Jiajie Su, Lingjuan Lyu, Xiaolin Zheng, Li Wang","  Cross Domain Recommendation (CDR) has been popularly studied to alleviate the
+cold-start and data sparsity problem commonly existed in recommender systems.
+CDR models can improve the recommendation performance of a target domain by
+leveraging the data of other source domains. However, most existing CDR models
+assume information can directly 'transfer across the bridge', ignoring the
+privacy issues. To solve the privacy concern in CDR, in this paper, we propose
+a novel two stage based privacy-preserving CDR framework (PriCDR). In the first
+stage, we propose two methods, i.e., Johnson-Lindenstrauss Transform (JLT)
+based and Sparse-awareJLT (SJLT) based, to publish the rating matrix of the
+source domain using differential privacy. We theoretically analyze the privacy
+and utility of our proposed differential privacy based rating publishing
+methods. In the second stage, we propose a novel heterogeneous CDR model
+(HeteroCDR), which uses deep auto-encoder and deep neural network to model the
+published source rating matrix and target rating matrix respectively. To this
+end, PriCDR can not only protect the data privacy of the source domain, but
+also alleviate the data sparsity of the source domain. We conduct experiments
+on two benchmark datasets and the results demonstrate the effectiveness of our
+proposed PriCDR and HeteroCDR.
+","1","AI: Codex (2026-09-24; title/abstract review)","Protects shared recommendation ratings using differential privacy; outside the medical domain."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/1709.06161v3","PrivyNet: A Flexible Framework for Privacy-Preserving Deep Neural
+  Network Training","Meng Li, Liangzhen Lai, Naveen Suda, Vikas Chandra, David Z. Pan","  Massive data exist among user local platforms that usually cannot support
+deep neural network (DNN) training due to computation and storage resource
+constraints. Cloud-based training schemes provide beneficial services but
+suffer from potential privacy risks due to excessive user data collection. To
+enable cloud-based DNN training while protecting the data privacy
+simultaneously, we propose to leverage the intermediate representations of the
+data, which is achieved by splitting the DNNs and deploying them separately
+onto local platforms and the cloud. The local neural network (NN) is used to
+generate the feature representations. To avoid local training and protect data
+privacy, the local NN is derived from pre-trained NNs. The cloud NN is then
+trained based on the extracted intermediate representations for the target
+learning task. We validate the idea of DNN splitting by characterizing the
+dependency of privacy loss and classification accuracy on the local NN topology
+for a convolutional NN (CNN) based image classification task. Based on the
+characterization, we further propose PrivyNet to determine the local NN
+topology, which optimizes the accuracy of the target learning task under the
+constraints on privacy loss, local computation, and storage. The efficiency and
+effectiveness of PrivyNet are demonstrated with the CIFAR-10 dataset.
+","1","AI: Codex (2026-09-24; title/abstract review)","Protects training data through split networks and tests generic image data rather than patient records."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2205.15104v1","FLICU: A Federated Learning Workflow for Intensive Care Unit Mortality
+  Prediction","Lena Mondrejevski, Ioanna Miliou, Annaclaudia Montanino, David Pitts, Jaakko Hollmén, Panagiotis Papapetrou","  Although Machine Learning (ML) can be seen as a promising tool to improve
+clinical decision-making for supporting the improvement of medication plans,
+clinical procedures, diagnoses, or medication prescriptions, it remains limited
+by access to healthcare data. Healthcare data is sensitive, requiring strict
+privacy practices, and typically stored in data silos, making traditional
+machine learning challenging. Federated learning can counteract those
+limitations by training machine learning models over data silos while keeping
+the sensitive data localized. This study proposes a federated learning workflow
+for ICU mortality prediction. Hereby, the applicability of federated learning
+as an alternative to centralized machine learning and local machine learning is
+investigated by introducing federated learning to the binary classification
+problem of predicting ICU mortality. We extract multivariate time series data
+from the MIMIC-III database (lab values and vital signs), and benchmark the
+predictive performance of four deep sequential classifiers (FRNN, LSTM, GRU,
+and 1DCNN) varying the patient history window lengths (8h, 16h, 24h, 48h) and
+the number of FL clients (2, 4, 8). The experiments demonstrate that both
+centralized machine learning and federated learning are comparable in terms of
+AUPRC and F1-score. Furthermore, the federated approach shows superior
+performance over local machine learning. Thus, the federated approach can be
+seen as a valid and privacy-preserving alternative to centralized machine
+learning for classifying ICU mortality when sharing sensitive patient data
+between hospitals is not possible.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops and tests a federated ICU mortality workflow that keeps patient data localized."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2106.13199v2","A Deep Learning Approach to Private Data Sharing of Medical Images Using
+  Conditional GANs","Hanxi Sun, Jason Plawinski, Sajanth Subramaniam, Amir Jamaludin, Timor Kadir, Aimee Readie, Gregory Ligozio, David Ohlssen, Mark Baillie, Thibaud Coroller","  Sharing data from clinical studies can facilitate innovative data-driven
+research and ultimately lead to better public health. However, sharing
+biomedical data can put sensitive personal information at risk. This is usually
+solved by anonymization, which is a slow and expensive process. An alternative
+to anonymization is sharing a synthetic dataset that bears a behaviour similar
+to the real data but preserves privacy. As part of the collaboration between
+Novartis and the Oxford Big Data Institute, we generate a synthetic dataset
+based on COSENTYX (secukinumab) Ankylosing Spondylitis clinical study. We apply
+an Auxiliary Classifier GAN to generate synthetic MRIs of vertebral units. The
+images are conditioned on the VU location (cervical, thoracic and lumbar). In
+this paper, we present a method for generating a synthetic dataset and conduct
+an in-depth analysis on its properties along three key metrics: image fidelity,
+sample diversity and dataset privacy.
+","2","AI: Codex (2026-09-24; title/abstract review)","Generates synthetic medical MRIs for private sharing and evaluates dataset privacy."
+"M05","privacy preserving medical data","Find methods protecting patient privacy when sharing or learning from medical data; general privacy methods without a medical application are partial.","http://arxiv.org/abs/2202.01292v2","Improved Regret for Differentially Private Exploration in Linear MDP","Dung Daniel Ngo, Giuseppe Vietri, Zhiwei Steven Wu","  We study privacy-preserving exploration in sequential decision-making for
+environments that rely on sensitive data such as medical records. In
+particular, we focus on solving the problem of reinforcement learning (RL)
+subject to the constraint of (joint) differential privacy in the linear MDP
+setting, where both dynamics and rewards are given by linear functions. Prior
+work on this problem due to Luyo et al. (2021) achieves a regret rate that has
+a dependence of $O(K^{3/5})$ on the number of episodes $K$. We provide a
+private algorithm with an improved regret rate with an optimal dependence of
+$O(\sqrt{K})$ on the number of episodes. The key recipe for our stronger regret
+guarantee is the adaptivity in the policy update schedule, in which an update
+only occurs when sufficient changes in the data are detected. As a result, our
+algorithm benefits from low switching cost and only performs $O(\log(K))$
+updates, which greatly reduces the amount of privacy noise. Finally, in the
+most prevalent privacy regimes where the privacy parameter $\epsilon$ is a
+constant, our algorithm incurs negligible privacy cost -- in comparison with
+the existing non-private regret bounds, the additional regret due to privacy
+appears in lower-order terms.
+","1","AI: Codex (2026-09-24; title/abstract review)","Develops differentially private reinforcement learning motivated by medical records, but gives no medical-specific application results."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/0806.0228v3","Numerical Study of a Propagating Non-Thermal Microwave Feature in a
+  Solar Flare Loop","T. Minoshima, T. Yokoyama","  We analytically and numerically study the motion of electrons along a
+magnetic loop, to compare with the observation of the propagating feature of
+the non-thermal microwave source in the 1999 August 28 solar flare reported by
+Yokoyama et al. (2002). We model the electron motion with the Fokker-Planck
+equation and calculate the spatial distribution of the gyrosynchrotron
+radiation. We find that the microwave propagating feature does not correspond
+to the motion of electrons with a specific initial pitch angle. This apparent
+propagating feature is a consequence of the motion of an ensemble of electrons
+with different initial pitch angles, which have different time and position to
+produce strong radiation in the loop. We conclude that the non-thermal
+electrons in the 1999 August 28 flare were isotropically accelerated and then
+are injected into the loop.
+","0","AI: Codex (2026-09-24; title/abstract review)","Models electron motion during an observed flare rather than predicting future flare occurrence."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2105.01202v1","All-Clear Flare Prediction Using Interval-based Time Series Classifiers","Anli Ji, Berkay Aydin, Manolis K. Georgoulis, Rafal Angryk","  An all-clear flare prediction is a type of solar flare forecasting that puts
+more emphasis on predicting non-flaring instances (often relatively small
+flares and flare quiet regions) with high precision while still maintaining
+valuable predictive results. While many flare prediction studies do not address
+this problem directly, all-clear predictions can be useful in operational
+context. However, in all-clear predictions, finding the right balance between
+avoiding false negatives (misses) and reducing the false positives (false
+alarms) is often challenging. Our study focuses on training and testing a set
+of interval-based time series classifiers named Time Series Forest (TSF). These
+classifiers will be used towards building an all-clear flare prediction system
+by utilizing multivariate time series data. Throughout this paper, we
+demonstrate our data collection, predictive model building and evaluation
+processes, and compare our time series classification models with baselines
+using our benchmark datasets. Our results show that time series classifiers
+provide better forecasting results in terms of skill scores, precision and
+recall metrics, and they can be further improved for more precise all-clear
+forecasts by tuning model hyperparameters.
+","2","AI: Codex (2026-09-24; title/abstract review)","Develops and evaluates time-series classifiers for future solar-flare and all-clear forecasting."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/1507.06785v1","The collisional relaxation of electrons in hot flaring plasma and
+  inferring the properties of solar flare accelerated electrons from X-ray
+  observations","Natasha Jeffrey, Eduard Kontar, Gordon Emslie, Nicolas Bian","  X-ray observations are a direct diagnostic of fast electrons produced in
+solar flares, energized during the energy release process and directed towards
+the Sun. Since the properties of accelerated electrons can be substantially
+changed during their transport and interaction with the background plasma, a
+model must ultimately be applied to X-ray observations in order to understand
+the mechanism responsible for their acceleration. A cold thick target model is
+ubiquitously used for this task, since it provides a simple analytic
+relationship between the accelerated electron spectrum and the emitting
+electron spectrum in the X-ray source, with the latter quantity readily
+obtained from X-ray observations. However, such a model is inappropriate for
+the majority of solar flares in which the electrons propagate in a hot
+megaKelvin plasma, because it does not take into account the physics of
+thermalization of fast electrons. The use of a more realistic model, properly
+accounting for the properties of the background plasma, and the collisional
+diffusion and thermalization of electrons, can alleviate or even remove many of
+the traditional problems associated with the cold thick target model and the
+deduction of the accelerated electron spectrum from X-ray spectroscopy, such as
+the number problem and the need to impose an ad hoc low energy cut-off.
+","0","AI: Codex (2026-09-24; title/abstract review)","Infers accelerated-electron properties from flare observations rather than forecasting future flares."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2010.06487v2","Simultaneously forecasting global geomagnetic activity using Recurrent
+  Networks","Charles Topliff, Morris Cohen, William Bristow","  Many systems used by society are extremely vulnerable to space weather events
+such as solar flares and geomagnetic storms which could potentially cause
+catastrophic damage. In recent years, many works have emerged to provide early
+warning to such systems by forecasting these events through some proxy, but
+these approaches have largely focused on a specific phenomenon. We present a
+sequence-to-sequence learning approach to the problem of forecasting global
+space weather conditions at an hourly resolution. This approach improves upon
+other work in this field by simultaneously forecasting several key proxies for
+geomagnetic activity up to 6 hours in advance. We demonstrate an improvement
+over the best currently known predictor of geomagnetic storms, and an
+improvement over a persistence baseline several hours in advance.
+","1","AI: Codex (2026-09-24; title/abstract review)","Forecasts geomagnetic activity, providing adjacent space-weather prediction methods but not direct solar-flare forecasts."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2211.15333v1","Numerical Modeling of Energetic Electron Acceleration, Transport, and
+  Emission in Solar Flares: Connecting Loop-top and Footpoint Hard X-Ray
+  Sources","Xiangliang Kong, Bin Chen, Fan Guo, Chengcai Shen, Xiaocan Li, Jing Ye, Lulu Zhao, Zelong Jiang, Sijie Yu, Yao Chen, Joe Giacalone","  The acceleration and transport of energetic electrons during solar flares is
+one of the outstanding topics in solar physics. Recent X-ray and radio imaging
+and spectroscopy observations have provided diagnostics of the distribution of
+nonthermal electrons and suggested that, in certain flare events, electrons are
+primarily accelerated in the loop-top and likely experience trapping and/or
+scattering effects. By combining the focused particle transport equation with
+magnetohydrodynamic (MHD) simulations of solar flares, we present a macroscopic
+particle model that naturally incorporates electron acceleration and transport.
+Our simulation results indicate that the physical processes such as turbulent
+pitch-angle scattering can have important impacts on both electron acceleration
+in the loop-top and transport in the flare loop, and their influences are
+highly energy dependent. A spatial-dependent turbulent scattering with
+enhancement in the loop-top can enable both efficient electron acceleration to
+high energies and transport of abundant electrons to the footpoints. We further
+generate spatially resolved synthetic hard X-ray (HXR) emission images and
+spectra, revealing both the loop-top and footpoint HXR sources. Similar to the
+observations, we show that the footpoint HXR sources are brighter and harder
+than the loop-top HXR source. We suggest that the macroscopic particle model
+provides new insights into understanding the connection between the observed
+loop-top and footpoint nonthermal emission sources by combining the particle
+model with dynamically evolving MHD simulations of solar flares.
+","0","AI: Codex (2026-09-24; title/abstract review)","Simulates electron acceleration and emission during flares, not their future occurrence."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2410.11409v1","Advection-nonlinear-diffusion model of flare accelerated electron
+  transport in Type III solar radio bursts","Eduard P. Kontar, Francesco Azzollini, Olena Lyubchyk","  Electrons accelerated by solar flares and observed as type III solar radio
+bursts are not only a crucial diagnostic tool for understanding electron
+transport in the inner heliosphere but also a possible early indication of
+potentially hazardous space weather events. The electron beams travelling in
+the solar corona and heliosphere along magnetic field lines generate Langmuir
+waves and quasilinearly relax towards a plateau in velocity space. The
+relaxation of the electron beam over the short distance in contrast to large
+beam-travel distances observed is often referred to as Sturrok's dilemma. Here,
+we develop a new electron transport model with quasilinear distance/time
+self-consistently changing in space and time. The model results in a nonlinear
+advection-diffusion equation for the electron beam density with nonlinear
+diffusion term that inversely proportional to the beam density. The solution
+predicts slow super-diffusive (ballistic) spatial expansion of a fast
+propagating electron beam. The model also provides the evolution of the
+spectral energy density of Langmuir waves, which determines brightness
+temperature of plasma radiation in solar bursts. The model solution is
+consistent with the results of numerical simulation using kinetic equations and
+can explain some characteristics of type III solar radio bursts.
+","0","AI: Codex (2026-09-24; title/abstract review)","Models flare-accelerated electron transport and radio bursts rather than forecasting new flares."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/1505.03733v2","Collisional relaxation of electrons in a warm plasma and accelerated
+  nonthermal electron spectra in solar flares","E. P. Kontar, N. L. S. Jeffrey, A. G. Emslie, N. H. Bian","  Extending previous studies of nonthermal electron transport in solar flares
+which include the effects of collisional energy diffusion and thermalization of
+fast electrons, we present an analytic method to infer more accurate estimates
+of the accelerated electron spectrum in solar flares from observations of the
+hard X-ray spectrum. Unlike for the standard cold-target model, the spatial
+characteristics of the flaring region, especially the necessity to consider a
+finite volume of hot plasma in the source, need to be taken into account in
+order to correctly obtain the injected electron spectrum from the
+source-integrated electron flux spectrum (a quantity straightforwardly obtained
+from hard X-ray observations). We show that the effect of electron
+thermalization can be significant enough to nullify the need to introduce an
+{\it ad hoc} low-energy cutoff to the injected electron spectrum in order to
+keep the injected power in non-thermal electrons at a reasonable value. Rather
+the suppression of the inferred low-energy end of the injected spectrum
+compared to that deduced from a cold-target analysis allows the inference from
+hard X-ray observations of a more realistic energy in injected non-thermal
+electrons in solar flares.
+","0","AI: Codex (2026-09-24; title/abstract review)","Infers electron spectra of observed solar flares, not future flare events."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/astro-ph/9604019v1","Observations of Electrons from the Decay of Solar Flare Neutrons","W. Dröge, D. Ruffolo, B. Klecker","  We have found evidence for fluxes of energetic electrons in interplanetary
+space on board the ISEE-3 spacecraft which we interpret as the decay products
+of neutrons generated in a solar flare on 1980 June 21. The decay electrons
+arrived at the s/c shortly before the electrons from the flare and can be
+distinguished from the latter by their distinctive energy spectrum. The time
+profile of the decay electrons is in good agreement with the results from a
+simulation based on a scattering mean free path derived from a fit to the flare
+electron data. The comparison with simultaneously observed decay protons and a
+published direct measurement of high-energy neutrons places important
+constraints on the parent neutron spectrum.
+","0","AI: Codex (2026-09-24; title/abstract review)","Reports electrons from a historical flare without a forecasting method."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2401.04591v1","Dreicer electric field definition and runaway electrons in solar flares","Yu. T. Tsap, A. V. Stepanov, Yu. G. Kopylova","  We analyse electron acceleration by a large-scale electric field $E$ in a
+collisional hydrogen plasma under the solar flare coronal conditions based on
+approaches proposed by Dreicer and Spitzer for the dynamic friction force of
+electrons. The Dreicer electric field $E_{Dr}$ is determined as a critical
+electric field at which the entire electron population runs away. Two regimes
+of strong ($E \lesssim E_{Dr}$) and weak ($E \ll E_{Dr}$) electric field are
+discussed. It is shown that the commonly used formal definition of the Dreicer
+field leads to an overestimation of its value by about five times. The critical
+velocity at which the electrons of the ``tail'' of the Maxwell distribution
+become runaway under the action of the sub-Dreiser electric fields turns out to
+be underestimated by $\sqrt{3}$ times in some works because the Coulomb
+collisions between runaway and thermal electrons are not taken into account.
+The electron acceleration by sub-Dreicer electric fields generated in the solar
+corona faces difficulties.
+","0","AI: Codex (2026-09-24; title/abstract review)","Analyzes electron acceleration conditions during flares rather than predicting flare occurrence."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/1812.09474v2","Determination of the total accelerated electron rate and power using
+  solar flare hard X-ray spectra","Eduard P. Kontar, Natasha L. S. Jeffrey, A. Gordon Emslie","  Solar flare hard X-ray spectroscopy serves as a key diagnostic of the
+accelerated electron spectrum. However, the standard approach using the
+collisional cold thick-target model poorly constrains the lower-energy part of
+the accelerated electron spectrum, and hence the overall energetics of the
+accelerated electrons are typically constrained only to within one or two
+orders of magnitude. Here we develop and apply a physically self-consistent
+warm-target approach which involves the use of both hard X-ray spectroscopy and
+imaging data. The approach allows an accurate determination of the electron
+distribution low-energy cutoff, and hence the electron acceleration rate and
+the contribution of accelerated electrons to the total energy released, by
+constraining the coronal plasma parameters. Using a solar flare observed in
+X-rays by the {\em RHESSI} spacecraft, we demonstrate that using the standard
+cold-target methodology, the low-energy cutoff (and hence the energy content in
+electrons) is essentially undetermined. However, the warm-target methodology
+can determine the low-energy electron cutoff with $\sim$7\% uncertainty at the
+$3\sigma$ level and hence permits an accurate quantitative study of the
+importance of accelerated electrons in solar flare energetics.
+","0","AI: Codex (2026-09-24; title/abstract review)","Estimates electron energies from observed flare spectra, not future flare probability."
+"M06","solar flare forecasting","Find methods predicting future solar flares; solar generation forecasting and unrelated astronomical transients are not relevant.","http://arxiv.org/abs/2012.07908v1","Electron Energy Spectra and e-e Bremsstrahlung from Anisotropic Electron
+  Distributions in Extreme Solar Flares","I. D. Oparin, Yu. E. Charikov, E. P. Ovchinnikova, A. N. Shabalin","  We study the electron energy spectra of two powerful solar flares
+SOL2003-10-28T 11:06:16 (GOES class X17.2) and SOL2002-07-23T00:18:16 (X4.8) on
+the basis of HXR and gamma-ray spectra obtained from RHESSI data.
+Electron-electron (e-e) bremsstrahlung makes a significant contribution to the
+X-ray flux at energies above 500 keV. In X-ray flux calculations different
+electron pitch-angle distributions were considered: quasi-transverse and
+quasi-longitudinal. It was shown that breaks in hard X-ray spectra occur on
+energies $\epsilon\approx100$ keV with photon spectral-index difference
+$\Delta\gamma\ge 1$ in the case of quasi-longitudinal anisotropy and hard
+power-law electron energy spectra. We deduce the parameters of non-thermal
+electrons energy spectra from RHESSI data for the extreme solar flares of 2003
+October 28 and 2002 July 23. After including e-e bremsstrahlung, the
+non-thermal electrons energy spectra obtained in the thick-target model can be
+fitted using power-law with spectral index $\delta\approx 5$. For the 2002 July
+23 flare, there is a pronounced asymmetry towards the southern footpoint,
+starting from energies above 100 keV. The separation of HXR sources at energies
+above 100 keV may be related to a feature of relativistic electron transport in
+flaring loops.
+","0","AI: Codex (2026-09-24; title/abstract review)","Analyzes spectra and electron distributions of past flares rather than forecasting events."

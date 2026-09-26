@@ -1,237 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Scholarly Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: url('YOUR_IMAGE_PATH_HERE') no-repeat center center fixed;
-            background-size: cover;
-        }
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 20px; /* Adjust the margin to place it in the middle */
-        }
-        .pagination {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px; /* Adjust the margin to place it at the bottom */
-        }
-        .top-right-links {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            display: flex;
-            gap: 10px; /* Add spacing between buttons */
-        }
-        .results {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex-grow: 1; /* Ensures the div grows to take available space */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        /* Button Styling */
-        .btn-31, .btn-31 *, .btn-31 :after, .btn-31 :before, .btn-31:after, .btn-31:before {
-            border: 0 solid;
-            box-sizing: border-box;
-        }
-
-        .btn-31 {
-            -webkit-tap-highlight-color: transparent;
-            -webkit-appearance: button;
-            background-color: #000;
-            color: #fff;
-            cursor: pointer;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            font-size: 100%;
-            font-weight: 900;
-            line-height: 1.5;
-            margin: 0;
-            padding: 1rem 2rem;
-            position: relative;
-            text-transform: uppercase;
-        }
-
-        .btn-31:before {
-            --progress: 100%;
-            background: #fff;
-            -webkit-clip-path: polygon(
-                100% 0,
-                var(--progress) var(--progress),
-                0 100%,
-                100% 100%
-            );
-            clip-path: polygon(
-                100% 0,
-                var(--progress) var(--progress),
-                0 100%,
-                100% 100%
-            );
-            content: "";
-            inset: 0;
-            position: absolute;
-            transition: -webkit-clip-path 0.2s ease;
-            transition: clip-path 0.2s ease;
-        }
-
-        .btn-31:hover:before {
-            --progress: 0%;
-        }
-
-        .btn-31 .text-container {
-            display: block;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .btn-31 .text {
-            display: block;
-            font-weight: 900;
-            mix-blend-mode: difference;
-            position: relative;
-        }
-
-        .btn-31:hover .text {
-            -webkit-animation: move-up-alternate 0.3s ease forwards;
-            animation: move-up-alternate 0.3s ease forwards;
-        }
-
-        .btn-link {
-            color: white; /* Default color */
-            text-decoration: none; /* Remove underline */
-            transition: color 0.2s ease; /* Smooth transition */
-        }
-
-        .btn-31:hover .btn-link {
-            color: black; /* Change text color on hover */
-        }
-
-        @-webkit-keyframes move-up-alternate {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(80%); }
-            51% { transform: translateY(-80%); }
-            to { transform: translateY(0); }
-        }
-
-        @keyframes move-up-alternate {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(80%); }
-            51% { transform: translateY(-80%); }
-            to { transform: translateY(0); }
-        }
-    </style>
-</head>
-<body>
-    <div class="top-right-links">
-        {% if request.session.username %}
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'profile' %}" class="btn-link">Profile</a>
-                </span>
-            </button>
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'logout' %}" class="btn-link">Log Out</a>
-                </span>
-            </button>
-        {% else %}
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'signup' %}" class="btn-link">Sign Up</a>
-                </span>
-            </button>
-            <button class="btn-31">
-                <span class="text-container">
-                    <a href="{% url 'login' %}" class="btn-link">Login</a>
-                </span>
-            </button>
-        {% endif %}
-    </div>
-
-    <div class="container">
-        <form method="post" action="/resps/">
-            {% csrf_token %}
-            <input type="text" name="query2" placeholder="Query Sentence">
-            <label for="year">Published Date Filter:</label>
-            <select id="year" name="pub_year" placeholder="Published Date Filter">
-                <option value="All">All</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-            </select>
-            <input type="submit" value="Search">
-        </form>
-    </div>
-
-    <div class="results">
-        <ul>
-            {% for paper in papers %}
-                <li>
-                    <a href="{{ paper.url }}" target="_blank">{{ paper.title }}</a>
-                    <p>{{ paper.summary }}</p>
-                    <p>{{ paper.published }}</p>
-                </li>
-            {% empty %}
-                <li>No results found.</li>
-            {% endfor %}
-        </ul>
-    </div>
-<!-- Pagination Links -->
-<div class="pagination">
-    <span class="step-links">
-        {% if papers.has_previous %}
-            <a href="?page=1">First</a>
-            <a href="?page={{ papers.previous_page_number }}">Previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ papers.number }} of {{ papers.paginator.num_pages }}
-        </span>
-
-        {% if papers.has_next %}
-            <a href="?page={{ papers.next_page_number }}">Next</a>
-            <a href="?page={{ papers.paginator.num_pages }}">Last</a>
-        {% endif %}
-    </span>
+{% extends 'base.html' %}{% load navigation %}{% block title %}{{ query|default:'Deep Query' }} | Scholarly{% endblock %}{% block content %}
+<section class="command-deck results-command"><div class="page-heading"><div><p class="eyebrow">SEARCH THE LITERATURE</p>
+<h1>Deep query<span class="heading-dot">.</span></h1>
 </div>
-</body>
-</html>
+<span class="workspace-label">SEARCH / 02</span></div>
+{% include '_search_form.html' %}</section>
+<div class="results-layout"><aside class="filters"><header class="panel-heading"><h2>Refine results</h2>
+<a href="{% url 'resps' %}?q={{ query|urlencode }}">Reset</a></header>
+<form method="get" action="{% url 'resps' %}"><input type="hidden" name="q" value="{{ query }}"><label for="year">PUBLICATION YEAR</label><label class="sr-only" for="year-mode">Year matching</label><select id="year-mode" name="year_mode"><option value="since" {% if year_mode == 'since' %}selected{% endif %}>Since year</option><option value="exact" {% if year_mode == 'exact' %}selected{% endif %}>In year</option></select>
+<input type="number" id="year" name="year" min="1900" max="2100" placeholder="Any year" value="{{ year|default_if_none:'' }}"><label for="sort">SORT ORDER</label><select id="sort" name="sort"><option value="relevance" {% if sort == 'relevance' %}selected{% endif %}>Relevance</option><option value="newest" {% if sort == 'newest' %}selected{% endif %}>Newest first</option></select><label for="match-mode">MATCH WORDS</label><select id="match-mode" name="match" aria-describedby="match-help"><option value="any" {% if match == 'any' %}selected{% endif %}>Any words</option><option value="all" {% if match == 'all' %}selected{% endif %}>All words</option><option value="phrase" {% if match == 'phrase' %}selected{% endif %}>Exact phrase</option></select><p id="match-help" class="help">All words can appear across fields. Exact phrase keeps words together in order within one field. Related word forms still match; punctuation is ignored.</p><button class="button wide">Apply filters</button></form>
+<div class="filter-section"><p class="eyebrow">SEARCH SCOPE</p>
+<div class="scope-row"><span class="checkmark">&check;</span> Paper titles</div>
+<div class="scope-row"><span class="checkmark">&check;</span> Abstracts</div>
+<div class="scope-row"><span class="checkmark">&check;</span> Author names</div>
+</div>
+<div class="search-note"><p class="eyebrow">ABOUT RELEVANCE</p>
+<p>Distinctive terms carry more weight. Titles receive priority, and related word forms are matched automatically.</p>
+</div>
+</aside>
+<section class="results" aria-label="Search results"><div class="results-meta"><span><strong>{{ papers.paginator.count }}</strong> results{% if query %} for <span class="cyan">&ldquo;{{ query }}&rdquo;</span>{% endif %}{% if year %} {% if year_mode == 'exact' %}in{% else %}since{% endif %} {{ year }}{% endif %}</span><span class="green">{{ elapsed }} ms</span></div>
+{% if form.errors %}<div class="error-summary" role="alert">Check your search filters.{{ form.errors }}</div>
+{% endif %}
+{% for paper in papers %}{% include '_paper_card.html' %}{% empty %}<div class="empty-state"><svg class="empty-icon"><use href="#i-search"/></svg><p class="eyebrow">{% if query %}NO MATCHING RECORDS{% else %}READY WHEN YOU ARE{% endif %}</p>
+<h2>{% if query %}Try another direction.{% else %}Every discovery starts<br>with a question.{% endif %}</h2>
+<p>{% if query %}Try Any words matching, a broader keyword, an author's name, or remove the publication year filter.{% else %}Search a topic, title, or author to explore {{ corpus.total }} academic papers.{% endif %}</p>
+<a class="button secondary" href="{% url 'resps' %}?q=neural+networks">Explore neural networks &nearr;</a></div>
+{% endfor %}
+{% include '_pagination.html' with page=papers %}</section>
+<aside class="inspector"><header class="panel-heading"><h2><svg class="icon"><use href="#i-book"/></svg>Paper preview</h2>
+<span class="live-label">{% if papers %}TOP RESULT{% else %}IDLE{% endif %}</span></header>
+{% with paper=papers.0 %}{% if paper %}<div class="inspector-body"><span class="badge cyan-badge">RECORD #{{ paper.pk }}</span><h2>{{ paper.title }}</h2>
+<p class="authors">{{ paper.authors }}</p>
+<dl class="data-list"><div><dt>Published</dt><dd>{{ paper.published|date:'M d, Y'|default:'Unknown' }}</dd></div>
+<div><dt>Repository</dt><dd>arXiv</dd></div>
+</dl><p class="eyebrow">ABSTRACT / EXCERPT</p>
+<p class="preview-abstract">{{ paper.summary|truncatewords:130 }}</p>
+<a class="button wide" href="{% reader_url paper %}">Open reading view &nearr;</a><a class="button secondary wide" href="{% url 'paper_citation' paper.pk %}"><svg class="icon"><use href="#i-download"/></svg> Export BibTeX</a></div>
+{% else %}<div class="inspector-idle"><svg class="empty-icon"><use href="#i-book"/></svg><p>Your next paper<br>is waiting to be found.</p>
+<span>Search to preview a record.</span></div>
+{% endif %}{% endwith %}</aside>
+</div>
+{% endblock %}

@@ -1,0 +1,262 @@
+{
+  "judgment_source": "ai",
+  "corpus_sha256": "96db1ed2ab9c464b9d7b31297b6abdcebdb0242d26996f653c50bbe12e0748b4",
+  "corpus_count": 14748,
+  "judgments_sha256": "d1365da98840d1fe5e91f1ef6e98cb3f6b51d6bd1d9c43281c73f1c37d417c7f",
+  "zero_relevance_queries": [],
+  "per_query": [
+    {
+      "query_id": "M01",
+      "ranker": "any",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7606971932189102,
+      "pooled_recall@10": 0.5555555555555556
+    },
+    {
+      "query_id": "M01",
+      "ranker": "all",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7606971932189102,
+      "pooled_recall@10": 0.5555555555555556
+    },
+    {
+      "query_id": "M01",
+      "ranker": "phrase",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.92663607790064,
+      "pooled_recall@10": 0.5555555555555556
+    },
+    {
+      "query_id": "M02",
+      "ranker": "any",
+      "precision@10": 0.3,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.5203572533620408,
+      "pooled_recall@10": 0.2727272727272727
+    },
+    {
+      "query_id": "M02",
+      "ranker": "all",
+      "precision@10": 0.3,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.5203572533620408,
+      "pooled_recall@10": 0.2727272727272727
+    },
+    {
+      "query_id": "M02",
+      "ranker": "phrase",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.9191677261551536,
+      "pooled_recall@10": 0.9090909090909091
+    },
+    {
+      "query_id": "M03",
+      "ranker": "any",
+      "precision@10": 0.5,
+      "MRR@10": 0.3333333333333333,
+      "nDCG@10": 0.44309137936717397,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "M03",
+      "ranker": "all",
+      "precision@10": 0.5,
+      "MRR@10": 0.3333333333333333,
+      "nDCG@10": 0.44309137936717397,
+      "pooled_recall@10": 0.625
+    },
+    {
+      "query_id": "M03",
+      "ranker": "phrase",
+      "precision@10": 0.6,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8908810610831807,
+      "pooled_recall@10": 0.75
+    },
+    {
+      "query_id": "M04",
+      "ranker": "any",
+      "precision@10": 0.3,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8318724637288826,
+      "pooled_recall@10": 0.75
+    },
+    {
+      "query_id": "M04",
+      "ranker": "all",
+      "precision@10": 0.4,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.961999147059583,
+      "pooled_recall@10": 1.0
+    },
+    {
+      "query_id": "M04",
+      "ranker": "phrase",
+      "precision@10": 0.2,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.6366824387328317,
+      "pooled_recall@10": 0.5
+    },
+    {
+      "query_id": "M05",
+      "ranker": "any",
+      "precision@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7431286862216819,
+      "pooled_recall@10": 0.7692307692307693
+    },
+    {
+      "query_id": "M05",
+      "ranker": "all",
+      "precision@10": 0.6,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.7881198110594844,
+      "pooled_recall@10": 0.46153846153846156
+    },
+    {
+      "query_id": "M05",
+      "ranker": "phrase",
+      "precision@10": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0,
+      "pooled_recall@10": 0.0
+    },
+    {
+      "query_id": "M06",
+      "ranker": "any",
+      "precision@10": 0.1,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8262346571285599,
+      "pooled_recall@10": 0.5
+    },
+    {
+      "query_id": "M06",
+      "ranker": "all",
+      "precision@10": 0.2,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "pooled_recall@10": 1.0
+    },
+    {
+      "query_id": "M06",
+      "ranker": "phrase",
+      "precision@10": 0.1,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.8262346571285599,
+      "pooled_recall@10": 0.5
+    }
+  ],
+  "macro": {
+    "any": {
+      "precision@10": {
+        "value": 0.5333333333333333,
+        "queries": 6
+      },
+      "MRR@10": {
+        "value": 0.8888888888888888,
+        "queries": 6
+      },
+      "nDCG@10": {
+        "value": 0.6875636055045415,
+        "queries": 6
+      },
+      "pooled_recall@10": {
+        "value": 0.5787522662522663,
+        "queries": 6
+      }
+    },
+    "all": {
+      "precision@10": {
+        "value": 0.5,
+        "queries": 6
+      },
+      "MRR@10": {
+        "value": 0.8888888888888888,
+        "queries": 6
+      },
+      "nDCG@10": {
+        "value": 0.745710797344532,
+        "queries": 6
+      },
+      "pooled_recall@10": {
+        "value": 0.652470214970215,
+        "queries": 6
+      }
+    },
+    "phrase": {
+      "precision@10": {
+        "value": 0.48333333333333334,
+        "queries": 6
+      },
+      "MRR@10": {
+        "value": 0.8333333333333334,
+        "queries": 6
+      },
+      "nDCG@10": {
+        "value": 0.6999336601667276,
+        "queries": 6
+      },
+      "pooled_recall@10": {
+        "value": 0.5357744107744108,
+        "queries": 6
+      }
+    }
+  },
+  "coverage": {
+    "any": {
+      "zero_result_queries": 0,
+      "zero_result_rate": 0.0,
+      "queries": 6,
+      "mean_returned_at_10": 10.0
+    },
+    "phrase": {
+      "zero_result_queries": 1,
+      "zero_result_rate": 0.16666666666666666,
+      "queries": 6,
+      "mean_returned_at_10": 5.5
+    },
+    "all": {
+      "zero_result_queries": 0,
+      "zero_result_rate": 0.0,
+      "queries": 6,
+      "mean_returned_at_10": 7.666666666666667
+    }
+  },
+  "result_counts": {
+    "M01": {
+      "any": 6468,
+      "all": 306,
+      "phrase": 277
+    },
+    "M02": {
+      "any": 1828,
+      "all": 75,
+      "phrase": 15
+    },
+    "M03": {
+      "any": 296,
+      "all": 39,
+      "phrase": 31
+    },
+    "M04": {
+      "any": 5004,
+      "all": 8,
+      "phrase": 2
+    },
+    "M05": {
+      "any": 5229,
+      "all": 6,
+      "phrase": 0
+    },
+    "M06": {
+      "any": 491,
+      "all": 2,
+      "phrase": 1
+    }
+  },
+  "limitations": "6-query ai-reviewed pilot; recall is relative to the pooled top-10 candidates, not the entire corpus. Frozen runs are evaluated without rerunning search. AI judgments are provisional and are not human ground truth or independent validation."
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}{% block title %}My Library | Scholarly{% endblock %}{% block content %}
+<section class="command-deck"><div class="page-heading"><div><p class="eyebrow">YOUR PERSONAL RESEARCH SPACE</p>
+<h1>My library<span class="heading-dot">.</span></h1>
+</div>
+<a class="button secondary" href="{% url 'resps' %}"><svg class="icon"><use href="#i-search"/></svg>Discover papers</a></div>
+<div class="library-stats"><div><span>SAVED PAPERS</span><strong>{{ saved_count }} <svg class="icon"><use href="#i-library"/></svg></strong></div>
+<div><span>COLLECTION</span><strong>Reading queue</strong></div>
+<div><span>EXPORT FORMAT</span><strong class="cyan">BibTeX <small>.bib</small></strong></div>
+<div><span>WORKSPACE</span><strong class="green">{% if user.is_authenticated %}{{ user.username }}{% else %}Guest session{% endif %}</strong></div>
+</div>
+</section>
+<div class="library-layout"><aside class="library-directory"><p class="eyebrow">COLLECTIONS DIRECTORY</p>
+<a class="directory-active" href="{% url 'library' %}"><svg class="icon"><use href="#i-library"/></svg>All saved papers <span>{{ saved_count }}</span></a><div class="search-note"><h3>A home for your next idea.</h3><p>Use the Save action on any paper to add it to this reading queue.</p>
+<p>Your collection is private to your account.</p>
+</div>
+</aside>
+<section class="library-records"><form class="library-search" method="get"><svg class="icon"><use href="#i-search"/></svg><label class="sr-only" for="library-query">Filter saved papers by title or author</label><input id="library-query" name="q" value="{{ query }}" placeholder="Filter by title or author..." maxlength="300"><button class="button secondary compact">Filter</button></form>
+<div class="results-meta"><span>{{ records.paginator.count }} saved records{% if query %} matching &ldquo;{{ query }}&rdquo;{% endif %}</span><span>NEWEST SAVED FIRST</span></div>
+{% for record in records %}{% include '_paper_card.html' with paper=record.paper %}{% empty %}<div class="empty-state"><svg class="empty-icon"><use href="#i-library"/></svg><p class="eyebrow">{% if query %}NO MATCHES{% else %}ROOM FOR YOUR NEXT DISCOVERY{% endif %}</p>
+<h2>{% if query %}Nothing here matches yet.{% else %}Keep the papers<br>worth coming back to.{% endif %}</h2>
+<p>{% if not user.is_authenticated %}Log in to save papers and build your personal reading queue.{% elif query %}Try another title or author, or clear the filter.{% else %}Find a paper, select Save, and it will be here when you need it.{% endif %}</p>
+{% if not user.is_authenticated %}<a class="button" href="{% url 'login' %}">Log in to your library &rarr;</a>{% elif query %}<a class="button secondary" href="{% url 'library' %}">Clear filter</a>{% else %}<a class="button" href="{% url 'resps' %}">Find your first paper &nearr;</a>{% endif %}</div>
+{% endfor %}{% include '_pagination.html' with page=records %}</section>
+</div>
+{% endblock %}
